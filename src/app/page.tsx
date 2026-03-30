@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ViewMode, Category, Topic, Relationship as RelType, Resource as ResType } from "@/lib/types";
 import { Navbar } from "@/components/Navbar";
@@ -8,7 +8,7 @@ import { Umbrella } from "@/components/umbrella/Umbrella";
 import { GraphView } from "@/components/graph/GraphView";
 import { GraphControls } from "@/components/graph/GraphControls";
 import { TopicCard } from "@/components/topic/TopicCard";
-import { SearchOverlay } from "@/components/search/SearchOverlay";
+import { SearchBar } from "@/components/SearchBar";
 import topicsData from "@/data/topics.json";
 import relationshipsData from "@/data/relationships.json";
 import resourcesData from "@/data/resources.json";
@@ -20,7 +20,6 @@ const resources = resourcesData as ResType[];
 export default function Home() {
   const [view, setView] = useState<ViewMode>("umbrella");
   const [selectedTopicId, setSelectedTopicId] = useState<string | null>(null);
-  const [searchOpen, setSearchOpen] = useState(false);
   const [highlightedNodeId, setHighlightedNodeId] = useState<string | null>(null);
   const [categoryFilters, setCategoryFilters] = useState<Set<Category>>(new Set());
   const [difficultyFilter, setDifficultyFilter] = useState<string | null>(null);
@@ -69,25 +68,12 @@ export default function Home() {
     }
   }, []);
 
-  // Cmd+K keyboard shortcut
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
-        e.preventDefault();
-        setSearchOpen((prev) => !prev);
-      }
-    };
-    document.addEventListener("keydown", handleKey);
-    return () => document.removeEventListener("keydown", handleKey);
-  }, []);
-
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Navbar */}
       <Navbar
         view={view}
         onViewChange={handleViewChange}
-        onSearchClick={() => setSearchOpen(true)}
       />
 
       {/* Views */}
@@ -113,7 +99,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="min-h-screen pt-14"
+            className="min-h-screen"
           >
             <GraphView
               topics={topics}
@@ -151,19 +137,11 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* Search overlay */}
-      <AnimatePresence>
-        {searchOpen && (
-          <SearchOverlay
-            topics={topics}
-            onSelect={(id) => {
-              handleTopicSelect(id);
-              setSearchOpen(false);
-            }}
-            onClose={() => setSearchOpen(false)}
-          />
-        )}
-      </AnimatePresence>
+      {/* Search bar — fixed to bottom on both views */}
+      <SearchBar
+        topics={topics}
+        onTopicSelect={handleTopicSelect}
+      />
     </main>
   );
 }

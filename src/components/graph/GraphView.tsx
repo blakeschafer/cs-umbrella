@@ -54,12 +54,10 @@ export function GraphView({
   // Update dimensions on resize
   useEffect(() => {
     const update = () => {
-      if (containerRef.current) {
-        setDimensions({
-          width: containerRef.current.offsetWidth,
-          height: containerRef.current.offsetHeight,
-        });
-      }
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight - 56, // subtract navbar height
+      });
     };
     update();
     window.addEventListener("resize", update);
@@ -236,7 +234,7 @@ export function GraphView({
   return (
     <div
       ref={containerRef}
-      className="w-full h-screen"
+      className="fixed inset-0 top-14"
       style={{ background: "#0a0a0f" }}
     >
       <ForceGraph2D

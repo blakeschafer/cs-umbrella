@@ -27,7 +27,7 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
   const expandedColor = expandedCategory ? CATEGORY_COLORS[expandedCategory] : "#fff";
 
   return (
-    <div className="relative flex min-h-screen flex-col items-center pt-24 pb-12 px-4">
+    <div className="relative flex min-h-screen flex-col items-center pt-20 pb-32 px-4">
       <RainEffect />
 
       {/* Umbrella SVG */}
@@ -35,10 +35,10 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 w-full max-w-3xl"
+        className="relative z-10 w-full max-w-2xl"
       >
-        <svg viewBox="0 0 800 500" className="w-full drop-shadow-2xl">
-          {/* Panels */}
+        <svg viewBox="0 0 800 480" className="w-full drop-shadow-2xl">
+          {/* Panels — canopy arcs across the top */}
           {CATEGORIES.map((cat, i) => (
             <UmbrellaPanel
               key={cat}
@@ -51,21 +51,21 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
             />
           ))}
 
-          {/* Pole */}
+          {/* Pole — straight down from center of canopy */}
           <line
-            x1={400} y1={300} x2={400} y2={440}
-            stroke="#94a3b8" strokeWidth={3} strokeLinecap="round"
+            x1={400} y1={280} x2={400} y2={420}
+            stroke="#64748b" strokeWidth={3} strokeLinecap="round"
           />
 
           {/* J-hook handle */}
           <path
-            d="M 400 440 Q 400 460 385 465 Q 370 470 365 455"
-            fill="none" stroke="#94a3b8" strokeWidth={3} strokeLinecap="round"
+            d="M 400 420 Q 400 445, 382 445 Q 364 445, 364 430"
+            fill="none" stroke="#64748b" strokeWidth={3} strokeLinecap="round"
           />
 
-          {/* Top tip */}
-          <circle cx={400} cy={50} r={4} fill="#94a3b8" />
-          <line x1={400} y1={54} x2={400} y2={80} stroke="#94a3b8" strokeWidth={2} strokeLinecap="round" />
+          {/* Top tip — top center of canopy */}
+          <circle cx={400} cy={58} r={3.5} fill="#64748b" />
+          <line x1={400} y1={62} x2={400} y2={75} stroke="#64748b" strokeWidth={2} strokeLinecap="round" />
         </svg>
       </motion.div>
 
@@ -74,7 +74,7 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-        className="relative z-10 mt-4 text-center"
+        className="relative z-10 mt-2 text-center"
       >
         <h1 className="text-4xl font-bold tracking-tight text-white">
           CS Umbrella
@@ -93,7 +93,7 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
             animate={{ opacity: 1, y: 0, height: "auto" }}
             exit={{ opacity: 0, y: -10, height: 0 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="relative z-10 mt-8 w-full max-w-4xl overflow-hidden"
+            className="relative z-10 mt-6 w-full max-w-4xl overflow-hidden"
           >
             {/* Category header */}
             <div className="mb-4 flex items-center gap-3">

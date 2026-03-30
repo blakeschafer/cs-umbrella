@@ -14,50 +14,63 @@ interface UmbrellaPanelProps {
 }
 
 const CX = 400;
-const CY = 300;
-const OUTER_R = 250;
-const INNER_R = 40;
+const CY = 280;
+const OUTER_R = 220;
+const INNER_R = 30;
 const TOTAL_PANELS = 8;
-const START_DEG = -70;
-const END_DEG = 110;
+// Canopy spans from 15° to 165° — a wide arc across the top
+const START_DEG = 15;
+const END_DEG = 165;
 const SWEEP = (END_DEG - START_DEG) / TOTAL_PANELS;
 
 function degToRad(deg: number) {
   return (deg * Math.PI) / 180;
 }
 
+const round = (n: number) => Math.round(n * 10000) / 10000;
+
 function polarToCart(cx: number, cy: number, r: number, deg: number) {
   const rad = degToRad(deg);
-  const round = (n: number) => Math.round(n * 10000) / 10000;
-  return { x: round(cx + r * Math.cos(rad)), y: round(cy - r * Math.sin(rad)) };
+  // Standard math: 0°=right, 90°=up. SVG y is inverted, so subtract sin.
+  return {
+    x: round(cx + r * Math.cos(rad)),
+    y: round(cy - r * Math.sin(rad)),
+  };
 }
 
 function buildArcPath(index: number) {
-  const startAngle = START_DEG + index * SWEEP;
-  const endAngle = startAngle + SWEEP;
+  // Panels go left-to-right, so index 0 starts at END_DEG (left side)
+  // and index 7 ends at START_DEG (right side)
+  const startAngle = END_DEG - index * SWEEP;
+  const endAngle = startAngle - SWEEP;
 
   const outerStart = polarToCart(CX, CY, OUTER_R, startAngle);
   const outerEnd = polarToCart(CX, CY, OUTER_R, endAngle);
-  const innerStart = polarToCart(CX, CY, INNER_R, endAngle);
-  const innerEnd = polarToCart(CX, CY, INNER_R, startAngle);
+  const innerStart = polarToCart(CX, CY, INNER_R, startAngle);
+  const innerEnd = polarToCart(CX, CY, INNER_R, endAngle);
 
+  // Bulge outward for canopy curve
   const midAngle = (startAngle + endAngle) / 2;
-  const bulgeR = OUTER_R + 18;
-  const midPoint = polarToCart(CX, CY, bulgeR, midAngle);
+  const bulgeR = OUTER_R + 20;
+  const bulgePoint = polarToCart(CX, CY, bulgeR, midAngle);
 
-  const labelPos = polarToCart(CX, CY, (OUTER_R + INNER_R) / 2 + 20, midAngle);
+  const labelR = (OUTER_R + INNER_R) / 2 + 15;
+  const labelPos = polarToCart(CX, CY, labelR, midAngle);
+
+  // SVG large-arc-flag: 0 since each panel < 180°
+  const path = [
+    `M ${innerStart.x} ${innerStart.y}`,
+    `L ${outerStart.x} ${outerStart.y}`,
+    `Q ${bulgePoint.x} ${bulgePoint.y} ${outerEnd.x} ${outerEnd.y}`,
+    `L ${innerEnd.x} ${innerEnd.y}`,
+    `A ${INNER_R} ${INNER_R} 0 0 1 ${innerStart.x} ${innerStart.y}`,
+    "Z",
+  ].join(" ");
 
   return {
-    path: [
-      `M ${innerEnd.x} ${innerEnd.y}`,
-      `L ${outerStart.x} ${outerStart.y}`,
-      `Q ${midPoint.x} ${midPoint.y} ${outerEnd.x} ${outerEnd.y}`,
-      `L ${innerStart.x} ${innerStart.y}`,
-      `A ${INNER_R} ${INNER_R} 0 0 0 ${innerEnd.x} ${innerEnd.y}`,
-      "Z",
-    ].join(" "),
+    path,
     labelPos,
-    midAngle: Math.round(midAngle * 10000) / 10000,
+    midAngle: round(midAngle),
   };
 }
 
@@ -66,7 +79,12 @@ export function UmbrellaPanel({ category, index, topicCount, isExpanded, onHover
   const { path, labelPos, midAngle } = buildArcPath(index);
   const filterId = `glow-${index}`;
 
-  const labelRotation = -midAngle;
+  // Rotate label so text reads along the arc, keeping it readable
+  // For panels on the left side (angle > 90), flip so text isn't upside down
+  let labelRotation = 90 - midAngle;
+  if (midAngle > 90) {
+    labelRotation = 90 - midAngle;
+  }
 
   return (
     <g
@@ -91,11 +109,11 @@ export function UmbrellaPanel({ category, index, topicCount, isExpanded, onHover
         stroke={color}
         strokeWidth={1.5}
         filter={`url(#${filterId})`}
-        initial={{ fillOpacity: 0.12, strokeOpacity: 0.6 }}
+        initial={{ fillOpacity: 0.15, strokeOpacity: 0.6 }}
         animate={{
-          fillOpacity: isExpanded ? 0.4 : [0.12, 0.18, 0.12],
+          fillOpacity: isExpanded ? 0.45 : [0.12, 0.2, 0.12],
           strokeOpacity: isExpanded ? 1 : 0.6,
-          scale: isExpanded ? 1.05 : 1,
+          scale: isExpanded ? 1.04 : 1,
         }}
         transition={{
           fillOpacity: isExpanded ? { duration: 0.2 } : { duration: 3, repeat: Infinity, ease: "easeInOut" },
@@ -106,15 +124,15 @@ export function UmbrellaPanel({ category, index, topicCount, isExpanded, onHover
 
       {/* Category label */}
       <text
-        x={labelPos.x}
-        y={labelPos.y}
+        x={round(labelPos.x)}
+        y={round(labelPos.y)}
         textAnchor="middle"
         dominantBaseline="central"
         fill={isExpanded ? "#fff" : "rgba(255,255,255,0.8)"}
-        fontSize={isExpanded ? 12 : 11}
+        fontSize={isExpanded ? 12 : 10.5}
         fontWeight={600}
         style={{ pointerEvents: "none", userSelect: "none" }}
-        transform={`rotate(${labelRotation}, ${labelPos.x}, ${labelPos.y})`}
+        transform={`rotate(${round(labelRotation)}, ${round(labelPos.x)}, ${round(labelPos.y)})`}
       >
         {category}
       </text>
@@ -122,17 +140,17 @@ export function UmbrellaPanel({ category, index, topicCount, isExpanded, onHover
       {/* Topic count on hover */}
       {isExpanded && (
         <motion.text
-          x={labelPos.x}
-          y={labelPos.y + 16}
+          x={round(labelPos.x)}
+          y={round(labelPos.y + 14)}
           textAnchor="middle"
           dominantBaseline="central"
           fill="rgba(255,255,255,0.6)"
-          fontSize={10}
+          fontSize={9}
           fontWeight={400}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           style={{ pointerEvents: "none", userSelect: "none" }}
-          transform={`rotate(${labelRotation}, ${labelPos.x}, ${labelPos.y + 16})`}
+          transform={`rotate(${round(labelRotation)}, ${round(labelPos.x)}, ${round(labelPos.y + 14)})`}
         >
           {topicCount} topic{topicCount !== 1 ? "s" : ""}
         </motion.text>
