@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ViewMode, Category, Topic, Relationship as RelType, Resource as ResType } from "@/lib/types";
+import { Umbrella } from "@/components/umbrella/Umbrella";
 import topicsData from "@/data/topics.json";
 import relationshipsData from "@/data/relationships.json";
 import resourcesData from "@/data/resources.json";
@@ -89,10 +90,16 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="min-h-screen"
           >
-            {/* Umbrella component (Task 5) */}
-            <div className="flex min-h-screen items-center justify-center">
-              <p className="text-[var(--text-secondary)]">Umbrella View — coming in Task 5</p>
-            </div>
+            <Umbrella
+              topics={topics}
+              onCategoryClick={(category) => {
+                setSelectedCategory(category);
+                setShowCategoryList(true);
+                setSelectedTopicId(null);
+              }}
+              onExploreClick={() => setView("graph")}
+              onSearchClick={() => setSearchOpen(true)}
+            />
           </motion.div>
         ) : (
           <motion.div
