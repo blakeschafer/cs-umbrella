@@ -1,0 +1,677 @@
+[
+  {
+    "id": "big_o_notation",
+    "name": "Big O Notation",
+    "category": "Algorithms",
+    "description": "A mathematical notation that describes the upper bound of an algorithm's time or space complexity. It helps compare how algorithms scale as input size grows.",
+    "difficulty": "Beginner",
+    "tags": ["complexity", "analysis", "performance"],
+    "importance": 5
+  },
+  {
+    "id": "sorting_algorithms",
+    "name": "Sorting Algorithms",
+    "category": "Algorithms",
+    "description": "Methods for arranging elements in a specific order, such as ascending or descending. Common examples include bubble sort, merge sort, and quicksort, each with different performance trade-offs.",
+    "difficulty": "Intermediate",
+    "tags": ["sorting", "comparison", "ordering"],
+    "importance": 5
+  },
+  {
+    "id": "search_algorithms",
+    "name": "Search Algorithms",
+    "category": "Algorithms",
+    "description": "Techniques for finding specific elements within data structures. Linear search checks every element while binary search efficiently halves the search space on sorted data.",
+    "difficulty": "Beginner",
+    "tags": ["searching", "binary search", "linear search"],
+    "importance": 4
+  },
+  {
+    "id": "graph_algorithms",
+    "name": "Graph Algorithms",
+    "category": "Algorithms",
+    "description": "Algorithms that operate on graph data structures to solve problems like finding shortest paths, detecting cycles, and traversing networks. Key examples include BFS, DFS, and Dijkstra's algorithm.",
+    "difficulty": "Advanced",
+    "tags": ["graphs", "traversal", "shortest path"],
+    "importance": 4
+  },
+  {
+    "id": "dynamic_programming",
+    "name": "Dynamic Programming",
+    "category": "Algorithms",
+    "description": "An optimization technique that solves complex problems by breaking them into overlapping subproblems and storing their solutions. It avoids redundant computation through memoization or tabulation.",
+    "difficulty": "Advanced",
+    "tags": ["optimization", "memoization", "subproblems"],
+    "importance": 5
+  },
+  {
+    "id": "greedy_algorithms",
+    "name": "Greedy Algorithms",
+    "category": "Algorithms",
+    "description": "A problem-solving approach that makes the locally optimal choice at each step, hoping to find a global optimum. Works well for problems like activity selection and Huffman coding.",
+    "difficulty": "Intermediate",
+    "tags": ["optimization", "heuristic", "local optimal"],
+    "importance": 3
+  },
+  {
+    "id": "divide_and_conquer",
+    "name": "Divide and Conquer",
+    "category": "Algorithms",
+    "description": "A strategy that breaks a problem into smaller subproblems, solves each independently, and combines their results. Merge sort and quicksort are classic examples of this paradigm.",
+    "difficulty": "Intermediate",
+    "tags": ["recursion", "subproblems", "merge"],
+    "importance": 4
+  },
+  {
+    "id": "recursion",
+    "name": "Recursion",
+    "category": "Algorithms",
+    "description": "A technique where a function calls itself to solve smaller instances of the same problem. Every recursive solution needs a base case to prevent infinite loops and a recursive case that moves toward it.",
+    "difficulty": "Beginner",
+    "tags": ["base case", "call stack", "self-reference"],
+    "importance": 5
+  },
+  {
+    "id": "backtracking",
+    "name": "Backtracking",
+    "category": "Algorithms",
+    "description": "A systematic method for exploring all possible solutions by building candidates incrementally and abandoning them when they fail constraints. Used in puzzles like N-Queens and Sudoku solvers.",
+    "difficulty": "Advanced",
+    "tags": ["constraint satisfaction", "pruning", "exploration"],
+    "importance": 3
+  },
+  {
+    "id": "hashing",
+    "name": "Hashing",
+    "category": "Algorithms",
+    "description": "A technique that maps data of arbitrary size to fixed-size values using hash functions. It enables near-constant time lookups and is the backbone of hash tables and data integrity checks.",
+    "difficulty": "Intermediate",
+    "tags": ["hash function", "collision", "mapping"],
+    "importance": 4
+  },
+  {
+    "id": "arrays",
+    "name": "Arrays",
+    "category": "Data Structures",
+    "description": "A fundamental data structure that stores elements in contiguous memory locations, allowing fast access by index. Arrays have fixed size in many languages and offer O(1) random access.",
+    "difficulty": "Beginner",
+    "tags": ["sequential", "indexing", "contiguous memory"],
+    "importance": 5
+  },
+  {
+    "id": "linked_lists",
+    "name": "Linked Lists",
+    "category": "Data Structures",
+    "description": "A linear data structure where each element (node) contains data and a pointer to the next node. Unlike arrays, linked lists allow efficient insertions and deletions without shifting elements.",
+    "difficulty": "Beginner",
+    "tags": ["nodes", "pointers", "linear"],
+    "importance": 4
+  },
+  {
+    "id": "stacks",
+    "name": "Stacks",
+    "category": "Data Structures",
+    "description": "A last-in, first-out (LIFO) data structure where elements are added and removed from the same end. Stacks are used in function call management, undo operations, and expression evaluation.",
+    "difficulty": "Beginner",
+    "tags": ["LIFO", "push", "pop"],
+    "importance": 4
+  },
+  {
+    "id": "queues",
+    "name": "Queues",
+    "category": "Data Structures",
+    "description": "A first-in, first-out (FIFO) data structure where elements are added at the back and removed from the front. Queues model real-world scenarios like task scheduling and print job management.",
+    "difficulty": "Beginner",
+    "tags": ["FIFO", "enqueue", "dequeue"],
+    "importance": 4
+  },
+  {
+    "id": "hash_tables",
+    "name": "Hash Tables",
+    "category": "Data Structures",
+    "description": "A data structure that stores key-value pairs using a hash function to compute an index into an array of buckets. Hash tables provide average O(1) time complexity for lookups, insertions, and deletions.",
+    "difficulty": "Intermediate",
+    "tags": ["key-value", "hash function", "collision resolution"],
+    "importance": 5
+  },
+  {
+    "id": "binary_trees",
+    "name": "Binary Trees",
+    "category": "Data Structures",
+    "description": "A hierarchical data structure where each node has at most two children, called left and right. Binary trees form the basis for more specialized structures like BSTs, heaps, and expression trees.",
+    "difficulty": "Intermediate",
+    "tags": ["tree", "nodes", "hierarchical"],
+    "importance": 4
+  },
+  {
+    "id": "heaps",
+    "name": "Heaps",
+    "category": "Data Structures",
+    "description": "A specialized tree-based structure that satisfies the heap property: in a max-heap, every parent is greater than its children. Heaps efficiently support priority queue operations and are used in heap sort.",
+    "difficulty": "Intermediate",
+    "tags": ["priority queue", "max-heap", "min-heap"],
+    "importance": 3
+  },
+  {
+    "id": "graphs",
+    "name": "Graphs",
+    "category": "Data Structures",
+    "description": "A data structure consisting of vertices (nodes) connected by edges. Graphs can be directed or undirected and model relationships like social networks, maps, and dependency chains.",
+    "difficulty": "Intermediate",
+    "tags": ["vertices", "edges", "adjacency"],
+    "importance": 5
+  },
+  {
+    "id": "tries",
+    "name": "Tries",
+    "category": "Data Structures",
+    "description": "A tree-like data structure used for efficient retrieval of keys in a dataset, typically strings. Each node represents a character, making tries ideal for autocomplete and spell-checking features.",
+    "difficulty": "Advanced",
+    "tags": ["prefix tree", "strings", "autocomplete"],
+    "importance": 3
+  },
+  {
+    "id": "binary_search_trees",
+    "name": "Binary Search Trees",
+    "category": "Data Structures",
+    "description": "A binary tree where the left subtree contains only nodes with smaller values and the right subtree only larger values. BSTs enable efficient searching, insertion, and deletion in O(log n) average time.",
+    "difficulty": "Intermediate",
+    "tags": ["BST", "ordered", "search"],
+    "importance": 4
+  },
+  {
+    "id": "machine_learning",
+    "name": "Machine Learning",
+    "category": "AI / ML",
+    "description": "A branch of AI where systems learn patterns from data without being explicitly programmed. ML models improve their performance on tasks through experience and are used in recommendations, predictions, and more.",
+    "difficulty": "Intermediate",
+    "tags": ["AI", "training", "prediction"],
+    "importance": 5
+  },
+  {
+    "id": "neural_networks",
+    "name": "Neural Networks",
+    "category": "AI / ML",
+    "description": "Computing systems inspired by biological neural networks in the brain. They consist of layers of interconnected nodes that process information and learn complex patterns from data.",
+    "difficulty": "Intermediate",
+    "tags": ["neurons", "layers", "weights"],
+    "importance": 5
+  },
+  {
+    "id": "deep_learning",
+    "name": "Deep Learning",
+    "category": "AI / ML",
+    "description": "A subset of machine learning that uses neural networks with many layers to learn hierarchical representations of data. Deep learning powers breakthroughs in image recognition, language processing, and game playing.",
+    "difficulty": "Advanced",
+    "tags": ["deep neural networks", "representation learning", "GPU"],
+    "importance": 5
+  },
+  {
+    "id": "natural_language_processing",
+    "name": "Natural Language Processing",
+    "category": "AI / ML",
+    "description": "The field of AI focused on enabling computers to understand, interpret, and generate human language. NLP powers chatbots, translation services, and sentiment analysis tools.",
+    "difficulty": "Advanced",
+    "tags": ["text", "language", "tokenization"],
+    "importance": 4
+  },
+  {
+    "id": "computer_vision",
+    "name": "Computer Vision",
+    "category": "AI / ML",
+    "description": "A field of AI that trains computers to interpret and understand visual information from images and videos. Applications include facial recognition, autonomous vehicles, and medical image analysis.",
+    "difficulty": "Advanced",
+    "tags": ["images", "object detection", "visual"],
+    "importance": 4
+  },
+  {
+    "id": "reinforcement_learning",
+    "name": "Reinforcement Learning",
+    "category": "AI / ML",
+    "description": "A type of machine learning where an agent learns to make decisions by receiving rewards or penalties for its actions. It powers game-playing AIs and robotic control systems.",
+    "difficulty": "Advanced",
+    "tags": ["reward", "agent", "policy"],
+    "importance": 3
+  },
+  {
+    "id": "supervised_learning",
+    "name": "Supervised Learning",
+    "category": "AI / ML",
+    "description": "A machine learning approach where models are trained on labeled data, learning to map inputs to known outputs. Common tasks include classification (spam detection) and regression (price prediction).",
+    "difficulty": "Intermediate",
+    "tags": ["labeled data", "classification", "regression"],
+    "importance": 4
+  },
+  {
+    "id": "unsupervised_learning",
+    "name": "Unsupervised Learning",
+    "category": "AI / ML",
+    "description": "A machine learning approach where models find hidden patterns in data without labeled examples. Techniques include clustering similar items together and reducing data dimensionality.",
+    "difficulty": "Intermediate",
+    "tags": ["unlabeled data", "patterns", "dimensionality reduction"],
+    "importance": 4
+  },
+  {
+    "id": "decision_trees",
+    "name": "Decision Trees",
+    "category": "AI / ML",
+    "description": "A supervised learning model that makes predictions by learning a series of if-then rules from data features. Decision trees are intuitive, interpretable, and form the basis of powerful ensemble methods like random forests.",
+    "difficulty": "Intermediate",
+    "tags": ["classification", "splitting", "interpretable"],
+    "importance": 3
+  },
+  {
+    "id": "clustering",
+    "name": "Clustering",
+    "category": "AI / ML",
+    "description": "An unsupervised learning technique that groups similar data points together based on their features. Popular algorithms like K-means and DBSCAN are used in customer segmentation and anomaly detection.",
+    "difficulty": "Intermediate",
+    "tags": ["grouping", "k-means", "similarity"],
+    "importance": 3
+  },
+  {
+    "id": "operating_systems",
+    "name": "Operating Systems",
+    "category": "Systems",
+    "description": "Software that manages computer hardware and provides services for running applications. Operating systems handle memory, processes, file systems, and device communication.",
+    "difficulty": "Intermediate",
+    "tags": ["OS", "kernel", "system software"],
+    "importance": 5
+  },
+  {
+    "id": "compilers",
+    "name": "Compilers",
+    "category": "Systems",
+    "description": "Programs that translate source code written in a high-level language into machine code that a computer can execute. Compilers perform lexical analysis, parsing, optimization, and code generation.",
+    "difficulty": "Advanced",
+    "tags": ["translation", "parsing", "code generation"],
+    "importance": 3
+  },
+  {
+    "id": "memory_management",
+    "name": "Memory Management",
+    "category": "Systems",
+    "description": "The process of controlling and coordinating computer memory, including allocation, deallocation, and organization. Concepts include virtual memory, paging, and garbage collection.",
+    "difficulty": "Intermediate",
+    "tags": ["allocation", "virtual memory", "paging"],
+    "importance": 4
+  },
+  {
+    "id": "process_scheduling",
+    "name": "Process Scheduling",
+    "category": "Systems",
+    "description": "The method by which an operating system decides which process gets CPU time and for how long. Scheduling algorithms like round-robin and priority-based scheduling balance fairness and efficiency.",
+    "difficulty": "Intermediate",
+    "tags": ["CPU", "scheduling", "processes"],
+    "importance": 3
+  },
+  {
+    "id": "file_systems",
+    "name": "File Systems",
+    "category": "Systems",
+    "description": "The way an operating system organizes, stores, and retrieves data on storage devices. File systems manage directories, permissions, and metadata to keep data accessible and structured.",
+    "difficulty": "Intermediate",
+    "tags": ["storage", "directories", "metadata"],
+    "importance": 3
+  },
+  {
+    "id": "virtual_machines",
+    "name": "Virtual Machines",
+    "category": "Systems",
+    "description": "Software emulations of physical computers that run operating systems and applications in isolation. VMs enable running multiple OS instances on a single host and are fundamental to cloud computing.",
+    "difficulty": "Intermediate",
+    "tags": ["virtualization", "hypervisor", "isolation"],
+    "importance": 3
+  },
+  {
+    "id": "distributed_systems",
+    "name": "Distributed Systems",
+    "category": "Systems",
+    "description": "Systems where components on networked computers communicate and coordinate to achieve a common goal. Key challenges include consistency, availability, and partition tolerance (the CAP theorem).",
+    "difficulty": "Advanced",
+    "tags": ["distributed", "consensus", "CAP theorem"],
+    "importance": 4
+  },
+  {
+    "id": "concurrency",
+    "name": "Concurrency",
+    "category": "Systems",
+    "description": "The ability of a system to handle multiple tasks at the same time through threads, processes, or asynchronous execution. Concurrency introduces challenges like race conditions and deadlocks.",
+    "difficulty": "Advanced",
+    "tags": ["threads", "parallelism", "synchronization"],
+    "importance": 4
+  },
+  {
+    "id": "cpu_architecture",
+    "name": "CPU Architecture",
+    "category": "Systems",
+    "description": "The design and organization of a computer's central processing unit, including instruction sets, registers, and pipelines. Understanding CPU architecture helps explain how software executes at the hardware level.",
+    "difficulty": "Advanced",
+    "tags": ["processor", "instruction set", "pipeline"],
+    "importance": 3
+  },
+  {
+    "id": "html_css",
+    "name": "HTML/CSS",
+    "category": "Web Dev",
+    "description": "The foundational technologies of the web. HTML provides the structure and content of web pages, while CSS controls their visual presentation, layout, and styling.",
+    "difficulty": "Beginner",
+    "tags": ["markup", "styling", "web pages"],
+    "importance": 5
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "category": "Web Dev",
+    "description": "The programming language of the web that enables interactive and dynamic content in browsers. JavaScript runs on both client and server sides and powers modern web applications.",
+    "difficulty": "Beginner",
+    "tags": ["scripting", "dynamic", "browser"],
+    "importance": 5
+  },
+  {
+    "id": "http_protocol",
+    "name": "HTTP Protocol",
+    "category": "Web Dev",
+    "description": "The application-layer protocol used for transmitting web resources like HTML pages. HTTP defines how messages are formatted and transmitted, and how servers and browsers respond to requests.",
+    "difficulty": "Beginner",
+    "tags": ["request", "response", "protocol"],
+    "importance": 4
+  },
+  {
+    "id": "rest_apis",
+    "name": "REST APIs",
+    "category": "Web Dev",
+    "description": "An architectural style for designing networked applications using standard HTTP methods. REST APIs use endpoints and JSON data to enable communication between frontend clients and backend servers.",
+    "difficulty": "Intermediate",
+    "tags": ["API", "endpoints", "JSON"],
+    "importance": 5
+  },
+  {
+    "id": "frontend_frameworks",
+    "name": "Frontend Frameworks",
+    "category": "Web Dev",
+    "description": "Libraries and frameworks like React, Vue, and Angular that simplify building interactive user interfaces. They provide component-based architecture, state management, and efficient DOM updates.",
+    "difficulty": "Intermediate",
+    "tags": ["React", "components", "SPA"],
+    "importance": 4
+  },
+  {
+    "id": "backend_development",
+    "name": "Backend Development",
+    "category": "Web Dev",
+    "description": "The server-side of web applications that handles business logic, database operations, and API endpoints. Backend technologies include Node.js, Python, and various frameworks for building robust server applications.",
+    "difficulty": "Intermediate",
+    "tags": ["server", "API", "business logic"],
+    "importance": 4
+  },
+  {
+    "id": "web_security",
+    "name": "Web Security",
+    "category": "Web Dev",
+    "description": "Practices and techniques for protecting web applications from threats like XSS, CSRF, and SQL injection. Web security covers input validation, authentication, HTTPS, and secure coding practices.",
+    "difficulty": "Intermediate",
+    "tags": ["XSS", "CSRF", "HTTPS"],
+    "importance": 4
+  },
+  {
+    "id": "responsive_design",
+    "name": "Responsive Design",
+    "category": "Web Dev",
+    "description": "An approach to web design that makes pages render well on all device sizes, from phones to desktops. It uses flexible grids, media queries, and fluid images to adapt layouts automatically.",
+    "difficulty": "Beginner",
+    "tags": ["mobile", "media queries", "flexible layout"],
+    "importance": 3
+  },
+  {
+    "id": "web_performance",
+    "name": "Web Performance",
+    "category": "Web Dev",
+    "description": "The practice of making websites load and run faster through optimization techniques. Key strategies include code splitting, lazy loading, caching, image optimization, and minimizing network requests.",
+    "difficulty": "Intermediate",
+    "tags": ["optimization", "loading speed", "caching"],
+    "importance": 3
+  },
+  {
+    "id": "tcp_ip",
+    "name": "TCP/IP",
+    "category": "Networking",
+    "description": "The fundamental communication protocol suite of the internet that defines how data is packaged, addressed, transmitted, and received. TCP ensures reliable delivery while IP handles addressing and routing.",
+    "difficulty": "Intermediate",
+    "tags": ["protocol", "packets", "internet"],
+    "importance": 5
+  },
+  {
+    "id": "dns",
+    "name": "DNS",
+    "category": "Networking",
+    "description": "The Domain Name System translates human-readable domain names (like google.com) into IP addresses that computers use to communicate. DNS is often called the phonebook of the internet.",
+    "difficulty": "Beginner",
+    "tags": ["domain names", "resolution", "nameserver"],
+    "importance": 4
+  },
+  {
+    "id": "routing",
+    "name": "Routing",
+    "category": "Networking",
+    "description": "The process of selecting paths in a network along which to send data packets. Routers use protocols like OSPF and BGP to determine the best path for data to travel between networks.",
+    "difficulty": "Intermediate",
+    "tags": ["routers", "path selection", "protocols"],
+    "importance": 4
+  },
+  {
+    "id": "network_security",
+    "name": "Network Security",
+    "category": "Networking",
+    "description": "Policies and practices designed to protect the integrity and usability of network infrastructure. It encompasses firewalls, intrusion detection systems, VPNs, and network monitoring.",
+    "difficulty": "Intermediate",
+    "tags": ["protection", "monitoring", "intrusion detection"],
+    "importance": 4
+  },
+  {
+    "id": "firewalls",
+    "name": "Firewalls",
+    "category": "Networking",
+    "description": "Network security devices that monitor and filter incoming and outgoing traffic based on predefined rules. Firewalls act as a barrier between trusted internal networks and untrusted external networks.",
+    "difficulty": "Intermediate",
+    "tags": ["filtering", "rules", "network barrier"],
+    "importance": 3
+  },
+  {
+    "id": "osi_model",
+    "name": "OSI Model",
+    "category": "Networking",
+    "description": "A conceptual framework with seven layers that standardizes how different network protocols interact. The layers range from physical transmission (Layer 1) to application-level protocols (Layer 7).",
+    "difficulty": "Beginner",
+    "tags": ["layers", "framework", "standardization"],
+    "importance": 4
+  },
+  {
+    "id": "wireless_networks",
+    "name": "Wireless Networks",
+    "category": "Networking",
+    "description": "Networks that use radio waves instead of physical cables to connect devices. Wi-Fi, Bluetooth, and cellular networks are common examples, each with different range and bandwidth characteristics.",
+    "difficulty": "Intermediate",
+    "tags": ["Wi-Fi", "radio", "mobile"],
+    "importance": 3
+  },
+  {
+    "id": "load_balancing",
+    "name": "Load Balancing",
+    "category": "Networking",
+    "description": "The practice of distributing network traffic across multiple servers to ensure no single server is overwhelmed. Load balancers improve application availability, reliability, and response times.",
+    "difficulty": "Intermediate",
+    "tags": ["distribution", "scalability", "availability"],
+    "importance": 3
+  },
+  {
+    "id": "sockets",
+    "name": "Sockets",
+    "category": "Networking",
+    "description": "Endpoints for sending and receiving data across a network. Sockets provide the low-level programming interface for network communication using protocols like TCP and UDP.",
+    "difficulty": "Intermediate",
+    "tags": ["endpoint", "connection", "programming interface"],
+    "importance": 3
+  },
+  {
+    "id": "cryptography",
+    "name": "Cryptography",
+    "category": "Security",
+    "description": "The science of securing information by transforming it into an unreadable format using mathematical algorithms. Cryptography ensures confidentiality, integrity, and authenticity of data.",
+    "difficulty": "Intermediate",
+    "tags": ["ciphers", "confidentiality", "math"],
+    "importance": 5
+  },
+  {
+    "id": "encryption",
+    "name": "Encryption",
+    "category": "Security",
+    "description": "The process of converting plaintext into ciphertext using an algorithm and a key, so only authorized parties can read it. Symmetric encryption uses one key, while asymmetric uses a public-private key pair.",
+    "difficulty": "Intermediate",
+    "tags": ["symmetric", "asymmetric", "ciphertext"],
+    "importance": 5
+  },
+  {
+    "id": "authentication",
+    "name": "Authentication",
+    "category": "Security",
+    "description": "The process of verifying the identity of a user, device, or system. Common methods include passwords, multi-factor authentication, biometrics, and token-based systems like OAuth.",
+    "difficulty": "Beginner",
+    "tags": ["identity", "login", "MFA"],
+    "importance": 5
+  },
+  {
+    "id": "access_control",
+    "name": "Access Control",
+    "category": "Security",
+    "description": "Security techniques that regulate who can view or use resources in a computing environment. Models include role-based access control (RBAC), discretionary access control, and mandatory access control.",
+    "difficulty": "Intermediate",
+    "tags": ["permissions", "RBAC", "authorization"],
+    "importance": 4
+  },
+  {
+    "id": "penetration_testing",
+    "name": "Penetration Testing",
+    "category": "Security",
+    "description": "A simulated cyberattack against a system to identify exploitable vulnerabilities before malicious actors do. Pen testing involves reconnaissance, exploitation, and reporting to improve security posture.",
+    "difficulty": "Advanced",
+    "tags": ["ethical hacking", "vulnerabilities", "testing"],
+    "importance": 3
+  },
+  {
+    "id": "malware_analysis",
+    "name": "Malware Analysis",
+    "category": "Security",
+    "description": "The process of studying malicious software to understand its behavior, origin, and impact. Analysts use static and dynamic techniques to dissect viruses, trojans, ransomware, and other threats.",
+    "difficulty": "Advanced",
+    "tags": ["viruses", "reverse engineering", "threats"],
+    "importance": 3
+  },
+  {
+    "id": "network_security_fundamentals",
+    "name": "Network Security Fundamentals",
+    "category": "Security",
+    "description": "Core principles for protecting data during transmission across networks. Topics include encryption in transit, VPNs, secure protocols like TLS, and defense-in-depth strategies.",
+    "difficulty": "Intermediate",
+    "tags": ["TLS", "VPN", "defense in depth"],
+    "importance": 4
+  },
+  {
+    "id": "secure_coding",
+    "name": "Secure Coding",
+    "category": "Security",
+    "description": "The practice of writing software that is resistant to security vulnerabilities. It involves input validation, proper error handling, avoiding common pitfalls like buffer overflows, and following security guidelines.",
+    "difficulty": "Intermediate",
+    "tags": ["input validation", "best practices", "vulnerability prevention"],
+    "importance": 4
+  },
+  {
+    "id": "public_key_infrastructure",
+    "name": "Public Key Infrastructure",
+    "category": "Security",
+    "description": "A framework for managing digital certificates and public-key encryption to enable secure communication. PKI uses certificate authorities, digital signatures, and trust chains to verify identities online.",
+    "difficulty": "Advanced",
+    "tags": ["certificates", "CA", "digital signatures"],
+    "importance": 3
+  },
+  {
+    "id": "sql",
+    "name": "SQL",
+    "category": "Databases",
+    "description": "Structured Query Language is the standard language for managing and querying relational databases. SQL lets you create tables, insert data, and retrieve information using declarative statements.",
+    "difficulty": "Beginner",
+    "tags": ["queries", "relational", "declarative"],
+    "importance": 5
+  },
+  {
+    "id": "relational_databases",
+    "name": "Relational Databases",
+    "category": "Databases",
+    "description": "Database systems that organize data into tables with rows and columns, linked by relationships through keys. Examples include PostgreSQL, MySQL, and SQLite, all accessed using SQL.",
+    "difficulty": "Beginner",
+    "tags": ["tables", "keys", "RDBMS"],
+    "importance": 5
+  },
+  {
+    "id": "nosql",
+    "name": "NoSQL",
+    "category": "Databases",
+    "description": "A category of databases that store data in formats other than traditional relational tables. Types include document stores (MongoDB), key-value stores (Redis), and graph databases (Neo4j).",
+    "difficulty": "Intermediate",
+    "tags": ["document store", "key-value", "non-relational"],
+    "importance": 4
+  },
+  {
+    "id": "database_indexing",
+    "name": "Database Indexing",
+    "category": "Databases",
+    "description": "A technique that creates additional data structures to speed up data retrieval operations on database tables. Indexes work like a book's index, allowing the database to find rows without scanning every record.",
+    "difficulty": "Intermediate",
+    "tags": ["performance", "B-tree", "lookup"],
+    "importance": 4
+  },
+  {
+    "id": "transactions",
+    "name": "Transactions",
+    "category": "Databases",
+    "description": "A sequence of database operations that are treated as a single unit of work, following ACID properties. Transactions ensure data consistency even when operations fail or multiple users access data simultaneously.",
+    "difficulty": "Intermediate",
+    "tags": ["ACID", "commit", "rollback"],
+    "importance": 4
+  },
+  {
+    "id": "normalization",
+    "name": "Normalization",
+    "category": "Databases",
+    "description": "The process of organizing database tables to reduce data redundancy and improve data integrity. Normal forms (1NF, 2NF, 3NF) provide rules for structuring tables and their relationships.",
+    "difficulty": "Intermediate",
+    "tags": ["normal forms", "redundancy", "design"],
+    "importance": 3
+  },
+  {
+    "id": "query_optimization",
+    "name": "Query Optimization",
+    "category": "Databases",
+    "description": "Techniques for improving database query performance by analyzing execution plans and restructuring queries. Optimization involves choosing efficient joins, using indexes, and minimizing data scans.",
+    "difficulty": "Advanced",
+    "tags": ["execution plan", "performance", "joins"],
+    "importance": 3
+  },
+  {
+    "id": "data_modeling",
+    "name": "Data Modeling",
+    "category": "Databases",
+    "description": "The process of creating a visual representation of a database structure, defining entities, attributes, and relationships. Good data models ensure efficient storage and retrieval of information.",
+    "difficulty": "Intermediate",
+    "tags": ["ER diagrams", "schema", "entities"],
+    "importance": 4
+  },
+  {
+    "id": "database_replication",
+    "name": "Database Replication",
+    "category": "Databases",
+    "description": "The process of copying and maintaining database data across multiple servers for redundancy and availability. Replication strategies include master-slave, master-master, and multi-region setups.",
+    "difficulty": "Advanced",
+    "tags": ["redundancy", "availability", "synchronization"],
+    "importance": 3
+  }
+]
