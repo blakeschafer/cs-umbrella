@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ViewMode, Category, Topic, Relationship as RelType, Resource as ResType } from "@/lib/types";
 import { Umbrella } from "@/components/umbrella/Umbrella";
