@@ -8,6 +8,7 @@ import { GraphView } from "@/components/graph/GraphView";
 import { GraphControls } from "@/components/graph/GraphControls";
 import { TopicCard } from "@/components/topic/TopicCard";
 import { TopicList } from "@/components/topic/TopicList";
+import { SearchOverlay } from "@/components/search/SearchOverlay";
 import topicsData from "@/data/topics.json";
 import relationshipsData from "@/data/relationships.json";
 import resourcesData from "@/data/resources.json";
@@ -167,7 +168,19 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* Search overlay (Task 8) */}
+      {/* Search overlay */}
+      <AnimatePresence>
+        {searchOpen && (
+          <SearchOverlay
+            topics={topics}
+            onSelect={(id) => {
+              handleTopicSelect(id);
+              setSearchOpen(false);
+            }}
+            onClose={() => setSearchOpen(false)}
+          />
+        )}
+      </AnimatePresence>
     </main>
   );
 }
