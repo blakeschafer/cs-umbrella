@@ -6,6 +6,8 @@ import { ViewMode, Category, Topic, Relationship as RelType, Resource as ResType
 import { Umbrella } from "@/components/umbrella/Umbrella";
 import { GraphView } from "@/components/graph/GraphView";
 import { GraphControls } from "@/components/graph/GraphControls";
+import { TopicCard } from "@/components/topic/TopicCard";
+import { TopicList } from "@/components/topic/TopicList";
 import topicsData from "@/data/topics.json";
 import relationshipsData from "@/data/relationships.json";
 import resourcesData from "@/data/resources.json";
@@ -134,7 +136,37 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* Topic Card / Category List drawers (Task 7) */}
+      {/* Topic Card / Category List drawers */}
+      <AnimatePresence>
+        {showCategoryList && selectedCategory && !selectedTopicId && (
+          <TopicList
+            category={selectedCategory}
+            topics={topics.filter((t) => t.category === selectedCategory)}
+            onTopicSelect={(id) => {
+              setSelectedTopicId(id);
+              setShowCategoryList(false);
+            }}
+            onClose={() => {
+              setShowCategoryList(false);
+              setSelectedCategory(null);
+            }}
+          />
+        )}
+
+        {selectedTopic && (
+          <TopicCard
+            topic={selectedTopic}
+            allTopics={topics}
+            relationships={relationships}
+            resources={resources}
+            onClose={handleCloseTopicCard}
+            onTopicSelect={handleTopicSelect}
+            onViewInGraph={handleViewInGraph}
+            onExploreConnections={handleExploreConnections}
+          />
+        )}
+      </AnimatePresence>
+
       {/* Search overlay (Task 8) */}
     </main>
   );
