@@ -27,7 +27,9 @@ function degToRad(deg: number) {
 
 function polarToCart(cx: number, cy: number, r: number, deg: number) {
   const rad = degToRad(deg);
-  return { x: cx + r * Math.cos(rad), y: cy - r * Math.sin(rad) };
+  // Round to 4 decimal places to avoid SSR/client hydration mismatch
+  const round = (n: number) => Math.round(n * 10000) / 10000;
+  return { x: round(cx + r * Math.cos(rad)), y: round(cy - r * Math.sin(rad)) };
 }
 
 function buildArcPath(index: number) {
@@ -47,6 +49,8 @@ function buildArcPath(index: number) {
   const bulgeR = OUTER_R + 18;
   const midPoint = polarToCart(CX, CY, bulgeR, midAngle);
 
+  const labelPos = polarToCart(CX, CY, (OUTER_R + INNER_R) / 2 + 20, midAngle);
+
   return {
     path: [
       `M ${innerEnd.x} ${innerEnd.y}`,
@@ -56,8 +60,8 @@ function buildArcPath(index: number) {
       `A ${INNER_R} ${INNER_R} 0 0 0 ${innerEnd.x} ${innerEnd.y}`,
       "Z",
     ].join(" "),
-    labelPos: polarToCart(CX, CY, (OUTER_R + INNER_R) / 2 + 20, midAngle),
-    midAngle,
+    labelPos,
+    midAngle: Math.round(midAngle * 10000) / 10000,
   };
 }
 
