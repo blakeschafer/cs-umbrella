@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Topic } from "@/lib/types";
 import { createSearch } from "@/lib/search";
@@ -17,10 +17,10 @@ export function SearchOverlay({ topics, onSelect, onClose }: SearchOverlayProps)
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const fuse = useRef(createSearch(topics));
+  const fuse = useMemo(() => createSearch(topics), [topics]);
 
   const results = query.trim()
-    ? fuse.current.search(query).slice(0, 10).map((r) => r.item)
+    ? fuse.search(query).slice(0, 10).map((r) => r.item)
     : [];
 
   // Reset selected index when query changes

@@ -128,6 +128,15 @@ export function Umbrella({ topics, onCategoryClick, onExploreClick, onSearchClic
             Explore Graph &rarr;
           </button>
         </motion.div>
+
+        <motion.p
+          className="mt-6 text-sm text-[var(--text-secondary)] opacity-60"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+        >
+          Click a topic on the umbrella to begin
+        </motion.p>
       </motion.div>
     </div>
   );

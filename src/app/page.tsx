@@ -26,6 +26,7 @@ export default function Home() {
   const [highlightedNodeId, setHighlightedNodeId] = useState<string | null>(null);
   const [categoryFilters, setCategoryFilters] = useState<Set<Category>>(new Set());
   const [difficultyFilter, setDifficultyFilter] = useState<string | null>(null);
+  const [resetZoomTrigger, setResetZoomTrigger] = useState(0);
 
   const selectedTopic = selectedTopicId
     ? topics.find((t) => t.id === selectedTopicId) ?? null
@@ -121,9 +122,9 @@ export default function Home() {
               relationships={relationships}
               highlightedNodeId={highlightedNodeId}
               onNodeClick={handleTopicSelect}
-              onBackClick={handleBackToUmbrella}
               categoryFilters={categoryFilters}
               difficultyFilter={difficultyFilter}
+              resetZoomTrigger={resetZoomTrigger}
             />
             <GraphControls
               categoryFilters={categoryFilters}
@@ -131,7 +132,7 @@ export default function Home() {
               difficultyFilter={difficultyFilter}
               onSetDifficulty={setDifficultyFilter}
               onBackClick={handleBackToUmbrella}
-              onResetZoom={() => {}}
+              onResetZoom={() => setResetZoomTrigger((n) => n + 1)}
             />
           </motion.div>
         )}

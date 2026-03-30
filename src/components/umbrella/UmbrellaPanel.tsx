@@ -93,13 +93,16 @@ export function UmbrellaPanel({ category, index, topicCount, onClick }: Umbrella
         stroke={color}
         strokeWidth={1.5}
         filter={`url(#${filterId})`}
-        initial={{ fillOpacity: 0.15, strokeOpacity: 0.6 }}
+        initial={{ fillOpacity: 0.12, strokeOpacity: 0.6 }}
         animate={{
-          fillOpacity: hovered ? 0.35 : 0.15,
+          fillOpacity: hovered ? 0.35 : [0.12, 0.18, 0.12],
           strokeOpacity: hovered ? 1 : 0.6,
-          scale: hovered ? 1.02 : 1,
+          scale: hovered ? 1.03 : 1,
         }}
-        transition={{ duration: 0.2 }}
+        transition={{
+          fillOpacity: hovered ? { duration: 0.2 } : { duration: 3, repeat: Infinity, ease: "easeInOut" },
+          scale: { duration: 0.2 },
+        }}
         style={{ transformOrigin: `${CX}px ${CY}px` }}
       />
 

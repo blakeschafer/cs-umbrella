@@ -32,9 +32,9 @@ interface GraphViewProps {
   relationships: Relationship[];
   highlightedNodeId: string | null;
   onNodeClick: (topicId: string) => void;
-  onBackClick: () => void;
   categoryFilters: Set<Category>;
   difficultyFilter: string | null;
+  resetZoomTrigger?: number;
 }
 
 export function GraphView({
@@ -44,6 +44,7 @@ export function GraphView({
   onNodeClick,
   categoryFilters,
   difficultyFilter,
+  resetZoomTrigger,
 }: GraphViewProps) {
   const graphRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -104,6 +105,13 @@ export function GraphView({
     });
     return connected;
   }, [activeNodeId, graphData.links]);
+
+  // Reset zoom when trigger increments
+  useEffect(() => {
+    if (!resetZoomTrigger || !graphRef.current) return;
+    graphRef.current.zoom(1, 500);
+    graphRef.current.centerAt(0, 0, 500);
+  }, [resetZoomTrigger]);
 
   // Center on highlighted node when it changes
   useEffect(() => {
