@@ -4,6 +4,8 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ViewMode, Category, Topic, Relationship as RelType, Resource as ResType } from "@/lib/types";
 import { Umbrella } from "@/components/umbrella/Umbrella";
+import { GraphView } from "@/components/graph/GraphView";
+import { GraphControls } from "@/components/graph/GraphControls";
 import topicsData from "@/data/topics.json";
 import relationshipsData from "@/data/relationships.json";
 import resourcesData from "@/data/resources.json";
@@ -110,10 +112,24 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="min-h-screen"
           >
-            {/* Graph component (Task 6) */}
-            <div className="flex min-h-screen items-center justify-center">
-              <p className="text-[var(--text-secondary)]">Graph View — coming in Task 6</p>
-            </div>
+            {/* Graph component */}
+            <GraphView
+              topics={topics}
+              relationships={relationships}
+              highlightedNodeId={highlightedNodeId}
+              onNodeClick={handleTopicSelect}
+              onBackClick={handleBackToUmbrella}
+              categoryFilters={categoryFilters}
+              difficultyFilter={difficultyFilter}
+            />
+            <GraphControls
+              categoryFilters={categoryFilters}
+              onToggleCategory={handleToggleCategory}
+              difficultyFilter={difficultyFilter}
+              onSetDifficulty={setDifficultyFilter}
+              onBackClick={handleBackToUmbrella}
+              onResetZoom={() => {}}
+            />
           </motion.div>
         )}
       </AnimatePresence>
