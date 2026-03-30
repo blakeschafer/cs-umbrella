@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Topic, Category } from "@/lib/types";
 import { CATEGORIES, CATEGORY_COLORS, DIFFICULTY_COLORS } from "@/lib/constants";
-import { UmbrellaPanel } from "./UmbrellaPanel";
+import { UmbrellaPanel, CX, CY } from "./UmbrellaPanel";
 import { RainEffect } from "./RainEffect";
 
 interface UmbrellaProps {
@@ -26,19 +26,24 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
 
   const expandedColor = expandedCategory ? CATEGORY_COLORS[expandedCategory] : "#fff";
 
+  const handlePanelClick = (category: Category) => {
+    // Toggle: click same panel closes it, click different panel switches
+    setExpandedCategory((prev) => (prev === category ? null : category));
+  };
+
   return (
     <div className="relative flex min-h-screen flex-col items-center pt-20 pb-32 px-4">
       <RainEffect />
 
-      {/* Umbrella SVG */}
+      {/* Umbrella SVG — bigger viewBox for larger folds */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 w-full max-w-2xl"
+        className="relative z-10 w-full max-w-4xl"
       >
-        <svg viewBox="0 0 800 480" className="w-full drop-shadow-2xl">
-          {/* Panels — canopy arcs across the top */}
+        <svg viewBox="0 0 1000 560" className="w-full drop-shadow-2xl">
+          {/* Panels */}
           {CATEGORIES.map((cat, i) => (
             <UmbrellaPanel
               key={cat}
@@ -46,26 +51,25 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
               index={i}
               topicCount={countByCategory(cat)}
               isExpanded={expandedCategory === cat}
-              onHover={setExpandedCategory}
-              onClick={(c) => setExpandedCategory(expandedCategory === c ? null : c)}
+              onClick={handlePanelClick}
             />
           ))}
 
-          {/* Pole — straight down from center of canopy */}
+          {/* Pole */}
           <line
-            x1={400} y1={280} x2={400} y2={420}
+            x1={CX} y1={CY} x2={CX} y2={CY + 150}
             stroke="#64748b" strokeWidth={3} strokeLinecap="round"
           />
 
           {/* J-hook handle */}
           <path
-            d="M 400 420 Q 400 445, 382 445 Q 364 445, 364 430"
+            d={`M ${CX} ${CY + 150} Q ${CX} ${CY + 175}, ${CX - 18} ${CY + 175} Q ${CX - 36} ${CY + 175}, ${CX - 36} ${CY + 160}`}
             fill="none" stroke="#64748b" strokeWidth={3} strokeLinecap="round"
           />
 
-          {/* Top tip — top center of canopy */}
-          <circle cx={400} cy={58} r={3.5} fill="#64748b" />
-          <line x1={400} y1={62} x2={400} y2={75} stroke="#64748b" strokeWidth={2} strokeLinecap="round" />
+          {/* Top tip */}
+          <circle cx={CX} cy={38} r={3.5} fill="#64748b" />
+          <line x1={CX} y1={42} x2={CX} y2={58} stroke="#64748b" strokeWidth={2} strokeLinecap="round" />
         </svg>
       </motion.div>
 
@@ -80,20 +84,20 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
           CS Umbrella
         </h1>
         <p className="mt-2 text-[var(--text-secondary)]">
-          Hover over a category to explore its topics
+          Click a category to explore its topics
         </p>
       </motion.div>
 
-      {/* Expanded category topics — inline below umbrella */}
+      {/* Expanded category topics — stays visible until user clicks another or closes */}
       <AnimatePresence mode="wait">
         {expandedCategory && (
           <motion.div
             key={expandedCategory}
-            initial={{ opacity: 0, y: -10, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: "auto" }}
-            exit={{ opacity: 0, y: -10, height: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="relative z-10 mt-6 w-full max-w-4xl overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="relative z-10 mt-8 w-full max-w-4xl"
           >
             {/* Category header */}
             <div className="mb-4 flex items-center gap-3">
@@ -110,6 +114,14 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
               <span className="text-sm text-[var(--text-secondary)]">
                 {categoryTopics.length} topics
               </span>
+              <button
+                onClick={() => setExpandedCategory(null)}
+                className="ml-auto rounded-lg p-1 text-[var(--text-secondary)] transition-colors hover:bg-white/10 hover:text-white"
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
 
             {/* Topic grid */}
@@ -119,7 +131,7 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
                   key={topic.id}
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2, delay: i * 0.03 }}
+                  transition={{ duration: 0.2, delay: i * 0.04 }}
                   onClick={() => onTopicClick(topic.id)}
                   className="group rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 text-left transition-all hover:border-opacity-60 hover:bg-white/5"
                   style={{ borderColor: `${expandedColor}20` }}

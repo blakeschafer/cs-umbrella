@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CS Umbrella
+
+**Explore the entire field of computer science — visually connected.**
+
+CS Umbrella is an interactive web app that maps computer science into a connected, explorable knowledge graph. Start with the umbrella visualization showing 8 top-level categories, then drill into an Obsidian-style graph to explore 75+ topics and their relationships.
+
+## Features
+
+- **Umbrella View** — Interactive SVG canopy with 8 CS categories. Click a panel to expand its topics inline.
+- **Graph View** — Force-directed knowledge graph with 75 nodes and 130+ edges. Hover to highlight connections, click nodes to read about topics.
+- **Topic Cards** — Detailed info for each topic including description, prerequisites, related topics, and learning resources.
+- **Search** — Fuzzy search bar (Cmd+K) with instant results across all topics.
+- **Responsive** — Works on desktop and tablet.
+
+## Tech Stack
+
+- [Next.js 15+](https://nextjs.org/) (App Router)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [react-force-graph-2d](https://github.com/vasturiano/react-force-graph)
+- [fuse.js](https://www.fusejs.io/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Install and Run
 
 ```bash
+git clone https://github.com/YOUR_USERNAME/cs-umbrella.git
+cd cs-umbrella
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/
+    layout.tsx          — Root layout, dark theme, fonts
+    page.tsx            — Main page, view state management
+    globals.css         — Tailwind + CSS custom properties
+  components/
+    Navbar.tsx           — Top nav with view toggle
+    SearchBar.tsx        — Bottom search bar with fuzzy matching
+    umbrella/
+      Umbrella.tsx       — Main umbrella visualization
+      UmbrellaPanel.tsx  — Individual canopy panel
+      RainEffect.tsx     — Canvas rain particle background
+    graph/
+      GraphView.tsx      — Force-directed graph (react-force-graph-2d)
+      GraphControls.tsx  — Category/difficulty filters
+    topic/
+      TopicCard.tsx      — Slide-in topic detail drawer
+    ui/
+      Badge.tsx          — Category and difficulty badges
+      Button.tsx         — Shared button component
+      textarea.tsx       — Textarea (shadcn)
+  data/
+    topics.json          — 75 CS topics across 8 categories
+    relationships.json   — 130 topic relationships
+    resources.json       — 150+ learning resources
+  lib/
+    types.ts             — TypeScript interfaces
+    constants.ts         — Colors, categories
+    search.ts            — fuse.js search setup
+    utils.ts             — cn() utility
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+We welcome contributions! Here's how to get started:
 
-## Deploy on Vercel
+### Ways to Contribute
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Add topics** — Expand the dataset beyond the initial 75 topics. Add entries to `src/data/topics.json`, relationships to `relationships.json`, and resources to `resources.json`.
+- **Improve descriptions** — Make topic descriptions clearer or more beginner-friendly.
+- **Add resources** — Link to high-quality articles, videos, and courses in `resources.json`.
+- **Fix bugs** — Check the Issues tab.
+- **Improve UI/UX** — Better animations, responsive design, accessibility.
+- **New features** — Learning paths, progress tracking, 3D graph mode.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Development Workflow
+
+1. Fork the repo
+2. Create a feature branch: `git checkout -b feat/your-feature`
+3. Make your changes
+4. Run the build to check for errors: `npm run build`
+5. Commit with a descriptive message: `git commit -m "feat: add new topics for cryptography"`
+6. Push and open a PR
+
+### Adding a New Topic
+
+Add an entry to `src/data/topics.json`:
+
+```json
+{
+  "id": "your_topic_id",
+  "name": "Your Topic Name",
+  "category": "Algorithms",
+  "description": "A clear, 2-3 sentence beginner-friendly description.",
+  "difficulty": "Beginner",
+  "tags": ["relevant", "tags"],
+  "importance": 3
+}
+```
+
+Then add relationships in `relationships.json` and resources in `resources.json`.
+
+### Data Validation
+
+- All topic IDs must be unique and use `snake_case`
+- All `source`/`target` in relationships must reference valid topic IDs
+- All `topicId` in resources must reference valid topic IDs
+- Categories must be one of: Algorithms, Data Structures, AI / ML, Systems, Web Dev, Networking, Security, Databases
+
+### Commit Convention
+
+We use conventional commits:
+
+- `feat:` — New feature
+- `fix:` — Bug fix
+- `docs:` — Documentation
+- `data:` — Dataset changes (new topics, resources, relationships)
+
+## Roadmap
+
+- [ ] 3D graph view (react-force-graph-3d)
+- [ ] Learning paths / skill trees
+- [ ] User accounts and progress tracking
+- [ ] AI-powered topic explanations
+- [ ] More topics (200+)
+- [ ] Mobile-optimized layout
+- [ ] Light mode
+
+## License
+
+MIT
