@@ -1,24 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Topic, Category } from "@/lib/types";
-import { CATEGORIES } from "@/lib/constants";
+import { CATEGORIES, CATEGORY_COLORS, DIFFICULTY_COLORS } from "@/lib/constants";
 import { UmbrellaPanel } from "./UmbrellaPanel";
 import { RainEffect } from "./RainEffect";
 
 interface UmbrellaProps {
   topics: Topic[];
-  onCategoryClick: (category: Category) => void;
-  onExploreClick: () => void;
-  onSearchClick: () => void;
+  onTopicClick: (topicId: string) => void;
 }
 
-export function Umbrella({ topics, onCategoryClick, onExploreClick, onSearchClick }: UmbrellaProps) {
+export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
+  const [expandedCategory, setExpandedCategory] = useState<Category | null>(null);
+
   const countByCategory = (cat: Category) =>
     topics.filter((t) => t.category === cat).length;
 
+  const categoryTopics = expandedCategory
+    ? topics
+        .filter((t) => t.category === expandedCategory)
+        .sort((a, b) => b.importance - a.importance)
+    : [];
+
+  const expandedColor = expandedCategory ? CATEGORY_COLORS[expandedCategory] : "#fff";
+
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center gap-6 px-4 py-12">
+    <div className="relative flex min-h-screen flex-col items-center pt-24 pb-12 px-4">
       <RainEffect />
 
       {/* Umbrella SVG */}
@@ -36,108 +45,108 @@ export function Umbrella({ topics, onCategoryClick, onExploreClick, onSearchClic
               category={cat}
               index={i}
               topicCount={countByCategory(cat)}
-              onClick={onCategoryClick}
+              isExpanded={expandedCategory === cat}
+              onHover={setExpandedCategory}
+              onClick={(c) => setExpandedCategory(expandedCategory === c ? null : c)}
             />
           ))}
 
           {/* Pole */}
           <line
-            x1={400}
-            y1={300}
-            x2={400}
-            y2={440}
-            stroke="#94a3b8"
-            strokeWidth={3}
-            strokeLinecap="round"
+            x1={400} y1={300} x2={400} y2={440}
+            stroke="#94a3b8" strokeWidth={3} strokeLinecap="round"
           />
 
           {/* J-hook handle */}
           <path
             d="M 400 440 Q 400 460 385 465 Q 370 470 365 455"
-            fill="none"
-            stroke="#94a3b8"
-            strokeWidth={3}
-            strokeLinecap="round"
+            fill="none" stroke="#94a3b8" strokeWidth={3} strokeLinecap="round"
           />
 
           {/* Top tip */}
           <circle cx={400} cy={50} r={4} fill="#94a3b8" />
-
-          {/* Top tip connector line to canopy */}
-          <line
-            x1={400}
-            y1={54}
-            x2={400}
-            y2={80}
-            stroke="#94a3b8"
-            strokeWidth={2}
-            strokeLinecap="round"
-          />
+          <line x1={400} y1={54} x2={400} y2={80} stroke="#94a3b8" strokeWidth={2} strokeLinecap="round" />
         </svg>
       </motion.div>
 
-      {/* Title & actions */}
+      {/* Title */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-        className="relative z-10 flex flex-col items-center gap-4 text-center"
+        className="relative z-10 mt-4 text-center"
       >
-        <h1 className="text-5xl font-bold tracking-tight text-white">
+        <h1 className="text-4xl font-bold tracking-tight text-white">
           CS Umbrella
         </h1>
-        <p className="max-w-md text-[var(--text-secondary)]">
-          Your interactive map to computer science. Click a panel to explore a
-          category, or dive into the knowledge graph.
+        <p className="mt-2 text-[var(--text-secondary)]">
+          Hover over a category to explore its topics
         </p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-          className="mt-2 flex gap-3"
-        >
-          <button
-            onClick={onSearchClick}
-            className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-white/80 backdrop-blur-sm transition-colors hover:bg-white/10 hover:text-white"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-            Search
-            <kbd className="ml-1 rounded border border-white/20 px-1.5 py-0.5 text-[10px] text-white/40">
-              Cmd+K
-            </kbd>
-          </button>
-
-          <button
-            onClick={onExploreClick}
-            className="rounded-lg bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-          >
-            Explore Graph &rarr;
-          </button>
-        </motion.div>
-
-        <motion.p
-          className="mt-6 text-sm text-[var(--text-secondary)] opacity-60"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-        >
-          Click a topic on the umbrella to begin
-        </motion.p>
       </motion.div>
+
+      {/* Expanded category topics — inline below umbrella */}
+      <AnimatePresence mode="wait">
+        {expandedCategory && (
+          <motion.div
+            key={expandedCategory}
+            initial={{ opacity: 0, y: -10, height: 0 }}
+            animate={{ opacity: 1, y: 0, height: "auto" }}
+            exit={{ opacity: 0, y: -10, height: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="relative z-10 mt-8 w-full max-w-4xl overflow-hidden"
+          >
+            {/* Category header */}
+            <div className="mb-4 flex items-center gap-3">
+              <div
+                className="h-3 w-3 rounded-full"
+                style={{ backgroundColor: expandedColor }}
+              />
+              <h2
+                className="text-xl font-semibold"
+                style={{ color: expandedColor }}
+              >
+                {expandedCategory}
+              </h2>
+              <span className="text-sm text-[var(--text-secondary)]">
+                {categoryTopics.length} topics
+              </span>
+            </div>
+
+            {/* Topic grid */}
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {categoryTopics.map((topic, i) => (
+                <motion.button
+                  key={topic.id}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2, delay: i * 0.03 }}
+                  onClick={() => onTopicClick(topic.id)}
+                  className="group rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 text-left transition-all hover:border-opacity-60 hover:bg-white/5"
+                  style={{ borderColor: `${expandedColor}20` }}
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <span className="text-sm font-medium text-[var(--text-primary)] group-hover:text-white">
+                      {topic.name}
+                    </span>
+                    <span
+                      className="shrink-0 rounded-full px-2 py-0.5 text-[10px] font-medium"
+                      style={{
+                        backgroundColor: `${DIFFICULTY_COLORS[topic.difficulty]}15`,
+                        color: DIFFICULTY_COLORS[topic.difficulty],
+                      }}
+                    >
+                      {topic.difficulty}
+                    </span>
+                  </div>
+                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-[var(--text-secondary)]">
+                    {topic.description}
+                  </p>
+                </motion.button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

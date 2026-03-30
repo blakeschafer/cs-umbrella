@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Category } from "@/lib/types";
 import { CATEGORY_COLORS } from "@/lib/constants";
@@ -9,6 +8,8 @@ interface UmbrellaPanelProps {
   category: Category;
   index: number;
   topicCount: number;
+  isExpanded: boolean;
+  onHover: (category: Category | null) => void;
   onClick: (category: Category) => void;
 }
 
@@ -27,7 +28,6 @@ function degToRad(deg: number) {
 
 function polarToCart(cx: number, cy: number, r: number, deg: number) {
   const rad = degToRad(deg);
-  // Round to 4 decimal places to avoid SSR/client hydration mismatch
   const round = (n: number) => Math.round(n * 10000) / 10000;
   return { x: round(cx + r * Math.cos(rad)), y: round(cy - r * Math.sin(rad)) };
 }
@@ -36,15 +36,11 @@ function buildArcPath(index: number) {
   const startAngle = START_DEG + index * SWEEP;
   const endAngle = startAngle + SWEEP;
 
-  // Outer arc goes from startAngle to endAngle
   const outerStart = polarToCart(CX, CY, OUTER_R, startAngle);
   const outerEnd = polarToCart(CX, CY, OUTER_R, endAngle);
-
-  // Inner arc goes from endAngle back to startAngle
   const innerStart = polarToCart(CX, CY, INNER_R, endAngle);
   const innerEnd = polarToCart(CX, CY, INNER_R, startAngle);
 
-  // Add a subtle curve to the outer edge for that canopy bulge
   const midAngle = (startAngle + endAngle) / 2;
   const bulgeR = OUTER_R + 18;
   const midPoint = polarToCart(CX, CY, bulgeR, midAngle);
@@ -65,25 +61,23 @@ function buildArcPath(index: number) {
   };
 }
 
-export function UmbrellaPanel({ category, index, topicCount, onClick }: UmbrellaPanelProps) {
-  const [hovered, setHovered] = useState(false);
+export function UmbrellaPanel({ category, index, topicCount, isExpanded, onHover, onClick }: UmbrellaPanelProps) {
   const color = CATEGORY_COLORS[category];
   const { path, labelPos, midAngle } = buildArcPath(index);
   const filterId = `glow-${index}`;
 
-  // Rotate label to be readable
   const labelRotation = -midAngle;
 
   return (
     <g
       onClick={() => onClick(category)}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() => onHover(category)}
+      onMouseLeave={() => onHover(null)}
       style={{ cursor: "pointer" }}
     >
       <defs>
         <filter id={filterId} x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation={hovered ? 6 : 0} result="blur" />
+          <feGaussianBlur stdDeviation={isExpanded ? 8 : 0} result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
@@ -99,13 +93,13 @@ export function UmbrellaPanel({ category, index, topicCount, onClick }: Umbrella
         filter={`url(#${filterId})`}
         initial={{ fillOpacity: 0.12, strokeOpacity: 0.6 }}
         animate={{
-          fillOpacity: hovered ? 0.35 : [0.12, 0.18, 0.12],
-          strokeOpacity: hovered ? 1 : 0.6,
-          scale: hovered ? 1.03 : 1,
+          fillOpacity: isExpanded ? 0.4 : [0.12, 0.18, 0.12],
+          strokeOpacity: isExpanded ? 1 : 0.6,
+          scale: isExpanded ? 1.05 : 1,
         }}
         transition={{
-          fillOpacity: hovered ? { duration: 0.2 } : { duration: 3, repeat: Infinity, ease: "easeInOut" },
-          scale: { duration: 0.2 },
+          fillOpacity: isExpanded ? { duration: 0.2 } : { duration: 3, repeat: Infinity, ease: "easeInOut" },
+          scale: { duration: 0.25, ease: "easeOut" },
         }}
         style={{ transformOrigin: `${CX}px ${CY}px` }}
       />
@@ -116,8 +110,8 @@ export function UmbrellaPanel({ category, index, topicCount, onClick }: Umbrella
         y={labelPos.y}
         textAnchor="middle"
         dominantBaseline="central"
-        fill={hovered ? "#fff" : "rgba(255,255,255,0.8)"}
-        fontSize={11}
+        fill={isExpanded ? "#fff" : "rgba(255,255,255,0.8)"}
+        fontSize={isExpanded ? 12 : 11}
         fontWeight={600}
         style={{ pointerEvents: "none", userSelect: "none" }}
         transform={`rotate(${labelRotation}, ${labelPos.x}, ${labelPos.y})`}
@@ -125,8 +119,8 @@ export function UmbrellaPanel({ category, index, topicCount, onClick }: Umbrella
         {category}
       </text>
 
-      {/* Topic count tooltip on hover */}
-      {hovered && (
+      {/* Topic count on hover */}
+      {isExpanded && (
         <motion.text
           x={labelPos.x}
           y={labelPos.y + 16}

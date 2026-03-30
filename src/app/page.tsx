@@ -3,11 +3,11 @@
 import { useState, useCallback, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ViewMode, Category, Topic, Relationship as RelType, Resource as ResType } from "@/lib/types";
+import { Navbar } from "@/components/Navbar";
 import { Umbrella } from "@/components/umbrella/Umbrella";
 import { GraphView } from "@/components/graph/GraphView";
 import { GraphControls } from "@/components/graph/GraphControls";
 import { TopicCard } from "@/components/topic/TopicCard";
-import { TopicList } from "@/components/topic/TopicList";
 import { SearchOverlay } from "@/components/search/SearchOverlay";
 import topicsData from "@/data/topics.json";
 import relationshipsData from "@/data/relationships.json";
@@ -20,8 +20,6 @@ const resources = resourcesData as ResType[];
 export default function Home() {
   const [view, setView] = useState<ViewMode>("umbrella");
   const [selectedTopicId, setSelectedTopicId] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
-  const [showCategoryList, setShowCategoryList] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [highlightedNodeId, setHighlightedNodeId] = useState<string | null>(null);
   const [categoryFilters, setCategoryFilters] = useState<Set<Category>>(new Set());
@@ -34,26 +32,18 @@ export default function Home() {
 
   const handleTopicSelect = useCallback((topicId: string) => {
     setSelectedTopicId(topicId);
-    setShowCategoryList(false);
   }, []);
 
   const handleExploreConnections = useCallback((topicId: string) => {
     setView("graph");
     setHighlightedNodeId(topicId);
     setSelectedTopicId(null);
-    setShowCategoryList(false);
   }, []);
 
   const handleViewInGraph = useCallback((topicId: string) => {
     setView("graph");
     setHighlightedNodeId(topicId);
     setSelectedTopicId(topicId);
-    setShowCategoryList(false);
-  }, []);
-
-  const handleBackToUmbrella = useCallback(() => {
-    setView("umbrella");
-    setHighlightedNodeId(null);
   }, []);
 
   const handleCloseTopicCard = useCallback(() => {
@@ -72,6 +62,13 @@ export default function Home() {
     });
   }, []);
 
+  const handleViewChange = useCallback((newView: ViewMode) => {
+    setView(newView);
+    if (newView === "umbrella") {
+      setHighlightedNodeId(null);
+    }
+  }, []);
+
   // Cmd+K keyboard shortcut
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -86,6 +83,14 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-hidden">
+      {/* Navbar */}
+      <Navbar
+        view={view}
+        onViewChange={handleViewChange}
+        onSearchClick={() => setSearchOpen(true)}
+      />
+
+      {/* Views */}
       <AnimatePresence mode="wait">
         {view === "umbrella" ? (
           <motion.div
@@ -93,18 +98,12 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.4 }}
             className="min-h-screen"
           >
             <Umbrella
               topics={topics}
-              onCategoryClick={(category) => {
-                setSelectedCategory(category);
-                setShowCategoryList(true);
-                setSelectedTopicId(null);
-              }}
-              onExploreClick={() => setView("graph")}
-              onSearchClick={() => setSearchOpen(true)}
+              onTopicClick={handleTopicSelect}
             />
           </motion.div>
         ) : (
@@ -113,10 +112,9 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="min-h-screen"
+            transition={{ duration: 0.4 }}
+            className="min-h-screen pt-14"
           >
-            {/* Graph component */}
             <GraphView
               topics={topics}
               relationships={relationships}
@@ -131,30 +129,14 @@ export default function Home() {
               onToggleCategory={handleToggleCategory}
               difficultyFilter={difficultyFilter}
               onSetDifficulty={setDifficultyFilter}
-              onBackClick={handleBackToUmbrella}
               onResetZoom={() => setResetZoomTrigger((n) => n + 1)}
             />
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Topic Card / Category List drawers */}
+      {/* Topic Card drawer */}
       <AnimatePresence>
-        {showCategoryList && selectedCategory && !selectedTopicId && (
-          <TopicList
-            category={selectedCategory}
-            topics={topics.filter((t) => t.category === selectedCategory)}
-            onTopicSelect={(id) => {
-              setSelectedTopicId(id);
-              setShowCategoryList(false);
-            }}
-            onClose={() => {
-              setShowCategoryList(false);
-              setSelectedCategory(null);
-            }}
-          />
-        )}
-
         {selectedTopic && (
           <TopicCard
             topic={selectedTopic}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="canopy" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="25%" stop-color="#a78bfa"/>
+      <stop offset="50%" stop-color="#f472b6"/>
+      <stop offset="75%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <!-- Canopy -->
+  <path d="M4 18 Q4 4 16 4 Q28 4 28 18" fill="none" stroke="url(#canopy)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Ribs -->
+  <line x1="10" y1="6.5" x2="10" y2="18" stroke="url(#canopy)" stroke-width="1" opacity="0.4"/>
+  <line x1="16" y1="4" x2="16" y2="18" stroke="url(#canopy)" stroke-width="1" opacity="0.4"/>
+  <line x1="22" y1="6.5" x2="22" y2="18" stroke="url(#canopy)" stroke-width="1" opacity="0.4"/>
+  <!-- Pole -->
+  <line x1="16" y1="18" x2="16" y2="26" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Hook -->
+  <path d="M16 26 Q16 29 13.5 29 Q11 29 11 27" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+</svg>

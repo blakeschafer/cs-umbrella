@@ -9,7 +9,6 @@ interface GraphControlsProps {
   onToggleCategory: (category: Category) => void;
   difficultyFilter: string | null;
   onSetDifficulty: (difficulty: string | null) => void;
-  onBackClick: () => void;
   onResetZoom: () => void;
 }
 
@@ -20,16 +19,10 @@ export function GraphControls({
   onToggleCategory,
   difficultyFilter,
   onSetDifficulty,
-  onBackClick,
   onResetZoom,
 }: GraphControlsProps) {
   return (
-    <div className="absolute top-4 right-4 z-20 flex flex-col gap-3 w-52">
-      {/* Back button */}
-      <Button variant="ghost" size="sm" onClick={onBackClick} className="self-start">
-        ← Back to Umbrella
-      </Button>
-
+    <div className="absolute top-18 right-4 z-20 flex flex-col gap-3 w-52">
       {/* Category filters */}
       <div
         className="rounded-xl p-3 flex flex-col gap-2"
