@@ -31,7 +31,7 @@ export function Navbar({ view, onViewChange }: NavbarProps) {
           {/* J-hook */}
           <path d="M16 26 Q16 29.5 13 29.5 Q10 29.5 10 27" fill="none" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" />
         </svg>
-        <span className="text-lg font-semibold text-[var(--text-primary)]">CS Umbrella</span>
+        <span className="text-lg font-semibold text-[var(--text-primary)]">Computer Science</span>
       </div>
 
       {/* View toggle — centered */}
