@@ -6,7 +6,17 @@
     "description": "A mathematical notation that describes the upper bound of an algorithm's time or space complexity. It helps compare how algorithms scale as input size grows.",
     "difficulty": "Beginner",
     "tags": ["complexity", "analysis", "performance"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand what algorithm complexity means and why it matters",
+      "Learn the concept of input size 'n' and how it drives performance",
+      "Study the common complexity classes: O(1), O(log n), O(n), O(n log n), O(n²)",
+      "Practice calculating Big O for simple loops and nested loops",
+      "Learn space complexity and how to analyze memory usage",
+      "Compare algorithms using Big O to make informed choices",
+      "Study best, average, and worst case analysis",
+      "Apply Big O analysis to real data structures like arrays and hash tables"
+    ]
   },
   {
     "id": "sorting_algorithms",
@@ -15,7 +25,17 @@
     "description": "Methods for arranging elements in a specific order, such as ascending or descending. Common examples include bubble sort, merge sort, and quicksort, each with different performance trade-offs.",
     "difficulty": "Intermediate",
     "tags": ["sorting", "comparison", "ordering"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand why sorting is a fundamental problem in CS",
+      "Implement and trace bubble sort to build intuition",
+      "Learn selection sort and insertion sort as simple O(n²) algorithms",
+      "Study merge sort as a divide-and-conquer O(n log n) algorithm",
+      "Implement quicksort and understand its partitioning strategy",
+      "Learn heap sort and how it uses the heap data structure",
+      "Compare all algorithms by time complexity, space complexity, and stability",
+      "Know which sorting algorithm to choose for a given use case"
+    ]
   },
   {
     "id": "search_algorithms",
@@ -24,7 +44,17 @@
     "description": "Techniques for finding specific elements within data structures. Linear search checks every element while binary search efficiently halves the search space on sorted data.",
     "difficulty": "Beginner",
     "tags": ["searching", "binary search", "linear search"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand what it means to search for an element in a collection",
+      "Implement linear search and understand O(n) complexity",
+      "Learn why sorted data enables faster searching",
+      "Implement binary search and trace through examples",
+      "Understand binary search's O(log n) complexity and prove it",
+      "Apply binary search to problems beyond simple arrays",
+      "Learn about interpolation search as an extension",
+      "Practice search problems on coding platforms"
+    ]
   },
   {
     "id": "graph_algorithms",
@@ -33,7 +63,17 @@
     "description": "Algorithms that operate on graph data structures to solve problems like finding shortest paths, detecting cycles, and traversing networks. Key examples include BFS, DFS, and Dijkstra's algorithm.",
     "difficulty": "Advanced",
     "tags": ["graphs", "traversal", "shortest path"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Review graph terminology: vertices, edges, directed vs undirected",
+      "Implement Breadth-First Search (BFS) using a queue",
+      "Implement Depth-First Search (DFS) using recursion or a stack",
+      "Use BFS/DFS to detect cycles and connected components",
+      "Learn Dijkstra's algorithm for shortest paths in weighted graphs",
+      "Study Bellman-Ford for graphs with negative weights",
+      "Understand minimum spanning trees with Kruskal's and Prim's algorithms",
+      "Practice graph problems on LeetCode and competitive programming sites"
+    ]
   },
   {
     "id": "dynamic_programming",
@@ -42,7 +82,17 @@
     "description": "An optimization technique that solves complex problems by breaking them into overlapping subproblems and storing their solutions. It avoids redundant computation through memoization or tabulation.",
     "difficulty": "Advanced",
     "tags": ["optimization", "memoization", "subproblems"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand the two properties: overlapping subproblems and optimal substructure",
+      "Solve the Fibonacci sequence recursively, then optimize with memoization",
+      "Learn top-down (memoization) vs bottom-up (tabulation) approaches",
+      "Solve classic 1D DP problems: coin change, climbing stairs",
+      "Tackle 2D DP problems: longest common subsequence, edit distance",
+      "Learn the knapsack problem and its variants",
+      "Practice identifying DP patterns in new problems",
+      "Study interval DP and DP on trees for advanced applications"
+    ]
   },
   {
     "id": "greedy_algorithms",
@@ -51,7 +101,17 @@
     "description": "A problem-solving approach that makes the locally optimal choice at each step, hoping to find a global optimum. Works well for problems like activity selection and Huffman coding.",
     "difficulty": "Intermediate",
     "tags": ["optimization", "heuristic", "local optimal"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand what 'greedy choice' means and when it leads to optimal solutions",
+      "Study the activity selection problem as a classic greedy example",
+      "Implement Huffman coding for data compression",
+      "Learn the fractional knapsack problem (greedy vs 0-1 knapsack)",
+      "Understand why greedy doesn't always work (use counterexamples)",
+      "Compare greedy to dynamic programming approaches",
+      "Practice greedy problems involving intervals, scheduling, and graphs",
+      "Build intuition for when to apply greedy vs other strategies"
+    ]
   },
   {
     "id": "divide_and_conquer",
@@ -60,7 +120,17 @@
     "description": "A strategy that breaks a problem into smaller subproblems, solves each independently, and combines their results. Merge sort and quicksort are classic examples of this paradigm.",
     "difficulty": "Intermediate",
     "tags": ["recursion", "subproblems", "merge"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand the three-step pattern: divide, conquer, combine",
+      "Analyze merge sort as the canonical divide and conquer example",
+      "Learn how the Master Theorem helps analyze recursive algorithms",
+      "Implement binary search through a divide and conquer lens",
+      "Study the closest pair of points algorithm",
+      "Implement Strassen's matrix multiplication",
+      "Practice identifying problems that have a natural divide structure",
+      "Understand the trade-off between recursive overhead and improved complexity"
+    ]
   },
   {
     "id": "recursion",
@@ -69,7 +139,17 @@
     "description": "A technique where a function calls itself to solve smaller instances of the same problem. Every recursive solution needs a base case to prevent infinite loops and a recursive case that moves toward it.",
     "difficulty": "Beginner",
     "tags": ["base case", "call stack", "self-reference"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand what the call stack is and how function calls work",
+      "Write your first recursive function: factorial",
+      "Learn the two essential parts: base case and recursive case",
+      "Trace through Fibonacci using recursion",
+      "Understand how recursion relates to mathematical induction",
+      "Practice tree traversal problems using recursion",
+      "Learn how to convert recursion to iteration when needed",
+      "Study tail recursion and how compilers optimize it"
+    ]
   },
   {
     "id": "backtracking",
@@ -78,7 +158,17 @@
     "description": "A systematic method for exploring all possible solutions by building candidates incrementally and abandoning them when they fail constraints. Used in puzzles like N-Queens and Sudoku solvers.",
     "difficulty": "Advanced",
     "tags": ["constraint satisfaction", "pruning", "exploration"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand exhaustive search and why it's sometimes necessary",
+      "Learn the backtracking template: choose, explore, unchoose",
+      "Implement the N-Queens problem step by step",
+      "Solve a Sudoku solver using backtracking",
+      "Study permutations and combinations generation",
+      "Learn pruning techniques to speed up backtracking",
+      "Understand the difference between backtracking and brute force",
+      "Practice subset-sum and word search problems"
+    ]
   },
   {
     "id": "hashing",
@@ -87,7 +177,74 @@
     "description": "A technique that maps data of arbitrary size to fixed-size values using hash functions. It enables near-constant time lookups and is the backbone of hash tables and data integrity checks.",
     "difficulty": "Intermediate",
     "tags": ["hash function", "collision", "mapping"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand what a hash function does and what makes a good one",
+      "Learn the key properties: determinism, uniformity, and fixed output size",
+      "Study collision: why it happens and why it's unavoidable",
+      "Implement chaining as a collision resolution strategy",
+      "Learn open addressing: linear probing and quadratic probing",
+      "Understand load factor and when to resize a hash table",
+      "Study cryptographic hash functions (MD5, SHA) and their uses",
+      "Apply hashing to real problems: deduplication, caching, and checksums"
+    ]
+  },
+  {
+    "id": "a_star_search",
+    "name": "A* Search",
+    "category": "Algorithms",
+    "description": "An informed search algorithm that finds the shortest path between nodes using a heuristic to guide exploration. It combines the cost to reach a node with an estimate of the remaining distance to efficiently find optimal paths.",
+    "difficulty": "Advanced",
+    "tags": ["pathfinding", "heuristic", "informed search"],
+    "importance": 3,
+    "roadmap": [
+      "Review BFS and Dijkstra's algorithm as uninformed search methods",
+      "Understand the concept of a heuristic function h(n)",
+      "Learn the A* evaluation function: f(n) = g(n) + h(n)",
+      "Implement A* on a grid-based pathfinding problem",
+      "Study admissible heuristics and why they guarantee optimality",
+      "Learn the Manhattan distance and Euclidean distance as common heuristics",
+      "Compare A* performance to BFS and Dijkstra's in practice",
+      "Apply A* to game development or robotics path planning"
+    ]
+  },
+  {
+    "id": "dijkstras_algorithm",
+    "name": "Dijkstra's Algorithm",
+    "category": "Algorithms",
+    "description": "A greedy algorithm that finds the shortest paths from a source node to all other nodes in a weighted graph with non-negative edge weights. It is widely used in network routing and GPS navigation.",
+    "difficulty": "Intermediate",
+    "tags": ["shortest path", "weighted graphs", "greedy"],
+    "importance": 4,
+    "roadmap": [
+      "Review graph basics: weighted edges and adjacency representations",
+      "Understand the single-source shortest path problem",
+      "Trace through Dijkstra's algorithm manually on a small graph",
+      "Implement Dijkstra's using a priority queue (min-heap)",
+      "Analyze the time complexity: O((V + E) log V) with a binary heap",
+      "Understand why it doesn't work with negative edge weights",
+      "Compare to Bellman-Ford for handling negative weights",
+      "Apply Dijkstra's to network routing and map navigation problems"
+    ]
+  },
+  {
+    "id": "binary_search",
+    "name": "Binary Search",
+    "category": "Algorithms",
+    "description": "An efficient algorithm that finds a target value in a sorted array by repeatedly halving the search space. With O(log n) time complexity, it is far faster than linear search for large datasets.",
+    "difficulty": "Beginner",
+    "tags": ["search", "sorted array", "logarithmic"],
+    "importance": 5,
+    "roadmap": [
+      "Understand the prerequisite: data must be sorted",
+      "Trace through binary search by hand on a sorted array",
+      "Implement iterative binary search and test edge cases",
+      "Implement recursive binary search and compare",
+      "Understand why the complexity is O(log n)",
+      "Learn off-by-one errors and how to avoid them",
+      "Apply binary search to find insertion positions and ranges",
+      "Solve advanced problems using binary search on the answer"
+    ]
   },
   {
     "id": "arrays",
@@ -96,7 +253,17 @@
     "description": "A fundamental data structure that stores elements in contiguous memory locations, allowing fast access by index. Arrays have fixed size in many languages and offer O(1) random access.",
     "difficulty": "Beginner",
     "tags": ["sequential", "indexing", "contiguous memory"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand how arrays are stored in memory as contiguous blocks",
+      "Learn zero-based indexing and how to access elements",
+      "Practice common operations: insert, delete, search, and iterate",
+      "Understand the time complexity of each array operation",
+      "Learn about dynamic arrays and how they resize automatically",
+      "Study multi-dimensional arrays (2D arrays for matrices)",
+      "Practice common interview problems: two pointers, sliding window",
+      "Build a simple project using arrays, like a to-do list"
+    ]
   },
   {
     "id": "linked_lists",
@@ -105,7 +272,17 @@
     "description": "A linear data structure where each element (node) contains data and a pointer to the next node. Unlike arrays, linked lists allow efficient insertions and deletions without shifting elements.",
     "difficulty": "Beginner",
     "tags": ["nodes", "pointers", "linear"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand the node structure: data + pointer to next node",
+      "Implement a singly linked list with insert and delete operations",
+      "Visualize how pointers chain nodes together",
+      "Implement a doubly linked list with prev and next pointers",
+      "Practice traversal, reversal, and cycle detection",
+      "Understand the trade-offs vs arrays: faster inserts, slower access",
+      "Implement common patterns: merging lists and finding the middle",
+      "Solve the 'reverse a linked list' problem iteratively and recursively"
+    ]
   },
   {
     "id": "stacks",
@@ -114,7 +291,17 @@
     "description": "A last-in, first-out (LIFO) data structure where elements are added and removed from the same end. Stacks are used in function call management, undo operations, and expression evaluation.",
     "difficulty": "Beginner",
     "tags": ["LIFO", "push", "pop"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand the LIFO principle with real-world analogies",
+      "Implement a stack using an array",
+      "Implement a stack using a linked list",
+      "Learn the core operations: push, pop, peek, isEmpty",
+      "Understand how the call stack uses this structure",
+      "Use a stack to balance parentheses in expressions",
+      "Implement undo functionality using a stack",
+      "Solve next greater element and other monotonic stack problems"
+    ]
   },
   {
     "id": "queues",
@@ -123,7 +310,17 @@
     "description": "A first-in, first-out (FIFO) data structure where elements are added at the back and removed from the front. Queues model real-world scenarios like task scheduling and print job management.",
     "difficulty": "Beginner",
     "tags": ["FIFO", "enqueue", "dequeue"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand the FIFO principle with real-world analogies like a line",
+      "Implement a queue using an array",
+      "Implement a queue using two stacks",
+      "Learn circular queues to avoid wasted space",
+      "Understand priority queues and how they differ",
+      "Use a queue to implement BFS on a graph",
+      "Study deques (double-ended queues) and their applications",
+      "Implement a task scheduler simulation using a queue"
+    ]
   },
   {
     "id": "hash_tables",
@@ -132,7 +329,17 @@
     "description": "A data structure that stores key-value pairs using a hash function to compute an index into an array of buckets. Hash tables provide average O(1) time complexity for lookups, insertions, and deletions.",
     "difficulty": "Intermediate",
     "tags": ["key-value", "hash function", "collision resolution"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand the motivation: O(1) average lookup with a hash function",
+      "Learn how a hash function maps keys to bucket indices",
+      "Implement a hash table with chaining for collision resolution",
+      "Implement open addressing with linear probing",
+      "Understand load factor and when to resize the table",
+      "Analyze worst-case vs average-case complexity",
+      "Study real-world uses: caches, database indexes, and sets",
+      "Implement a basic in-memory cache using a hash table"
+    ]
   },
   {
     "id": "binary_trees",
@@ -141,7 +348,17 @@
     "description": "A hierarchical data structure where each node has at most two children, called left and right. Binary trees form the basis for more specialized structures like BSTs, heaps, and expression trees.",
     "difficulty": "Intermediate",
     "tags": ["tree", "nodes", "hierarchical"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand what a tree data structure is and its key terminology",
+      "Learn the difference between a general tree and a binary tree",
+      "Implement a basic binary tree node class",
+      "Practice tree traversals: inorder, preorder, and postorder",
+      "Implement BFS (level-order traversal) on a binary tree",
+      "Understand balanced vs unbalanced trees and their impact",
+      "Study tree height, depth, and diameter calculations",
+      "Build a project using binary trees, like an expression parser"
+    ]
   },
   {
     "id": "heaps",
@@ -150,7 +367,17 @@
     "description": "A specialized tree-based structure that satisfies the heap property: in a max-heap, every parent is greater than its children. Heaps efficiently support priority queue operations and are used in heap sort.",
     "difficulty": "Intermediate",
     "tags": ["priority queue", "max-heap", "min-heap"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the heap property for both max-heaps and min-heaps",
+      "Learn how a binary heap is stored efficiently as an array",
+      "Implement insert (heapify-up) and the mechanics of bubbling up",
+      "Implement extract-max/min (heapify-down)",
+      "Build a complete heap from an unordered array using buildHeap",
+      "Implement heap sort using the max-heap",
+      "Understand priority queues and how heaps implement them",
+      "Apply heaps to the k-largest elements and median maintenance problems"
+    ]
   },
   {
     "id": "graphs",
@@ -159,7 +386,17 @@
     "description": "A data structure consisting of vertices (nodes) connected by edges. Graphs can be directed or undirected and model relationships like social networks, maps, and dependency chains.",
     "difficulty": "Intermediate",
     "tags": ["vertices", "edges", "adjacency"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Learn key terminology: vertices, edges, directed vs undirected",
+      "Understand weighted vs unweighted graphs",
+      "Learn adjacency matrix representation and its trade-offs",
+      "Learn adjacency list representation and when to prefer it",
+      "Implement a simple graph class with add_vertex and add_edge",
+      "Understand connected components, cycles, and paths",
+      "Study DAGs (Directed Acyclic Graphs) and topological sort",
+      "Model a real problem as a graph (social network or city map)"
+    ]
   },
   {
     "id": "tries",
@@ -168,7 +405,17 @@
     "description": "A tree-like data structure used for efficient retrieval of keys in a dataset, typically strings. Each node represents a character, making tries ideal for autocomplete and spell-checking features.",
     "difficulty": "Advanced",
     "tags": ["prefix tree", "strings", "autocomplete"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the motivation: fast prefix-based string lookups",
+      "Learn how each node represents a character in a path",
+      "Implement trie insert and search operations",
+      "Add an 'end of word' marker to each node",
+      "Implement prefix search (startsWith) for autocomplete",
+      "Understand time and space complexity compared to hash maps",
+      "Implement delete from a trie",
+      "Build an autocomplete system or spell-checker using a trie"
+    ]
   },
   {
     "id": "binary_search_trees",
@@ -177,7 +424,93 @@
     "description": "A binary tree where the left subtree contains only nodes with smaller values and the right subtree only larger values. BSTs enable efficient searching, insertion, and deletion in O(log n) average time.",
     "difficulty": "Intermediate",
     "tags": ["BST", "ordered", "search"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Review binary trees and understand the BST ordering property",
+      "Implement BST insert and trace through examples",
+      "Implement BST search and verify O(log n) average case",
+      "Implement inorder traversal and observe it produces sorted output",
+      "Implement BST delete, handling three cases (leaf, one child, two children)",
+      "Understand how an unbalanced BST degrades to O(n)",
+      "Learn about self-balancing BSTs: AVL trees and Red-Black trees",
+      "Implement a sorted set using a BST"
+    ]
+  },
+  {
+    "id": "red_black_trees",
+    "name": "Red-Black Trees",
+    "category": "Data Structures",
+    "description": "A self-balancing binary search tree where each node is colored red or black, with rules that guarantee the tree stays approximately balanced. Red-black trees provide O(log n) worst-case performance for all operations.",
+    "difficulty": "Advanced",
+    "tags": ["self-balancing", "BST", "balanced tree"],
+    "importance": 3,
+    "roadmap": [
+      "Understand why plain BSTs can become unbalanced and slow",
+      "Learn the five red-black tree properties",
+      "Understand rotations: left rotation and right rotation",
+      "Study the insert fixup procedure and case analysis",
+      "Understand the delete fixup procedure",
+      "Verify that all operations maintain O(log n) complexity",
+      "Compare red-black trees to AVL trees in terms of balance guarantees",
+      "Recognize red-black trees in Java's TreeMap and C++ std::map"
+    ]
+  },
+  {
+    "id": "b_trees",
+    "name": "B-Trees",
+    "category": "Data Structures",
+    "description": "A self-balancing search tree optimized for systems that read and write large blocks of data. B-trees keep data sorted and allow searches, insertions, and deletions in O(log n) time, and are widely used in databases and file systems.",
+    "difficulty": "Advanced",
+    "tags": ["database indexing", "disk storage", "balanced tree"],
+    "importance": 3,
+    "roadmap": [
+      "Understand why binary trees are inefficient for disk-based storage",
+      "Learn the concept of order (minimum degree) in a B-tree",
+      "Study the B-tree properties: all leaves at same depth, minimum fill",
+      "Trace through B-tree search operation",
+      "Understand B-tree insert and how nodes split",
+      "Understand B-tree delete and how nodes merge",
+      "Learn about B+ trees and how they differ from B-trees",
+      "Understand how databases use B+ trees for indexes"
+    ]
+  },
+  {
+    "id": "skip_lists",
+    "name": "Skip Lists",
+    "category": "Data Structures",
+    "description": "A probabilistic data structure that uses multiple levels of linked lists to allow fast search, insertion, and deletion in O(log n) expected time. Skip lists are an elegant alternative to balanced trees.",
+    "difficulty": "Advanced",
+    "tags": ["probabilistic", "linked list", "search"],
+    "importance": 2,
+    "roadmap": [
+      "Review sorted linked lists and their O(n) search limitation",
+      "Understand the concept of express lanes with multiple levels",
+      "Learn how random coin flips determine node height",
+      "Trace through a skip list search operation",
+      "Implement skip list insert with randomized level assignment",
+      "Implement skip list delete",
+      "Analyze expected O(log n) time complexity using probability",
+      "Compare skip lists to balanced BSTs: simplicity vs guarantees"
+    ]
+  },
+  {
+    "id": "bloom_filters",
+    "name": "Bloom Filters",
+    "category": "Data Structures",
+    "description": "A space-efficient probabilistic data structure that tests whether an element is a member of a set. Bloom filters may produce false positives but never false negatives, making them ideal for reducing expensive lookups.",
+    "difficulty": "Advanced",
+    "tags": ["probabilistic", "membership testing", "space efficient"],
+    "importance": 2,
+    "roadmap": [
+      "Understand the problem: fast set membership with limited memory",
+      "Learn how a bloom filter uses a bit array and multiple hash functions",
+      "Trace through an insert operation (setting bits)",
+      "Trace through a lookup operation (checking bits)",
+      "Understand why false positives occur but false negatives don't",
+      "Calculate the false positive rate given filter size and hash functions",
+      "Learn use cases: web caches, databases, spell checkers",
+      "Implement a simple bloom filter from scratch"
+    ]
   },
   {
     "id": "machine_learning",
@@ -186,7 +519,17 @@
     "description": "A branch of AI where systems learn patterns from data without being explicitly programmed. ML models improve their performance on tasks through experience and are used in recommendations, predictions, and more.",
     "difficulty": "Intermediate",
     "tags": ["AI", "training", "prediction"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand what machine learning is and how it differs from traditional programming",
+      "Learn the three main types: supervised, unsupervised, and reinforcement learning",
+      "Set up Python with NumPy, Pandas, and scikit-learn",
+      "Work through a complete end-to-end ML project with a real dataset",
+      "Learn about training/validation/test splits and why they matter",
+      "Study overfitting, underfitting, and how to evaluate model performance",
+      "Experiment with different algorithms and compare their results",
+      "Deploy a simple ML model as a web API"
+    ]
   },
   {
     "id": "neural_networks",
@@ -195,7 +538,17 @@
     "description": "Computing systems inspired by biological neural networks in the brain. They consist of layers of interconnected nodes that process information and learn complex patterns from data.",
     "difficulty": "Intermediate",
     "tags": ["neurons", "layers", "weights"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand the biological inspiration: neurons and synapses",
+      "Learn about perceptrons as the simplest neural unit",
+      "Study the anatomy of a neural network: input, hidden, and output layers",
+      "Understand activation functions: ReLU, sigmoid, and tanh",
+      "Learn forward propagation step by step",
+      "Understand how backpropagation computes gradients",
+      "Implement a small neural network from scratch in Python",
+      "Train a network on MNIST or another beginner dataset"
+    ]
   },
   {
     "id": "deep_learning",
@@ -204,7 +557,17 @@
     "description": "A subset of machine learning that uses neural networks with many layers to learn hierarchical representations of data. Deep learning powers breakthroughs in image recognition, language processing, and game playing.",
     "difficulty": "Advanced",
     "tags": ["deep neural networks", "representation learning", "GPU"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Ensure a solid understanding of basic neural networks and backpropagation",
+      "Set up a deep learning environment with PyTorch or TensorFlow",
+      "Understand why depth matters: hierarchical feature learning",
+      "Train your first deep network on an image classification task",
+      "Learn about common architectures: CNNs, RNNs, and Transformers",
+      "Understand regularization techniques: dropout, batch normalization",
+      "Study transfer learning and fine-tuning pretrained models",
+      "Build and deploy a deep learning model on a practical problem"
+    ]
   },
   {
     "id": "natural_language_processing",
@@ -213,7 +576,17 @@
     "description": "The field of AI focused on enabling computers to understand, interpret, and generate human language. NLP powers chatbots, translation services, and sentiment analysis tools.",
     "difficulty": "Advanced",
     "tags": ["text", "language", "tokenization"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand core NLP tasks: classification, NER, translation, and summarization",
+      "Learn text preprocessing: tokenization, stemming, and lemmatization",
+      "Study word representations: bag-of-words, TF-IDF, and word embeddings",
+      "Work with pre-trained word embeddings like Word2Vec and GloVe",
+      "Learn sequence models: RNNs and LSTMs for text",
+      "Study the Transformer architecture and attention mechanism",
+      "Use Hugging Face to fine-tune a BERT-based model",
+      "Build a practical NLP application: sentiment analyzer or chatbot"
+    ]
   },
   {
     "id": "computer_vision",
@@ -222,7 +595,17 @@
     "description": "A field of AI that trains computers to interpret and understand visual information from images and videos. Applications include facial recognition, autonomous vehicles, and medical image analysis.",
     "difficulty": "Advanced",
     "tags": ["images", "object detection", "visual"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand how images are represented as pixel arrays",
+      "Learn basic image operations: filtering, edge detection, and transforms",
+      "Study convolutional neural networks (CNNs) and how they process images",
+      "Implement image classification with a pretrained CNN",
+      "Learn object detection architectures: YOLO and Faster R-CNN",
+      "Study image segmentation techniques",
+      "Understand data augmentation for training robust models",
+      "Build a computer vision project: face detection or object counter"
+    ]
   },
   {
     "id": "reinforcement_learning",
@@ -231,7 +614,17 @@
     "description": "A type of machine learning where an agent learns to make decisions by receiving rewards or penalties for its actions. It powers game-playing AIs and robotic control systems.",
     "difficulty": "Advanced",
     "tags": ["reward", "agent", "policy"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the agent-environment interaction loop",
+      "Learn key concepts: state, action, reward, and policy",
+      "Study the Markov Decision Process (MDP) framework",
+      "Implement a simple Q-learning agent on a gridworld",
+      "Learn about exploration vs exploitation trade-off",
+      "Study Deep Q-Networks (DQN) combining RL and deep learning",
+      "Train an agent on an OpenAI Gym environment",
+      "Understand policy gradient methods and actor-critic algorithms"
+    ]
   },
   {
     "id": "supervised_learning",
@@ -240,7 +633,17 @@
     "description": "A machine learning approach where models are trained on labeled data, learning to map inputs to known outputs. Common tasks include classification (spam detection) and regression (price prediction).",
     "difficulty": "Intermediate",
     "tags": ["labeled data", "classification", "regression"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand what labeled data is and how it enables learning",
+      "Learn the difference between classification and regression",
+      "Implement linear regression and understand the loss function",
+      "Implement logistic regression for binary classification",
+      "Learn how to evaluate models: accuracy, precision, recall, F1",
+      "Study overfitting and use cross-validation to prevent it",
+      "Explore ensemble methods: random forests and gradient boosting",
+      "Apply supervised learning to a real dataset end-to-end"
+    ]
   },
   {
     "id": "unsupervised_learning",
@@ -249,7 +652,17 @@
     "description": "A machine learning approach where models find hidden patterns in data without labeled examples. Techniques include clustering similar items together and reducing data dimensionality.",
     "difficulty": "Intermediate",
     "tags": ["unlabeled data", "patterns", "dimensionality reduction"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand why we sometimes have data without labels",
+      "Learn K-means clustering and implement it from scratch",
+      "Study hierarchical clustering and dendrogram visualization",
+      "Learn dimensionality reduction with PCA",
+      "Understand t-SNE for high-dimensional data visualization",
+      "Study anomaly detection as an unsupervised problem",
+      "Apply clustering to a real dataset for customer segmentation",
+      "Compare supervised vs unsupervised approaches for the same problem"
+    ]
   },
   {
     "id": "decision_trees",
@@ -258,7 +671,17 @@
     "description": "A supervised learning model that makes predictions by learning a series of if-then rules from data features. Decision trees are intuitive, interpretable, and form the basis of powerful ensemble methods like random forests.",
     "difficulty": "Intermediate",
     "tags": ["classification", "splitting", "interpretable"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand how a decision tree makes predictions via if-then rules",
+      "Learn splitting criteria: Gini impurity and information gain",
+      "Implement a decision tree from scratch using a greedy algorithm",
+      "Visualize a trained decision tree to understand its decisions",
+      "Understand overfitting and how pruning helps",
+      "Learn about random forests as an ensemble of decision trees",
+      "Study gradient boosted trees (XGBoost, LightGBM)",
+      "Apply decision trees to a classification problem and interpret the results"
+    ]
   },
   {
     "id": "clustering",
@@ -267,7 +690,302 @@
     "description": "An unsupervised learning technique that groups similar data points together based on their features. Popular algorithms like K-means and DBSCAN are used in customer segmentation and anomaly detection.",
     "difficulty": "Intermediate",
     "tags": ["grouping", "k-means", "similarity"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand what clustering is and when to use it",
+      "Learn distance metrics: Euclidean, cosine, and Manhattan distance",
+      "Implement K-means and understand the convergence process",
+      "Use the elbow method to choose the number of clusters",
+      "Learn DBSCAN for density-based clustering",
+      "Understand cluster evaluation metrics: silhouette score",
+      "Visualize clusters using dimensionality reduction",
+      "Apply clustering to a real dataset and interpret the groups"
+    ]
+  },
+  {
+    "id": "transformer_architecture",
+    "name": "Transformer Architecture",
+    "category": "AI / ML",
+    "description": "A neural network architecture that relies entirely on attention mechanisms to process sequential data. Transformers revolutionized NLP and are the foundation for models like GPT, BERT, and most modern AI systems.",
+    "difficulty": "Advanced",
+    "tags": ["attention", "NLP", "encoder-decoder"],
+    "importance": 5,
+    "roadmap": [
+      "Understand the limitations of RNNs that transformers were designed to solve",
+      "Learn self-attention: how each token attends to every other token",
+      "Study multi-head attention and why multiple heads help",
+      "Understand positional encodings and why they are needed",
+      "Learn the encoder and decoder stacks",
+      "Study layer normalization and residual connections",
+      "Implement a simplified transformer in PyTorch",
+      "Understand how BERT (encoder-only) and GPT (decoder-only) differ"
+    ]
+  },
+  {
+    "id": "large_language_models",
+    "name": "Large Language Models",
+    "category": "AI / ML",
+    "description": "Massive neural networks trained on vast text corpora that can generate, summarize, translate, and reason about language. LLMs like GPT-4 and Claude are transforming how software interacts with human knowledge.",
+    "difficulty": "Advanced",
+    "tags": ["GPT", "language generation", "pretraining"],
+    "importance": 5,
+    "roadmap": [
+      "Understand transformer architecture as the foundation of LLMs",
+      "Learn about pretraining on next-token prediction",
+      "Study tokenization: BPE and WordPiece algorithms",
+      "Understand scaling laws: how model size affects capability",
+      "Learn about RLHF (Reinforcement Learning from Human Feedback)",
+      "Study in-context learning and how prompts guide model behavior",
+      "Understand hallucination and how to mitigate it",
+      "Interact with LLM APIs (OpenAI, Anthropic) and build a simple application"
+    ]
+  },
+  {
+    "id": "prompt_engineering",
+    "name": "Prompt Engineering",
+    "category": "AI / ML",
+    "description": "The practice of designing and refining input prompts to guide large language models toward desired outputs. Good prompt engineering can dramatically improve the quality and relevance of AI-generated responses.",
+    "difficulty": "Beginner",
+    "tags": ["prompts", "LLM", "instruction design"],
+    "importance": 4,
+    "roadmap": [
+      "Understand how LLMs process and respond to text prompts",
+      "Learn zero-shot prompting: asking directly without examples",
+      "Study few-shot prompting: providing examples in the prompt",
+      "Learn chain-of-thought prompting for complex reasoning tasks",
+      "Understand role prompting and system message design",
+      "Practice output formatting: asking for JSON, lists, or specific structures",
+      "Study prompt injection attacks and safety considerations",
+      "Build a practical tool using prompt engineering techniques"
+    ]
+  },
+  {
+    "id": "fine_tuning",
+    "name": "Fine-Tuning",
+    "category": "AI / ML",
+    "description": "The process of taking a pretrained model and further training it on a smaller domain-specific dataset. Fine-tuning allows models to specialize for particular tasks without training from scratch.",
+    "difficulty": "Advanced",
+    "tags": ["transfer learning", "domain adaptation", "pretraining"],
+    "importance": 4,
+    "roadmap": [
+      "Understand the concept of pretrained models and feature reuse",
+      "Learn the difference between fine-tuning and training from scratch",
+      "Set up a fine-tuning pipeline using Hugging Face Transformers",
+      "Understand learning rate selection for fine-tuning",
+      "Study full fine-tuning vs parameter-efficient methods (LoRA, adapters)",
+      "Learn about catastrophic forgetting and how to mitigate it",
+      "Fine-tune a model on a classification or generation task",
+      "Evaluate and compare fine-tuned vs base model performance"
+    ]
+  },
+  {
+    "id": "rag",
+    "name": "RAG (Retrieval-Augmented Generation)",
+    "category": "AI / ML",
+    "description": "A technique that enhances language model responses by retrieving relevant documents from a knowledge base before generating an answer. RAG reduces hallucinations and keeps models grounded in factual information.",
+    "difficulty": "Advanced",
+    "tags": ["retrieval", "embeddings", "vector search"],
+    "importance": 4,
+    "roadmap": [
+      "Understand why LLMs hallucinate and how retrieval helps",
+      "Learn what embeddings are and how they enable semantic search",
+      "Set up a vector database (Chroma, Pinecone, or Weaviate)",
+      "Implement document chunking and embedding storage",
+      "Build a basic retrieval pipeline: embed query, find nearest chunks",
+      "Combine retrieval with an LLM using a prompt template",
+      "Evaluate RAG quality: relevance, faithfulness, and completeness",
+      "Build a full RAG chatbot over a custom document collection"
+    ]
+  },
+  {
+    "id": "embeddings",
+    "name": "Embeddings",
+    "category": "AI / ML",
+    "description": "Numerical vector representations of text, images, or other data that capture semantic meaning in a high-dimensional space. Similar items have similar embeddings, enabling semantic search, clustering, and classification.",
+    "difficulty": "Intermediate",
+    "tags": ["vectors", "semantic similarity", "representation"],
+    "importance": 4,
+    "roadmap": [
+      "Understand why raw text can't be used directly by ML models",
+      "Learn about word embeddings: Word2Vec and GloVe",
+      "Understand how embeddings capture semantic similarity",
+      "Study sentence and document embeddings (SBERT, OpenAI embeddings)",
+      "Learn cosine similarity as the standard distance metric",
+      "Implement a semantic search engine using embeddings",
+      "Understand how embeddings power recommendation systems",
+      "Explore multimodal embeddings that combine text and images"
+    ]
+  },
+  {
+    "id": "attention_mechanism",
+    "name": "Attention Mechanism",
+    "category": "AI / ML",
+    "description": "A neural network component that allows models to focus on relevant parts of an input sequence when producing an output. Attention was originally introduced for machine translation and became the core of the Transformer architecture.",
+    "difficulty": "Advanced",
+    "tags": ["attention", "neural networks", "sequence models"],
+    "importance": 4,
+    "roadmap": [
+      "Understand the problem attention was designed to solve in sequence-to-sequence models",
+      "Learn about encoder-decoder attention and alignment",
+      "Study the query, key, value framework",
+      "Understand scaled dot-product attention mathematically",
+      "Learn multi-head attention and its benefits",
+      "Understand self-attention and how each token attends to others",
+      "Visualize attention weights to understand what models focus on",
+      "Study how attention is used in cross-modal models (vision-language)"
+    ]
+  },
+  {
+    "id": "generative_ai",
+    "name": "Generative AI",
+    "category": "AI / ML",
+    "description": "A class of AI models that can generate new content such as text, images, audio, and video. Generative AI includes large language models, diffusion models, and GANs, and is rapidly changing creative and knowledge work.",
+    "difficulty": "Intermediate",
+    "tags": ["generation", "LLM", "diffusion", "creativity"],
+    "importance": 5,
+    "roadmap": [
+      "Understand the distinction between discriminative and generative models",
+      "Learn about the major categories: LLMs, diffusion models, and GANs",
+      "Experiment with text generation using the OpenAI or Anthropic API",
+      "Explore image generation with Stable Diffusion or DALL-E",
+      "Study the capabilities and limitations of current generative models",
+      "Learn about content moderation and safety in generative AI",
+      "Build a simple generative AI application",
+      "Follow current research and understand where the field is heading"
+    ]
+  },
+  {
+    "id": "ai_ethics",
+    "name": "AI Ethics",
+    "category": "AI / ML",
+    "description": "The study of the moral implications of building and deploying AI systems. It covers fairness, transparency, privacy, accountability, and the societal impact of automated decision-making.",
+    "difficulty": "Beginner",
+    "tags": ["bias", "fairness", "transparency", "accountability"],
+    "importance": 3,
+    "roadmap": [
+      "Understand why ethics matters in AI system design",
+      "Learn about algorithmic bias and how training data shapes outcomes",
+      "Study real-world examples of AI failures and their consequences",
+      "Understand fairness metrics: demographic parity, equal opportunity",
+      "Learn about model explainability and interpretability techniques",
+      "Study data privacy concerns and regulations like GDPR",
+      "Understand AI safety research and alignment problems",
+      "Develop a framework for ethical AI review in your own projects"
+    ]
+  },
+  {
+    "id": "ai_agents",
+    "name": "AI Agents",
+    "category": "AI / ML",
+    "description": "AI systems that can autonomously perceive their environment, make decisions, and take actions to accomplish goals. Modern AI agents combine LLMs with tools like web search, code execution, and external APIs.",
+    "difficulty": "Advanced",
+    "tags": ["autonomy", "tool use", "planning"],
+    "importance": 4,
+    "roadmap": [
+      "Understand what makes an AI agent different from a simple model",
+      "Learn the ReAct pattern: reason and act in interleaved steps",
+      "Study tool use: giving an LLM access to functions and APIs",
+      "Implement a simple agent with web search and calculator tools",
+      "Learn about memory: short-term context vs long-term storage",
+      "Study multi-agent systems and how agents collaborate",
+      "Understand agent evaluation: task success rate and efficiency",
+      "Build an autonomous agent that completes a multi-step task"
+    ]
+  },
+  {
+    "id": "diffusion_models",
+    "name": "Diffusion Models",
+    "category": "AI / ML",
+    "description": "A class of generative models that learn to reverse a gradual noising process to create new data. Diffusion models produce state-of-the-art results in image generation and are the backbone of Stable Diffusion and DALL-E.",
+    "difficulty": "Advanced",
+    "tags": ["image generation", "denoising", "generative models"],
+    "importance": 3,
+    "roadmap": [
+      "Understand generative modeling and the goal of learning a data distribution",
+      "Learn the forward diffusion process: gradually adding noise to data",
+      "Understand the reverse diffusion process: learning to denoise",
+      "Study the math behind diffusion: score matching and denoising objectives",
+      "Learn about U-Net architectures used in diffusion models",
+      "Understand classifier-free guidance for conditioned generation",
+      "Explore latent diffusion models and how they work in the latent space",
+      "Experiment with Stable Diffusion via Hugging Face Diffusers library"
+    ]
+  },
+  {
+    "id": "transfer_learning",
+    "name": "Transfer Learning",
+    "category": "AI / ML",
+    "description": "A machine learning technique where a model trained on one task is reused as the starting point for a model on a different but related task. Transfer learning dramatically reduces training time and data requirements.",
+    "difficulty": "Intermediate",
+    "tags": ["pretrained models", "domain adaptation", "feature reuse"],
+    "importance": 3,
+    "roadmap": [
+      "Understand the intuition: knowledge from one task transfers to another",
+      "Learn about pretrained models and where to find them (Hugging Face, timm)",
+      "Study feature extraction: using a frozen pretrained model as a backbone",
+      "Understand fine-tuning: updating pretrained weights on new data",
+      "Learn when to freeze vs unfreeze layers",
+      "Apply transfer learning to image classification with a ResNet",
+      "Apply transfer learning to NLP with BERT",
+      "Compare transfer learning vs training from scratch on a small dataset"
+    ]
+  },
+  {
+    "id": "convolutional_neural_networks",
+    "name": "Convolutional Neural Networks",
+    "category": "AI / ML",
+    "description": "A class of deep learning models designed specifically for processing grid-like data such as images. CNNs use convolutional layers to automatically learn spatial hierarchies of features, from edges to objects.",
+    "difficulty": "Intermediate",
+    "tags": ["image recognition", "convolution", "feature maps"],
+    "importance": 4,
+    "roadmap": [
+      "Understand why fully connected networks are inefficient for images",
+      "Learn what a convolutional filter does and how it slides over an image",
+      "Understand feature maps and how they represent learned patterns",
+      "Study pooling layers: max pooling and average pooling",
+      "Learn common CNN architectures: LeNet, VGG, ResNet",
+      "Implement a CNN in PyTorch or TensorFlow for image classification",
+      "Understand skip connections in ResNet and why they help training",
+      "Fine-tune a pretrained CNN on a custom image dataset"
+    ]
+  },
+  {
+    "id": "recurrent_neural_networks",
+    "name": "Recurrent Neural Networks",
+    "category": "AI / ML",
+    "description": "A class of neural networks designed for sequential data where outputs depend on previous computations. RNNs maintain a hidden state that captures information from earlier in the sequence, though they struggle with long-range dependencies.",
+    "difficulty": "Intermediate",
+    "tags": ["sequential data", "hidden state", "LSTM"],
+    "importance": 3,
+    "roadmap": [
+      "Understand why feedforward networks cannot handle sequences naturally",
+      "Learn how RNNs maintain a hidden state across time steps",
+      "Understand backpropagation through time (BPTT)",
+      "Study the vanishing gradient problem in deep RNNs",
+      "Learn LSTMs and how gates solve the vanishing gradient problem",
+      "Study GRUs as a simpler alternative to LSTMs",
+      "Implement a character-level language model with an RNN",
+      "Understand when Transformers have replaced RNNs in practice"
+    ]
+  },
+  {
+    "id": "gradient_descent",
+    "name": "Gradient Descent",
+    "category": "AI / ML",
+    "description": "An optimization algorithm that iteratively updates model parameters in the direction that minimizes a loss function. Gradient descent and its variants are the primary training method for virtually all modern neural networks.",
+    "difficulty": "Intermediate",
+    "tags": ["optimization", "learning rate", "loss function"],
+    "importance": 4,
+    "roadmap": [
+      "Understand what a loss function measures and why we minimize it",
+      "Learn the concept of a gradient as the direction of steepest ascent",
+      "Implement batch gradient descent for a simple linear regression",
+      "Understand the learning rate and how it affects convergence",
+      "Learn stochastic gradient descent (SGD) and mini-batch SGD",
+      "Study momentum-based optimizers: SGD with momentum",
+      "Learn adaptive optimizers: AdaGrad, RMSProp, and Adam",
+      "Understand learning rate schedules and warm-up strategies"
+    ]
   },
   {
     "id": "operating_systems",
@@ -276,7 +994,17 @@
     "description": "Software that manages computer hardware and provides services for running applications. Operating systems handle memory, processes, file systems, and device communication.",
     "difficulty": "Intermediate",
     "tags": ["OS", "kernel", "system software"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand what an OS is and why it is needed",
+      "Learn the difference between kernel space and user space",
+      "Study process management: creation, states, and context switching",
+      "Understand memory management: virtual memory and paging",
+      "Learn about file systems and how data is organized on disk",
+      "Study I/O management and device drivers",
+      "Understand synchronization: mutexes, semaphores, and condition variables",
+      "Read the first few chapters of the OSTEP textbook (free online)"
+    ]
   },
   {
     "id": "compilers",
@@ -285,7 +1013,17 @@
     "description": "Programs that translate source code written in a high-level language into machine code that a computer can execute. Compilers perform lexical analysis, parsing, optimization, and code generation.",
     "difficulty": "Advanced",
     "tags": ["translation", "parsing", "code generation"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the phases of compilation: scanning, parsing, analysis, optimization, codegen",
+      "Learn about lexical analysis and how a scanner tokenizes source code",
+      "Study context-free grammars and how parsers use them",
+      "Implement a simple recursive descent parser",
+      "Learn about abstract syntax trees (ASTs)",
+      "Understand semantic analysis: type checking and symbol tables",
+      "Study common compiler optimizations: constant folding, inlining",
+      "Build a tiny language compiler or transpiler as a capstone project"
+    ]
   },
   {
     "id": "memory_management",
@@ -294,7 +1032,17 @@
     "description": "The process of controlling and coordinating computer memory, including allocation, deallocation, and organization. Concepts include virtual memory, paging, and garbage collection.",
     "difficulty": "Intermediate",
     "tags": ["allocation", "virtual memory", "paging"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand the memory hierarchy: registers, cache, RAM, and disk",
+      "Learn about heap vs stack memory allocation",
+      "Study manual memory management: malloc and free in C",
+      "Understand common bugs: memory leaks, dangling pointers, buffer overflows",
+      "Learn about virtual memory and address translation",
+      "Study paging and page tables",
+      "Understand garbage collection algorithms: mark-and-sweep, reference counting",
+      "Explore how garbage collectors work in Java, Python, and Go"
+    ]
   },
   {
     "id": "process_scheduling",
@@ -303,7 +1051,17 @@
     "description": "The method by which an operating system decides which process gets CPU time and for how long. Scheduling algorithms like round-robin and priority-based scheduling balance fairness and efficiency.",
     "difficulty": "Intermediate",
     "tags": ["CPU", "scheduling", "processes"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the CPU scheduler's role in multitasking",
+      "Learn about process states: ready, running, blocked, and terminated",
+      "Study First Come First Serve (FCFS) scheduling",
+      "Learn Shortest Job First (SJF) and its preemptive variant",
+      "Implement Round Robin scheduling and understand time quantum",
+      "Study priority scheduling and potential for starvation",
+      "Understand multilevel feedback queues used in real OSes",
+      "Compare scheduling algorithms on example process sets"
+    ]
   },
   {
     "id": "file_systems",
@@ -312,7 +1070,17 @@
     "description": "The way an operating system organizes, stores, and retrieves data on storage devices. File systems manage directories, permissions, and metadata to keep data accessible and structured.",
     "difficulty": "Intermediate",
     "tags": ["storage", "directories", "metadata"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand why file systems are needed over raw disk storage",
+      "Learn about inodes and how files are tracked in Unix systems",
+      "Study directory structures and path resolution",
+      "Understand file permissions and access control",
+      "Learn about disk layout: blocks, sectors, and clusters",
+      "Study journaling file systems and crash recovery",
+      "Understand virtual file systems (VFS) as an abstraction layer",
+      "Compare ext4, NTFS, and APFS as real-world examples"
+    ]
   },
   {
     "id": "virtual_machines",
@@ -321,7 +1089,17 @@
     "description": "Software emulations of physical computers that run operating systems and applications in isolation. VMs enable running multiple OS instances on a single host and are fundamental to cloud computing.",
     "difficulty": "Intermediate",
     "tags": ["virtualization", "hypervisor", "isolation"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the motivation for virtualization: isolation and resource sharing",
+      "Learn about Type 1 (bare-metal) and Type 2 (hosted) hypervisors",
+      "Study CPU virtualization techniques: trap-and-emulate",
+      "Understand memory virtualization and shadow page tables",
+      "Learn I/O virtualization and device passthrough",
+      "Compare VMs to containers as lighter-weight alternatives",
+      "Set up a VM locally using VirtualBox or VMware",
+      "Understand how cloud providers like AWS and Azure use VMs"
+    ]
   },
   {
     "id": "distributed_systems",
@@ -330,7 +1108,17 @@
     "description": "Systems where components on networked computers communicate and coordinate to achieve a common goal. Key challenges include consistency, availability, and partition tolerance (the CAP theorem).",
     "difficulty": "Advanced",
     "tags": ["distributed", "consensus", "CAP theorem"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand why distributed systems are complex: failures, latency, partial state",
+      "Learn about the CAP theorem and its implications",
+      "Study consistency models: strong, eventual, and causal consistency",
+      "Understand distributed consensus with the Raft or Paxos algorithm",
+      "Learn about distributed transactions and two-phase commit",
+      "Study distributed storage: replication strategies and quorums",
+      "Understand message queues and event-driven architecture",
+      "Take MIT 6.824 (Distributed Systems) course lectures online"
+    ]
   },
   {
     "id": "concurrency",
@@ -339,7 +1127,17 @@
     "description": "The ability of a system to handle multiple tasks at the same time through threads, processes, or asynchronous execution. Concurrency introduces challenges like race conditions and deadlocks.",
     "difficulty": "Advanced",
     "tags": ["threads", "parallelism", "synchronization"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand the difference between concurrency and parallelism",
+      "Learn about threads and how they share memory within a process",
+      "Understand race conditions and why shared mutable state is dangerous",
+      "Learn mutexes (locks) to protect critical sections",
+      "Study semaphores and condition variables for coordination",
+      "Understand deadlock: causes, conditions, and prevention",
+      "Learn lock-free data structures and compare-and-swap (CAS)",
+      "Study the actor model and message passing as an alternative to shared memory"
+    ]
   },
   {
     "id": "cpu_architecture",
@@ -348,7 +1146,74 @@
     "description": "The design and organization of a computer's central processing unit, including instruction sets, registers, and pipelines. Understanding CPU architecture helps explain how software executes at the hardware level.",
     "difficulty": "Advanced",
     "tags": ["processor", "instruction set", "pipeline"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the fetch-decode-execute cycle",
+      "Learn about registers and the role of the ALU",
+      "Study instruction set architectures (ISA): x86 vs ARM",
+      "Understand pipelining and instruction-level parallelism",
+      "Learn about cache hierarchy: L1, L2, L3 and cache coherence",
+      "Study branch prediction and speculative execution",
+      "Understand RISC vs CISC design philosophies",
+      "Write simple assembly code to see how high-level code maps to instructions"
+    ]
+  },
+  {
+    "id": "containers_docker",
+    "name": "Containers / Docker",
+    "category": "Systems",
+    "description": "A lightweight virtualization technology that packages applications and their dependencies into isolated environments called containers. Docker is the most widely used container runtime, enabling consistent deployments across development and production.",
+    "difficulty": "Beginner",
+    "tags": ["Docker", "containerization", "DevOps"],
+    "importance": 5,
+    "roadmap": [
+      "Understand what containers are and how they differ from VMs",
+      "Install Docker and run your first container",
+      "Learn Docker concepts: images, containers, volumes, and networks",
+      "Write a Dockerfile to containerize a simple application",
+      "Build and run a multi-container app using Docker Compose",
+      "Learn about container registries and pushing to Docker Hub",
+      "Understand container networking and port mapping",
+      "Explore best practices: minimal base images and layer caching"
+    ]
+  },
+  {
+    "id": "kubernetes",
+    "name": "Kubernetes",
+    "category": "Systems",
+    "description": "An open-source container orchestration system that automates deploying, scaling, and managing containerized applications. Kubernetes is the industry standard for running containers in production at scale.",
+    "difficulty": "Advanced",
+    "tags": ["orchestration", "containers", "scaling"],
+    "importance": 4,
+    "roadmap": [
+      "Understand why container orchestration is needed at scale",
+      "Learn the Kubernetes architecture: control plane and worker nodes",
+      "Study core objects: Pods, Deployments, Services, and ConfigMaps",
+      "Set up a local cluster with Minikube or kind",
+      "Deploy a containerized application and expose it as a Service",
+      "Learn about scaling with ReplicaSets and Horizontal Pod Autoscaler",
+      "Understand rolling updates and rollbacks",
+      "Study namespaces, resource limits, and RBAC for multi-tenant clusters"
+    ]
+  },
+  {
+    "id": "microservices",
+    "name": "Microservices",
+    "category": "Systems",
+    "description": "An architectural style that structures an application as a collection of small, independently deployable services that communicate over a network. Microservices enable teams to develop, deploy, and scale components independently.",
+    "difficulty": "Intermediate",
+    "tags": ["architecture", "services", "scalability"],
+    "importance": 4,
+    "roadmap": [
+      "Understand monolithic architecture and its limitations at scale",
+      "Learn the microservices principles: single responsibility and loose coupling",
+      "Study service communication: REST, gRPC, and message queues",
+      "Understand service discovery and how services find each other",
+      "Learn about API gateways as a single entry point",
+      "Study distributed tracing and centralized logging for observability",
+      "Understand the challenges: distributed transactions, data consistency",
+      "Build a small system with two or three communicating services"
+    ]
   },
   {
     "id": "html_css",
@@ -357,7 +1222,17 @@
     "description": "The foundational technologies of the web. HTML provides the structure and content of web pages, while CSS controls their visual presentation, layout, and styling.",
     "difficulty": "Beginner",
     "tags": ["markup", "styling", "web pages"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Learn basic HTML: tags, attributes, and document structure",
+      "Understand semantic HTML: headers, articles, sections, and nav",
+      "Learn CSS selectors: element, class, ID, and pseudo-selectors",
+      "Study the box model: margin, border, padding, and content",
+      "Learn Flexbox for one-dimensional layouts",
+      "Learn CSS Grid for two-dimensional layouts",
+      "Understand responsive design with media queries",
+      "Build a personal portfolio page to practice everything"
+    ]
   },
   {
     "id": "javascript",
@@ -366,7 +1241,17 @@
     "description": "The programming language of the web that enables interactive and dynamic content in browsers. JavaScript runs on both client and server sides and powers modern web applications.",
     "difficulty": "Beginner",
     "tags": ["scripting", "dynamic", "browser"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Learn variables, data types, and control flow",
+      "Understand functions, scope, and closures",
+      "Study the DOM API and how to manipulate HTML elements",
+      "Learn about events and event-driven programming",
+      "Understand asynchronous JS: callbacks, Promises, and async/await",
+      "Study ES6+ features: arrow functions, destructuring, and modules",
+      "Learn about the JavaScript event loop and how async code works",
+      "Build a small interactive project: todo app or weather widget"
+    ]
   },
   {
     "id": "http_protocol",
@@ -375,7 +1260,17 @@
     "description": "The application-layer protocol used for transmitting web resources like HTML pages. HTTP defines how messages are formatted and transmitted, and how servers and browsers respond to requests.",
     "difficulty": "Beginner",
     "tags": ["request", "response", "protocol"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand the client-server model and how HTTP fits in",
+      "Learn about HTTP methods: GET, POST, PUT, DELETE, and PATCH",
+      "Study HTTP status codes: 2xx success, 3xx redirect, 4xx client error, 5xx server error",
+      "Understand HTTP headers: content type, authorization, and caching",
+      "Learn the difference between HTTP/1.1 and HTTP/2",
+      "Understand HTTPS and how TLS secures HTTP connections",
+      "Study cookies and sessions for state management",
+      "Use browser dev tools to inspect real HTTP requests"
+    ]
   },
   {
     "id": "rest_apis",
@@ -384,7 +1279,17 @@
     "description": "An architectural style for designing networked applications using standard HTTP methods. REST APIs use endpoints and JSON data to enable communication between frontend clients and backend servers.",
     "difficulty": "Intermediate",
     "tags": ["API", "endpoints", "JSON"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand what an API is and why REST is popular",
+      "Learn REST constraints: statelessness, uniform interface, and layered system",
+      "Study resource naming conventions and URL design",
+      "Implement CRUD operations with appropriate HTTP methods and status codes",
+      "Learn about request and response bodies in JSON",
+      "Understand authentication in REST APIs: API keys and JWT",
+      "Learn API versioning strategies",
+      "Build and document a simple REST API"
+    ]
   },
   {
     "id": "frontend_frameworks",
@@ -393,7 +1298,17 @@
     "description": "Libraries and frameworks like React, Vue, and Angular that simplify building interactive user interfaces. They provide component-based architecture, state management, and efficient DOM updates.",
     "difficulty": "Intermediate",
     "tags": ["React", "components", "SPA"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand why frameworks exist: virtual DOM and component reuse",
+      "Learn React basics: JSX, components, and props",
+      "Understand state management with useState and useEffect hooks",
+      "Build a multi-component app and manage data flow",
+      "Learn routing with React Router for single-page applications",
+      "Study global state management with Context API or Zustand",
+      "Understand server-side rendering and Next.js App Router",
+      "Deploy a React application to Vercel or Netlify"
+    ]
   },
   {
     "id": "backend_development",
@@ -402,7 +1317,17 @@
     "description": "The server-side of web applications that handles business logic, database operations, and API endpoints. Backend technologies include Node.js, Python, and various frameworks for building robust server applications.",
     "difficulty": "Intermediate",
     "tags": ["server", "API", "business logic"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Choose a backend language and framework: Node.js/Express or Python/FastAPI",
+      "Understand server concepts: request handling, middleware, and routing",
+      "Build a basic REST API with CRUD endpoints",
+      "Connect your API to a database (PostgreSQL or MongoDB)",
+      "Implement user authentication with JWTs",
+      "Learn error handling and input validation best practices",
+      "Understand environment variables and configuration management",
+      "Deploy your backend to a cloud service like Railway or Render"
+    ]
   },
   {
     "id": "web_security",
@@ -411,7 +1336,17 @@
     "description": "Practices and techniques for protecting web applications from threats like XSS, CSRF, and SQL injection. Web security covers input validation, authentication, HTTPS, and secure coding practices.",
     "difficulty": "Intermediate",
     "tags": ["XSS", "CSRF", "HTTPS"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand the OWASP Top 10 web vulnerabilities",
+      "Learn about Cross-Site Scripting (XSS) and how to prevent it",
+      "Study SQL injection attacks and how parameterized queries prevent them",
+      "Understand Cross-Site Request Forgery (CSRF) and CSRF tokens",
+      "Learn about Content Security Policy (CSP) headers",
+      "Study HTTPS, TLS, and secure cookie attributes",
+      "Understand authentication security: password hashing and token storage",
+      "Run a security audit on a sample application"
+    ]
   },
   {
     "id": "responsive_design",
@@ -420,7 +1355,17 @@
     "description": "An approach to web design that makes pages render well on all device sizes, from phones to desktops. It uses flexible grids, media queries, and fluid images to adapt layouts automatically.",
     "difficulty": "Beginner",
     "tags": ["mobile", "media queries", "flexible layout"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand why responsive design is essential for mobile users",
+      "Learn the viewport meta tag and how it affects rendering",
+      "Study CSS media queries to target different screen sizes",
+      "Use relative units: %, em, rem, vw, and vh",
+      "Implement a mobile-first design approach",
+      "Learn Flexbox and Grid for responsive layouts",
+      "Test your design on different devices using browser dev tools",
+      "Build a landing page that works well on mobile, tablet, and desktop"
+    ]
   },
   {
     "id": "web_performance",
@@ -429,7 +1374,93 @@
     "description": "The practice of making websites load and run faster through optimization techniques. Key strategies include code splitting, lazy loading, caching, image optimization, and minimizing network requests.",
     "difficulty": "Intermediate",
     "tags": ["optimization", "loading speed", "caching"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand Core Web Vitals: LCP, FID, and CLS",
+      "Learn how to use Lighthouse and browser dev tools for audits",
+      "Optimize images: modern formats (WebP), compression, and lazy loading",
+      "Learn about browser caching and cache-control headers",
+      "Study code splitting and dynamic imports to reduce bundle size",
+      "Minimize blocking scripts and defer non-critical JavaScript",
+      "Understand CDNs and how they reduce latency",
+      "Apply optimizations to a real site and measure the improvement"
+    ]
+  },
+  {
+    "id": "websockets",
+    "name": "WebSockets",
+    "category": "Web Dev",
+    "description": "A communication protocol that provides full-duplex communication channels over a single TCP connection. WebSockets enable real-time features like live chat, notifications, and collaborative editing in web applications.",
+    "difficulty": "Intermediate",
+    "tags": ["real-time", "bidirectional", "TCP"],
+    "importance": 3,
+    "roadmap": [
+      "Understand the limitations of HTTP for real-time communication",
+      "Learn the WebSocket handshake and how the upgrade happens",
+      "Understand the WebSocket frame format",
+      "Implement a simple WebSocket server using Node.js (ws library)",
+      "Build a client that connects and exchanges messages",
+      "Study Socket.IO as an abstraction over WebSockets with fallbacks",
+      "Build a real-time chat application",
+      "Understand when to use WebSockets vs Server-Sent Events vs polling"
+    ]
+  },
+  {
+    "id": "graphql",
+    "name": "GraphQL",
+    "category": "Web Dev",
+    "description": "A query language for APIs and a runtime for executing those queries that allows clients to request exactly the data they need. GraphQL reduces over-fetching and under-fetching problems common with REST APIs.",
+    "difficulty": "Intermediate",
+    "tags": ["API", "query language", "schema"],
+    "importance": 3,
+    "roadmap": [
+      "Understand the problems with REST APIs that GraphQL solves",
+      "Learn the GraphQL schema definition language (SDL)",
+      "Study the three operation types: query, mutation, and subscription",
+      "Implement a GraphQL server with resolvers",
+      "Learn about the N+1 query problem and how DataLoader solves it",
+      "Understand fragments and how clients compose queries",
+      "Study GraphQL subscriptions for real-time data",
+      "Build a full-stack app with a GraphQL API"
+    ]
+  },
+  {
+    "id": "server_side_rendering",
+    "name": "Server-Side Rendering",
+    "category": "Web Dev",
+    "description": "A technique where HTML is generated on the server for each request, delivering fully rendered pages to the browser. SSR improves initial page load performance and SEO compared to purely client-side rendering.",
+    "difficulty": "Intermediate",
+    "tags": ["SSR", "SEO", "Next.js"],
+    "importance": 3,
+    "roadmap": [
+      "Understand the difference between CSR, SSR, and SSG",
+      "Learn why SSR matters for SEO and initial load performance",
+      "Study the trade-offs: server load, time to first byte, and hydration",
+      "Implement SSR with Next.js using the App Router",
+      "Understand streaming SSR and React Server Components",
+      "Learn about incremental static regeneration (ISR)",
+      "Study the hydration process and common pitfalls",
+      "Deploy an SSR application and measure performance improvements"
+    ]
+  },
+  {
+    "id": "webassembly",
+    "name": "WebAssembly",
+    "category": "Web Dev",
+    "description": "A binary instruction format that runs in the browser at near-native speed. WebAssembly allows code written in languages like C, C++, and Rust to run on the web, enabling high-performance applications.",
+    "difficulty": "Advanced",
+    "tags": ["performance", "binary format", "Wasm"],
+    "importance": 2,
+    "roadmap": [
+      "Understand what WebAssembly is and the problem it solves",
+      "Learn the WebAssembly text format (WAT) as human-readable Wasm",
+      "Understand the compilation pipeline: source language to Wasm",
+      "Compile a C or Rust program to WebAssembly using Emscripten or wasm-pack",
+      "Learn the WebAssembly JavaScript API for loading modules",
+      "Study the memory model and how JS and Wasm share memory",
+      "Understand WASI for running WebAssembly outside the browser",
+      "Build a performance-critical browser feature using WebAssembly"
+    ]
   },
   {
     "id": "tcp_ip",
@@ -438,7 +1469,17 @@
     "description": "The fundamental communication protocol suite of the internet that defines how data is packaged, addressed, transmitted, and received. TCP ensures reliable delivery while IP handles addressing and routing.",
     "difficulty": "Intermediate",
     "tags": ["protocol", "packets", "internet"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand the four layers of the TCP/IP model",
+      "Learn IP addressing: IPv4 notation and subnetting basics",
+      "Understand how routers use IP addresses to forward packets",
+      "Learn TCP's three-way handshake for connection establishment",
+      "Study TCP reliability features: acknowledgments, retransmission, and flow control",
+      "Understand UDP and when to choose it over TCP",
+      "Learn about ports and how they distinguish services on one IP",
+      "Use Wireshark to capture and analyze real TCP/IP traffic"
+    ]
   },
   {
     "id": "dns",
@@ -447,7 +1488,17 @@
     "description": "The Domain Name System translates human-readable domain names (like google.com) into IP addresses that computers use to communicate. DNS is often called the phonebook of the internet.",
     "difficulty": "Beginner",
     "tags": ["domain names", "resolution", "nameserver"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand why we need DNS: humans use names, computers use IPs",
+      "Learn the DNS hierarchy: root, TLD, and authoritative nameservers",
+      "Trace a full DNS resolution from stub resolver to authoritative server",
+      "Understand DNS record types: A, AAAA, CNAME, MX, and TXT",
+      "Learn about DNS caching and TTL",
+      "Understand DNS over HTTPS (DoH) and DNS over TLS (DoT)",
+      "Study common DNS attacks: cache poisoning and DNS hijacking",
+      "Use dig and nslookup to query DNS records yourself"
+    ]
   },
   {
     "id": "routing",
@@ -456,7 +1507,17 @@
     "description": "The process of selecting paths in a network along which to send data packets. Routers use protocols like OSPF and BGP to determine the best path for data to travel between networks.",
     "difficulty": "Intermediate",
     "tags": ["routers", "path selection", "protocols"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand routers as devices that forward packets between networks",
+      "Learn static routing and how routing tables work",
+      "Study dynamic routing protocols and their purposes",
+      "Learn OSPF as a link-state interior gateway protocol",
+      "Understand BGP as the routing protocol of the internet",
+      "Study routing metrics: hop count, bandwidth, and latency",
+      "Learn about CIDR notation and route aggregation",
+      "Use traceroute to observe the hops packets take in real networks"
+    ]
   },
   {
     "id": "network_security",
@@ -465,7 +1526,17 @@
     "description": "Policies and practices designed to protect the integrity and usability of network infrastructure. It encompasses firewalls, intrusion detection systems, VPNs, and network monitoring.",
     "difficulty": "Intermediate",
     "tags": ["protection", "monitoring", "intrusion detection"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand common network threats: eavesdropping, spoofing, and DDoS",
+      "Learn about defense in depth as a security strategy",
+      "Study firewalls: stateful inspection and rules configuration",
+      "Understand intrusion detection systems (IDS) and intrusion prevention systems (IPS)",
+      "Learn about VPNs for encrypting traffic over untrusted networks",
+      "Study network segmentation and DMZ architectures",
+      "Understand network monitoring tools: NetFlow and SNMP",
+      "Set up a simple network monitoring solution"
+    ]
   },
   {
     "id": "firewalls",
@@ -474,7 +1545,17 @@
     "description": "Network security devices that monitor and filter incoming and outgoing traffic based on predefined rules. Firewalls act as a barrier between trusted internal networks and untrusted external networks.",
     "difficulty": "Intermediate",
     "tags": ["filtering", "rules", "network barrier"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand what a firewall does and what it cannot do",
+      "Learn about packet filtering and stateless firewalls",
+      "Study stateful inspection firewalls and connection tracking",
+      "Understand application-layer (Layer 7) firewalls",
+      "Learn how to write basic firewall rules (allow/deny)",
+      "Study default-deny vs default-allow policies",
+      "Understand next-generation firewalls (NGFW) and their features",
+      "Configure a basic firewall using iptables or UFW"
+    ]
   },
   {
     "id": "osi_model",
@@ -483,7 +1564,17 @@
     "description": "A conceptual framework with seven layers that standardizes how different network protocols interact. The layers range from physical transmission (Layer 1) to application-level protocols (Layer 7).",
     "difficulty": "Beginner",
     "tags": ["layers", "framework", "standardization"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand why layered models help manage network complexity",
+      "Learn the seven layers from physical to application",
+      "Map common protocols to their OSI layers",
+      "Understand encapsulation: how data gets wrapped as it moves down the stack",
+      "Study where different network devices operate (switches at Layer 2, routers at Layer 3)",
+      "Learn how troubleshooting follows the OSI layers",
+      "Compare OSI to the simpler TCP/IP model",
+      "Use the OSI model as a framework for diagnosing network problems"
+    ]
   },
   {
     "id": "wireless_networks",
@@ -492,7 +1583,17 @@
     "description": "Networks that use radio waves instead of physical cables to connect devices. Wi-Fi, Bluetooth, and cellular networks are common examples, each with different range and bandwidth characteristics.",
     "difficulty": "Intermediate",
     "tags": ["Wi-Fi", "radio", "mobile"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand how radio waves carry data",
+      "Learn Wi-Fi standards: 802.11a/b/g/n/ac/ax (Wi-Fi 6)",
+      "Understand frequency bands: 2.4 GHz vs 5 GHz trade-offs",
+      "Study wireless security protocols: WEP, WPA2, and WPA3",
+      "Learn about Bluetooth and its use cases",
+      "Understand cellular networks: 4G LTE and 5G basics",
+      "Study wireless interference sources and mitigation",
+      "Set up and secure a home or office wireless network"
+    ]
   },
   {
     "id": "load_balancing",
@@ -501,7 +1602,17 @@
     "description": "The practice of distributing network traffic across multiple servers to ensure no single server is overwhelmed. Load balancers improve application availability, reliability, and response times.",
     "difficulty": "Intermediate",
     "tags": ["distribution", "scalability", "availability"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the problem: single servers become bottlenecks",
+      "Learn about Layer 4 (transport) vs Layer 7 (application) load balancing",
+      "Study load balancing algorithms: round robin, least connections, IP hash",
+      "Understand health checks and how balancers route around failures",
+      "Learn about sticky sessions and when they are needed",
+      "Study horizontal scaling and how load balancing enables it",
+      "Understand global load balancing with GeoDNS and anycast",
+      "Configure a load balancer using NGINX or HAProxy"
+    ]
   },
   {
     "id": "sockets",
@@ -510,7 +1621,93 @@
     "description": "Endpoints for sending and receiving data across a network. Sockets provide the low-level programming interface for network communication using protocols like TCP and UDP.",
     "difficulty": "Intermediate",
     "tags": ["endpoint", "connection", "programming interface"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand what a socket is: an endpoint for network communication",
+      "Learn the socket API: socket, bind, listen, accept, and connect",
+      "Implement a simple TCP echo server",
+      "Implement a client that connects to the echo server",
+      "Understand non-blocking sockets and the select/poll API",
+      "Learn about UDP sockets for connectionless communication",
+      "Study socket options: timeouts, keep-alive, and reuse",
+      "Build a simple HTTP server from scratch using sockets"
+    ]
+  },
+  {
+    "id": "http2",
+    "name": "HTTP/2",
+    "category": "Networking",
+    "description": "The second major version of the HTTP protocol that introduces multiplexing, header compression, and server push to dramatically improve web performance. HTTP/2 allows multiple requests over a single connection.",
+    "difficulty": "Intermediate",
+    "tags": ["protocol", "multiplexing", "performance"],
+    "importance": 3,
+    "roadmap": [
+      "Review HTTP/1.1 and understand its performance bottlenecks",
+      "Learn about head-of-line blocking in HTTP/1.1",
+      "Understand HTTP/2 multiplexing: multiple streams over one connection",
+      "Study HPACK header compression and why it matters",
+      "Learn about server push and its use cases",
+      "Understand the binary framing layer replacing text-based messages",
+      "Compare HTTP/2 performance improvements with benchmarks",
+      "Study HTTP/3 (QUIC) as the next evolution"
+    ]
+  },
+  {
+    "id": "grpc",
+    "name": "gRPC",
+    "category": "Networking",
+    "description": "A high-performance remote procedure call framework developed by Google that uses Protocol Buffers for serialization and HTTP/2 for transport. gRPC is widely used for efficient microservice communication.",
+    "difficulty": "Intermediate",
+    "tags": ["RPC", "Protocol Buffers", "microservices"],
+    "importance": 3,
+    "roadmap": [
+      "Understand RPC concepts and how they differ from REST",
+      "Learn Protocol Buffers (protobuf) for schema definition and serialization",
+      "Install the gRPC tools and generate code from a .proto file",
+      "Implement a simple unary gRPC service",
+      "Study server-side and client-side streaming",
+      "Understand bidirectional streaming for real-time communication",
+      "Learn about gRPC interceptors for middleware patterns",
+      "Compare gRPC vs REST APIs for microservice communication"
+    ]
+  },
+  {
+    "id": "cdn",
+    "name": "CDN",
+    "category": "Networking",
+    "description": "A Content Delivery Network is a distributed system of servers that delivers web content to users based on their geographic location. CDNs cache content at edge servers worldwide to reduce latency and improve load times.",
+    "difficulty": "Beginner",
+    "tags": ["caching", "edge servers", "latency"],
+    "importance": 3,
+    "roadmap": [
+      "Understand why geographic distance causes latency",
+      "Learn how a CDN caches content at edge servers worldwide",
+      "Study cache-control headers that CDNs use to determine TTL",
+      "Understand the difference between static and dynamic CDN content",
+      "Learn about CDN purging and cache invalidation",
+      "Study CDN security features: DDoS protection and WAF",
+      "Configure a simple CDN using Cloudflare",
+      "Measure latency improvements before and after using a CDN"
+    ]
+  },
+  {
+    "id": "vpn",
+    "name": "VPN",
+    "category": "Networking",
+    "description": "A Virtual Private Network creates an encrypted tunnel between a device and a remote server, masking the user's IP and protecting traffic on untrusted networks. VPNs are essential tools for remote access and privacy.",
+    "difficulty": "Beginner",
+    "tags": ["encryption", "privacy", "tunneling"],
+    "importance": 3,
+    "roadmap": [
+      "Understand what problem VPNs solve: privacy and secure access",
+      "Learn how tunneling protocols create encrypted connections",
+      "Study VPN protocols: OpenVPN, WireGuard, and IPSec",
+      "Understand split tunneling and full tunneling",
+      "Learn about site-to-site VPNs for connecting company networks",
+      "Understand the role of VPNs in zero-trust network architectures",
+      "Set up a WireGuard VPN server on a cloud instance",
+      "Understand the limitations and trust model of commercial VPN services"
+    ]
   },
   {
     "id": "cryptography",
@@ -519,7 +1716,17 @@
     "description": "The science of securing information by transforming it into an unreadable format using mathematical algorithms. Cryptography ensures confidentiality, integrity, and authenticity of data.",
     "difficulty": "Intermediate",
     "tags": ["ciphers", "confidentiality", "math"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand the three security goals: confidentiality, integrity, and authenticity",
+      "Learn about symmetric encryption: AES and its modes",
+      "Study asymmetric encryption: RSA and elliptic curve cryptography",
+      "Understand hash functions and their properties",
+      "Learn about digital signatures and how they prove authenticity",
+      "Study key exchange protocols: Diffie-Hellman",
+      "Understand TLS and how cryptographic primitives combine in practice",
+      "Take the Khan Academy cryptography course for a solid foundation"
+    ]
   },
   {
     "id": "encryption",
@@ -528,7 +1735,17 @@
     "description": "The process of converting plaintext into ciphertext using an algorithm and a key, so only authorized parties can read it. Symmetric encryption uses one key, while asymmetric uses a public-private key pair.",
     "difficulty": "Intermediate",
     "tags": ["symmetric", "asymmetric", "ciphertext"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand the basic concept: plaintext + key = ciphertext",
+      "Learn symmetric encryption and AES as the modern standard",
+      "Understand block ciphers and modes of operation (CBC, GCM)",
+      "Study asymmetric encryption: public and private keys",
+      "Learn about RSA encryption and decryption at a conceptual level",
+      "Understand hybrid encryption: use asymmetric to exchange symmetric keys",
+      "Learn about end-to-end encryption and where it is used",
+      "Implement encryption in your language of choice using a cryptography library"
+    ]
   },
   {
     "id": "authentication",
@@ -537,7 +1754,17 @@
     "description": "The process of verifying the identity of a user, device, or system. Common methods include passwords, multi-factor authentication, biometrics, and token-based systems like OAuth.",
     "difficulty": "Beginner",
     "tags": ["identity", "login", "MFA"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand the difference between authentication and authorization",
+      "Learn about password-based authentication and why passwords must be hashed",
+      "Study password hashing: bcrypt, Argon2, and scrypt",
+      "Understand session-based authentication with cookies",
+      "Learn token-based authentication with JSON Web Tokens (JWT)",
+      "Study multi-factor authentication (MFA) and TOTP",
+      "Learn about OAuth 2.0 for delegated authorization",
+      "Implement authentication in a web application from scratch"
+    ]
   },
   {
     "id": "access_control",
@@ -546,7 +1773,17 @@
     "description": "Security techniques that regulate who can view or use resources in a computing environment. Models include role-based access control (RBAC), discretionary access control, and mandatory access control.",
     "difficulty": "Intermediate",
     "tags": ["permissions", "RBAC", "authorization"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand the principle of least privilege",
+      "Learn about discretionary access control (DAC) and Unix file permissions",
+      "Study role-based access control (RBAC) and how to model permissions",
+      "Understand attribute-based access control (ABAC) for fine-grained policies",
+      "Learn about access control lists (ACLs)",
+      "Understand mandatory access control (MAC) in systems like SELinux",
+      "Study authorization in web applications: middleware and guards",
+      "Implement RBAC in a web application"
+    ]
   },
   {
     "id": "penetration_testing",
@@ -555,7 +1792,17 @@
     "description": "A simulated cyberattack against a system to identify exploitable vulnerabilities before malicious actors do. Pen testing involves reconnaissance, exploitation, and reporting to improve security posture.",
     "difficulty": "Advanced",
     "tags": ["ethical hacking", "vulnerabilities", "testing"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the legal and ethical framework for penetration testing",
+      "Learn the pen testing methodology: reconnaissance, scanning, exploitation, reporting",
+      "Set up a safe practice environment using Kali Linux and vulnerable VMs",
+      "Study network scanning with Nmap",
+      "Learn about web application vulnerabilities using OWASP WebGoat",
+      "Understand Metasploit for exploitation",
+      "Study privilege escalation techniques",
+      "Practice on platforms like Hack The Box or TryHackMe"
+    ]
   },
   {
     "id": "malware_analysis",
@@ -564,7 +1811,17 @@
     "description": "The process of studying malicious software to understand its behavior, origin, and impact. Analysts use static and dynamic techniques to dissect viruses, trojans, ransomware, and other threats.",
     "difficulty": "Advanced",
     "tags": ["viruses", "reverse engineering", "threats"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the malware categories: viruses, worms, trojans, ransomware",
+      "Learn static analysis: examining code without executing it",
+      "Study tools: strings, objdump, and Ghidra for disassembly",
+      "Learn dynamic analysis: running malware in a controlled sandbox",
+      "Set up a safe analysis environment with isolated VMs",
+      "Study common malware behaviors: persistence, C2 communication, evasion",
+      "Practice on real malware samples from VirusTotal or MalwareBazaar",
+      "Write an analysis report documenting your findings"
+    ]
   },
   {
     "id": "network_security_fundamentals",
@@ -573,7 +1830,17 @@
     "description": "Core principles for protecting data during transmission across networks. Topics include encryption in transit, VPNs, secure protocols like TLS, and defense-in-depth strategies.",
     "difficulty": "Intermediate",
     "tags": ["TLS", "VPN", "defense in depth"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand common network attacks: MITM, eavesdropping, replay attacks",
+      "Learn how TLS secures data in transit",
+      "Study certificate validation and how to detect invalid certificates",
+      "Understand VPNs for secure remote access",
+      "Learn about network segmentation and VLANs",
+      "Study intrusion detection and prevention systems",
+      "Understand security monitoring: logs, SIEM, and alerts",
+      "Conduct a basic network security audit"
+    ]
   },
   {
     "id": "secure_coding",
@@ -582,7 +1849,17 @@
     "description": "The practice of writing software that is resistant to security vulnerabilities. It involves input validation, proper error handling, avoiding common pitfalls like buffer overflows, and following security guidelines.",
     "difficulty": "Intermediate",
     "tags": ["input validation", "best practices", "vulnerability prevention"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Study the OWASP Top 10 as a foundation for common vulnerabilities",
+      "Learn input validation: never trust user-supplied data",
+      "Understand SQL injection and parameterized query prevention",
+      "Study cross-site scripting (XSS) and output encoding",
+      "Learn about secure error handling: avoid leaking information",
+      "Understand dependency management and keeping libraries updated",
+      "Learn security headers and their role in defense in depth",
+      "Perform a security review on your own code using a checklist"
+    ]
   },
   {
     "id": "public_key_infrastructure",
@@ -591,7 +1868,93 @@
     "description": "A framework for managing digital certificates and public-key encryption to enable secure communication. PKI uses certificate authorities, digital signatures, and trust chains to verify identities online.",
     "difficulty": "Advanced",
     "tags": ["certificates", "CA", "digital signatures"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the core problem: how do you trust a public key?",
+      "Learn about digital certificates and what information they contain",
+      "Study certificate authorities (CAs) and root trust stores",
+      "Understand the certificate chain from root to leaf",
+      "Learn how certificate signing requests (CSRs) work",
+      "Study certificate revocation: CRL and OCSP",
+      "Understand Let's Encrypt and how free TLS certificates work",
+      "Set up TLS for a web server using your own certificates"
+    ]
+  },
+  {
+    "id": "oauth",
+    "name": "OAuth",
+    "category": "Security",
+    "description": "An open authorization framework that allows third-party applications to access user resources without exposing credentials. OAuth 2.0 is the industry standard for delegated access and powers 'Login with Google' flows.",
+    "difficulty": "Intermediate",
+    "tags": ["authorization", "tokens", "delegation"],
+    "importance": 4,
+    "roadmap": [
+      "Understand the problem OAuth solves: delegating access without sharing passwords",
+      "Learn the four OAuth 2.0 grant types: authorization code, implicit, client credentials, password",
+      "Trace through the Authorization Code flow step by step",
+      "Understand access tokens, refresh tokens, and their lifetimes",
+      "Learn about scopes for limiting what an application can access",
+      "Study OpenID Connect (OIDC) as an identity layer on top of OAuth",
+      "Implement OAuth login (Google or GitHub) in a web application",
+      "Understand common OAuth security pitfalls: token leakage and redirect URI validation"
+    ]
+  },
+  {
+    "id": "jwt",
+    "name": "JWT",
+    "category": "Security",
+    "description": "JSON Web Tokens are a compact, URL-safe format for representing claims between two parties. JWTs are widely used for stateless authentication in web APIs and single-page applications.",
+    "difficulty": "Beginner",
+    "tags": ["tokens", "authentication", "stateless"],
+    "importance": 4,
+    "roadmap": [
+      "Understand why stateless authentication is useful for APIs",
+      "Learn the JWT structure: header, payload, and signature",
+      "Understand how the signature ensures integrity",
+      "Learn to create and verify JWTs in your language of choice",
+      "Study the standard claims: iss, sub, exp, and iat",
+      "Understand the difference between signing (JWS) and encryption (JWE)",
+      "Learn where to store JWTs securely in a browser",
+      "Study common JWT vulnerabilities: alg:none and weak secrets"
+    ]
+  },
+  {
+    "id": "zero_trust",
+    "name": "Zero Trust",
+    "category": "Security",
+    "description": "A security model based on the principle 'never trust, always verify.' Zero trust assumes no user or device is inherently trusted, requiring continuous verification regardless of network location.",
+    "difficulty": "Intermediate",
+    "tags": ["security model", "verification", "identity"],
+    "importance": 3,
+    "roadmap": [
+      "Understand the traditional perimeter security model and its weaknesses",
+      "Learn the core zero trust principles: verify explicitly, least privilege, assume breach",
+      "Study identity as the new security perimeter",
+      "Understand multi-factor authentication in a zero trust context",
+      "Learn about micro-segmentation and limiting lateral movement",
+      "Study device trust: health checks before granting access",
+      "Understand zero trust network access (ZTNA) vs traditional VPNs",
+      "Map a zero trust architecture for a real or hypothetical organization"
+    ]
+  },
+  {
+    "id": "cors",
+    "name": "CORS",
+    "category": "Security",
+    "description": "Cross-Origin Resource Sharing is a browser security mechanism that controls how web pages request resources from different origins. CORS prevents malicious websites from making unauthorized API calls on behalf of users.",
+    "difficulty": "Beginner",
+    "tags": ["cross-origin", "browser security", "headers"],
+    "importance": 3,
+    "roadmap": [
+      "Understand the same-origin policy and why browsers enforce it",
+      "Learn what constitutes an origin: scheme, host, and port",
+      "Understand simple requests vs preflight requests",
+      "Learn the key CORS headers: Access-Control-Allow-Origin and others",
+      "Study wildcard origins vs specific allowed origins",
+      "Understand credentialed requests and cookies across origins",
+      "Configure CORS correctly on a backend API",
+      "Diagnose and fix common CORS errors in development"
+    ]
   },
   {
     "id": "sql",
@@ -600,7 +1963,17 @@
     "description": "Structured Query Language is the standard language for managing and querying relational databases. SQL lets you create tables, insert data, and retrieve information using declarative statements.",
     "difficulty": "Beginner",
     "tags": ["queries", "relational", "declarative"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Learn basic SELECT queries with WHERE, ORDER BY, and LIMIT",
+      "Understand INSERT, UPDATE, and DELETE for data manipulation",
+      "Study CREATE TABLE with data types and constraints",
+      "Learn JOIN operations: INNER, LEFT, RIGHT, and FULL OUTER",
+      "Understand GROUP BY and aggregate functions: COUNT, SUM, AVG",
+      "Learn about subqueries and CTEs (Common Table Expressions)",
+      "Study indexes and when to add them for performance",
+      "Build a small database for a real project (blog or inventory)"
+    ]
   },
   {
     "id": "relational_databases",
@@ -609,7 +1982,17 @@
     "description": "Database systems that organize data into tables with rows and columns, linked by relationships through keys. Examples include PostgreSQL, MySQL, and SQLite, all accessed using SQL.",
     "difficulty": "Beginner",
     "tags": ["tables", "keys", "RDBMS"],
-    "importance": 5
+    "importance": 5,
+    "roadmap": [
+      "Understand the relational model: tables, rows, columns, and keys",
+      "Learn about primary keys and foreign keys",
+      "Study referential integrity and constraints",
+      "Set up PostgreSQL and connect via psql or a GUI like DBeaver",
+      "Design a multi-table schema with proper relationships",
+      "Learn about JOINs as the primary way to query related tables",
+      "Understand ACID properties and why they matter",
+      "Build a backend application with a relational database"
+    ]
   },
   {
     "id": "nosql",
@@ -618,7 +2001,17 @@
     "description": "A category of databases that store data in formats other than traditional relational tables. Types include document stores (MongoDB), key-value stores (Redis), and graph databases (Neo4j).",
     "difficulty": "Intermediate",
     "tags": ["document store", "key-value", "non-relational"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand why NoSQL databases were created and what problems they solve",
+      "Learn the four main NoSQL types: document, key-value, column-family, and graph",
+      "Set up MongoDB and explore document-based data modeling",
+      "Understand embedding vs referencing documents in MongoDB",
+      "Learn Redis as a key-value store and cache",
+      "Understand eventual consistency and when it is acceptable",
+      "Study the CAP theorem in the context of NoSQL databases",
+      "Choose the right NoSQL database for a given use case"
+    ]
   },
   {
     "id": "database_indexing",
@@ -627,7 +2020,17 @@
     "description": "A technique that creates additional data structures to speed up data retrieval operations on database tables. Indexes work like a book's index, allowing the database to find rows without scanning every record.",
     "difficulty": "Intermediate",
     "tags": ["performance", "B-tree", "lookup"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand why full table scans are slow for large tables",
+      "Learn how a B-tree index organizes data for fast lookups",
+      "Create indexes in PostgreSQL and analyze query plans with EXPLAIN",
+      "Understand single-column vs composite indexes",
+      "Learn about covering indexes and index-only scans",
+      "Study when NOT to add an index (write overhead trade-off)",
+      "Understand hash indexes and when they outperform B-trees",
+      "Optimize a slow query by analyzing and adding the right index"
+    ]
   },
   {
     "id": "transactions",
@@ -636,7 +2039,17 @@
     "description": "A sequence of database operations that are treated as a single unit of work, following ACID properties. Transactions ensure data consistency even when operations fail or multiple users access data simultaneously.",
     "difficulty": "Intermediate",
     "tags": ["ACID", "commit", "rollback"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand the ACID properties: atomicity, consistency, isolation, and durability",
+      "Learn the basic transaction commands: BEGIN, COMMIT, and ROLLBACK",
+      "Understand isolation levels: READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE",
+      "Study concurrency anomalies: dirty reads, non-repeatable reads, and phantom reads",
+      "Learn about locking mechanisms: shared locks and exclusive locks",
+      "Understand optimistic vs pessimistic concurrency control",
+      "Study deadlocks in databases and how to prevent them",
+      "Implement a bank transfer using transactions to ensure correctness"
+    ]
   },
   {
     "id": "normalization",
@@ -645,7 +2058,17 @@
     "description": "The process of organizing database tables to reduce data redundancy and improve data integrity. Normal forms (1NF, 2NF, 3NF) provide rules for structuring tables and their relationships.",
     "difficulty": "Intermediate",
     "tags": ["normal forms", "redundancy", "design"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the problems of unnormalized data: anomalies and redundancy",
+      "Learn First Normal Form (1NF): atomic values, no repeating groups",
+      "Study Second Normal Form (2NF): eliminate partial dependencies",
+      "Learn Third Normal Form (3NF): eliminate transitive dependencies",
+      "Understand Boyce-Codd Normal Form (BCNF)",
+      "Practice normalizing a messy unnormalized table to 3NF",
+      "Understand when to denormalize for performance",
+      "Design a schema from scratch using normalization principles"
+    ]
   },
   {
     "id": "query_optimization",
@@ -654,7 +2077,17 @@
     "description": "Techniques for improving database query performance by analyzing execution plans and restructuring queries. Optimization involves choosing efficient joins, using indexes, and minimizing data scans.",
     "difficulty": "Advanced",
     "tags": ["execution plan", "performance", "joins"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand what a query execution plan is and how to read it",
+      "Learn to use EXPLAIN and EXPLAIN ANALYZE in PostgreSQL",
+      "Identify sequential scans that should be index scans",
+      "Understand join algorithms: nested loop, hash join, merge join",
+      "Learn query rewriting techniques: avoid SELECT *, use CTEs wisely",
+      "Study index usage: covering indexes and partial indexes",
+      "Understand statistics and how the query planner makes decisions",
+      "Optimize a slow real-world query from start to finish"
+    ]
   },
   {
     "id": "data_modeling",
@@ -663,7 +2096,17 @@
     "description": "The process of creating a visual representation of a database structure, defining entities, attributes, and relationships. Good data models ensure efficient storage and retrieval of information.",
     "difficulty": "Intermediate",
     "tags": ["ER diagrams", "schema", "entities"],
-    "importance": 4
+    "importance": 4,
+    "roadmap": [
+      "Understand conceptual, logical, and physical data models",
+      "Learn Entity-Relationship (ER) diagrams and their notation",
+      "Identify entities, attributes, and cardinality in a business domain",
+      "Convert an ER diagram to a relational schema",
+      "Study one-to-one, one-to-many, and many-to-many relationships",
+      "Learn junction tables for modeling many-to-many in SQL",
+      "Practice modeling a real domain like an e-commerce or library system",
+      "Review your schema with normalization principles"
+    ]
   },
   {
     "id": "database_replication",
@@ -672,6 +2115,73 @@
     "description": "The process of copying and maintaining database data across multiple servers for redundancy and availability. Replication strategies include master-slave, master-master, and multi-region setups.",
     "difficulty": "Advanced",
     "tags": ["redundancy", "availability", "synchronization"],
-    "importance": 3
+    "importance": 3,
+    "roadmap": [
+      "Understand the goals: high availability, disaster recovery, and read scaling",
+      "Learn primary-replica (master-slave) replication",
+      "Understand synchronous vs asynchronous replication trade-offs",
+      "Study replication lag and its implications for reads",
+      "Learn multi-primary replication and conflict resolution",
+      "Understand logical vs physical replication",
+      "Study read replicas for horizontal scaling of read traffic",
+      "Set up a PostgreSQL replication pair and test failover"
+    ]
+  },
+  {
+    "id": "redis",
+    "name": "Redis",
+    "category": "Databases",
+    "description": "An in-memory data structure store used as a database, cache, message broker, and queue. Redis supports rich data types like strings, hashes, lists, sets, and sorted sets with near-instant access times.",
+    "difficulty": "Intermediate",
+    "tags": ["in-memory", "caching", "key-value"],
+    "importance": 4,
+    "roadmap": [
+      "Understand why in-memory storage is orders of magnitude faster than disk",
+      "Install Redis and connect via the redis-cli",
+      "Learn the core data types: strings, lists, hashes, sets, and sorted sets",
+      "Implement a caching layer using Redis for a database query",
+      "Learn about TTL (time-to-live) and cache expiration strategies",
+      "Use Redis Pub/Sub for simple message broadcasting",
+      "Study Redis persistence options: RDB snapshots and AOF logging",
+      "Understand Redis clustering for horizontal scaling"
+    ]
+  },
+  {
+    "id": "cap_theorem",
+    "name": "CAP Theorem",
+    "category": "Databases",
+    "description": "A fundamental theorem in distributed systems stating that a distributed database can guarantee at most two of three properties: Consistency, Availability, and Partition tolerance. Understanding CAP helps in choosing the right database for a use case.",
+    "difficulty": "Intermediate",
+    "tags": ["distributed systems", "consistency", "availability"],
+    "importance": 3,
+    "roadmap": [
+      "Understand the three properties: Consistency, Availability, and Partition tolerance",
+      "Learn why partition tolerance is unavoidable in real networks",
+      "Study CP systems: choose consistency over availability during a partition",
+      "Study AP systems: choose availability over consistency during a partition",
+      "Understand eventual consistency as a practical middle ground",
+      "Learn how different databases position themselves (HBase vs Cassandra)",
+      "Explore the PACELC theorem as an extension of CAP",
+      "Apply CAP reasoning to choose a database for a specific system design scenario"
+    ]
+  },
+  {
+    "id": "sharding",
+    "name": "Sharding",
+    "category": "Databases",
+    "description": "A database scaling technique that horizontally partitions data across multiple database instances called shards. Each shard holds a subset of the total data, allowing the system to handle more data and traffic than a single machine could.",
+    "difficulty": "Advanced",
+    "tags": ["horizontal scaling", "partitioning", "distributed"],
+    "importance": 3,
+    "roadmap": [
+      "Understand the limits of vertical scaling and why sharding is needed",
+      "Learn the difference between horizontal and vertical partitioning",
+      "Study common sharding strategies: range-based, hash-based, and directory-based",
+      "Understand the challenges: cross-shard queries and hot spots",
+      "Learn about consistent hashing to minimize data movement when re-sharding",
+      "Study how MongoDB and Cassandra implement sharding",
+      "Understand the application-level complexity sharding introduces",
+      "Design a sharding strategy for a high-traffic social media feed"
+    ]
   }
 ]

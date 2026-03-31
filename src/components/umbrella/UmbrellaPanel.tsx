@@ -7,20 +7,19 @@ import { CATEGORY_COLORS } from "@/lib/constants";
 interface UmbrellaPanelProps {
   category: Category;
   index: number;
+  totalPanels: number;
   topicCount: number;
   isExpanded: boolean;
   onClick: (category: Category) => void;
 }
 
 const CX = 500;
-const CY = 340;
-const OUTER_R = 300;
-const INNER_R = 35;
-const TOTAL_PANELS = 8;
-// Canopy spans from 10° to 170° — wide arc across the top
-const START_DEG = 10;
-const END_DEG = 170;
-const SWEEP = (END_DEG - START_DEG) / TOTAL_PANELS;
+const CY = 360;
+const OUTER_R = 310;
+const INNER_R = 30;
+// Canopy spans from 5° to 175°
+const START_DEG = 5;
+const END_DEG = 175;
 
 function degToRad(deg: number) {
   return (deg * Math.PI) / 180;
@@ -36,10 +35,11 @@ function polarToCart(cx: number, cy: number, r: number, deg: number) {
   };
 }
 
-function buildArcPath(index: number) {
+function buildArcPath(index: number, totalPanels: number) {
+  const sweep = (END_DEG - START_DEG) / totalPanels;
   // Panels go left-to-right: index 0 starts at END_DEG (left side)
-  const startAngle = END_DEG - index * SWEEP;
-  const endAngle = startAngle - SWEEP;
+  const startAngle = END_DEG - index * sweep;
+  const endAngle = startAngle - sweep;
 
   const outerStart = polarToCart(CX, CY, OUTER_R, startAngle);
   const outerEnd = polarToCart(CX, CY, OUTER_R, endAngle);
@@ -47,10 +47,10 @@ function buildArcPath(index: number) {
   const innerEnd = polarToCart(CX, CY, INNER_R, endAngle);
 
   const midAngle = (startAngle + endAngle) / 2;
-  const bulgeR = OUTER_R + 25;
+  const bulgeR = OUTER_R + 20;
   const bulgePoint = polarToCart(CX, CY, bulgeR, midAngle);
 
-  const labelR = (OUTER_R + INNER_R) / 2 + 20;
+  const labelR = (OUTER_R + INNER_R) / 2 + 25;
   const labelPos = polarToCart(CX, CY, labelR, midAngle);
 
   const path = [
@@ -67,13 +67,29 @@ function buildArcPath(index: number) {
 
 export { CX, CY };
 
-export function UmbrellaPanel({ category, index, topicCount, isExpanded, onClick }: UmbrellaPanelProps) {
+export function UmbrellaPanel({
+  category,
+  index,
+  totalPanels,
+  topicCount,
+  isExpanded,
+  onClick,
+}: UmbrellaPanelProps) {
   const color = CATEGORY_COLORS[category];
-  const { path, labelPos, midAngle } = buildArcPath(index);
+  const { path, labelPos, midAngle } = buildArcPath(index, totalPanels);
   const filterId = `glow-${index}`;
 
-  // Rotate labels so text is readable
-  const labelRotation = 90 - midAngle;
+  // Text reads radially — pointing outward from center like a spoke
+  // For left half (angle > 90°): text should read from outside toward center (rotate 180 so not upside down)
+  // For right half (angle <= 90°): text reads from center outward
+  const isLeftSide = midAngle > 90;
+  const textRotation = isLeftSide
+    ? round(-(midAngle - 180)) // flip so text reads left-to-right
+    : round(-midAngle);
+
+  // Shift label slightly outward for better centering in the panel
+  const labelOuterR = (OUTER_R + INNER_R) / 2 + 30;
+  const adjustedLabel = polarToCart(CX, CY, labelOuterR, midAngle);
 
   return (
     <g
@@ -94,54 +110,61 @@ export function UmbrellaPanel({ category, index, topicCount, isExpanded, onClick
         d={path}
         fill={color}
         stroke={color}
-        strokeWidth={isExpanded ? 2 : 1.5}
+        strokeWidth={isExpanded ? 2 : 1}
         filter={`url(#${filterId})`}
-        initial={{ fillOpacity: 0.15, strokeOpacity: 0.5 }}
+        initial={{ fillOpacity: 0.15, strokeOpacity: 0.4 }}
         animate={{
-          fillOpacity: isExpanded ? 0.5 : [0.12, 0.2, 0.12],
-          strokeOpacity: isExpanded ? 1 : 0.5,
+          fillOpacity: isExpanded ? 0.5 : [0.1, 0.2, 0.1],
+          strokeOpacity: isExpanded ? 1 : 0.4,
           scale: isExpanded ? 1.06 : 1,
         }}
         transition={{
-          fillOpacity: isExpanded ? { duration: 0.3 } : { duration: 3, repeat: Infinity, ease: "easeInOut" },
+          fillOpacity: isExpanded
+            ? { duration: 0.3 }
+            : { duration: 3, repeat: Infinity, ease: "easeInOut" },
           scale: { duration: 0.3, ease: "easeOut" },
           strokeOpacity: { duration: 0.3 },
         }}
         style={{ transformOrigin: `${CX}px ${CY}px` }}
       />
 
-      {/* Category label */}
+      {/* Category label — reads radially outward like a spoke */}
       <text
-        x={round(labelPos.x)}
-        y={round(labelPos.y)}
+        x={round(adjustedLabel.x)}
+        y={round(adjustedLabel.y)}
         textAnchor="middle"
         dominantBaseline="central"
-        fill={isExpanded ? "#fff" : "rgba(255,255,255,0.75)"}
-        fontSize={isExpanded ? 14 : 12}
+        fill={isExpanded ? "#fff" : "rgba(255,255,255,0.7)"}
+        fontSize={isExpanded ? 13 : 11}
         fontWeight={600}
+        letterSpacing="0.02em"
         style={{ pointerEvents: "none", userSelect: "none" }}
-        transform={`rotate(${round(labelRotation)}, ${round(labelPos.x)}, ${round(labelPos.y)})`}
+        transform={`rotate(${textRotation}, ${round(adjustedLabel.x)}, ${round(adjustedLabel.y)})`}
       >
         {category}
       </text>
 
-      {/* Topic count */}
+      {/* Topic count when expanded */}
       {isExpanded && (
-        <motion.text
-          x={round(labelPos.x)}
-          y={round(labelPos.y + 16)}
-          textAnchor="middle"
-          dominantBaseline="central"
-          fill="rgba(255,255,255,0.5)"
-          fontSize={10}
-          fontWeight={400}
+        <motion.g
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          style={{ pointerEvents: "none", userSelect: "none" }}
-          transform={`rotate(${round(labelRotation)}, ${round(labelPos.x)}, ${round(labelPos.y + 16)})`}
+          transition={{ delay: 0.1 }}
         >
-          {topicCount} topic{topicCount !== 1 ? "s" : ""}
-        </motion.text>
+          <text
+            x={round(adjustedLabel.x)}
+            y={round(adjustedLabel.y + 15)}
+            textAnchor="middle"
+            dominantBaseline="central"
+            fill="rgba(255,255,255,0.45)"
+            fontSize={9}
+            fontWeight={400}
+            style={{ pointerEvents: "none", userSelect: "none" }}
+            transform={`rotate(${textRotation}, ${round(adjustedLabel.x)}, ${round(adjustedLabel.y + 15)})`}
+          >
+            {topicCount} topic{topicCount !== 1 ? "s" : ""}
+          </text>
+        </motion.g>
       )}
     </g>
   );

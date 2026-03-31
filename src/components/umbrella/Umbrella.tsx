@@ -43,13 +43,14 @@ export function Umbrella({ topics, onTopicClick, searchBar }: UmbrellaProps) {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 w-full max-w-4xl"
       >
-        <svg viewBox="0 0 1000 560" className="w-full drop-shadow-2xl">
+        <svg viewBox="0 0 1000 580" className="w-full drop-shadow-2xl">
           {/* Panels */}
           {CATEGORIES.map((cat, i) => (
             <UmbrellaPanel
               key={cat}
               category={cat}
               index={i}
+              totalPanels={CATEGORIES.length}
               topicCount={countByCategory(cat)}
               isExpanded={expandedCategory === cat}
               onClick={handlePanelClick}

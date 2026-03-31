@@ -1,0 +1,53 @@
+[  806125ms] [ERROR] Received NaN for the `%s` attribute. If this is expected, cast the value to a string. x @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  806125ms] [ERROR] Received NaN for the `%s` attribute. If this is expected, cast the value to a string. y @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  806126ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806126ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806126ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806127ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806127ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806128ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806128ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806128ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806128ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806128ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806129ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806129ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806129ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806129ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806130ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806130ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806130ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806130ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806130ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806131ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806131ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806131ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806132ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806132ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806132ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806132ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806132ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806133ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806133ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806133ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806133ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806134ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806134ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806134ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806134ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806134ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806135ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806135ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806135ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806135ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806136ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806136ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806136ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806136ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806136ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806137ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806137ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806137ms] [ERROR] Error: <path> attribute d: Expected number, "M NaN NaN L NaN Na…". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806137ms] [ERROR] Error: <text> attribute x: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806138ms] [ERROR] Error: <text> attribute y: Expected length, "NaN". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377
+[  806138ms] [ERROR] Error: <text> attribute transform: Expected number, "rotate(NaN, NaN, NaN)". @ http://localhost:3003/_next/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:1377

@@ -32,6 +32,18 @@
   { "topicId": "hashing", "title": "Hashing in Data Structure", "url": "https://www.geeksforgeeks.org/hashing-data-structure/", "type": "article", "source": "GeeksforGeeks" },
   { "topicId": "hashing", "title": "Hashing", "url": "https://en.wikipedia.org/wiki/Hash_function", "type": "article", "source": "Wikipedia" },
 
+  { "topicId": "a_star_search", "title": "A* Search Algorithm", "url": "https://www.geeksforgeeks.org/a-search-algorithm/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "a_star_search", "title": "A* Pathfinding Visualization", "url": "https://www.youtube.com/watch?v=ySN5Wnu88nE", "type": "video", "source": "Computerphile" },
+  { "topicId": "a_star_search", "title": "Introduction to A*", "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html", "type": "article", "source": "Red Blob Games" },
+
+  { "topicId": "dijkstras_algorithm", "title": "Dijkstra's Algorithm", "url": "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "dijkstras_algorithm", "title": "Dijkstra's Algorithm Explained", "url": "https://www.youtube.com/watch?v=GazC3A4OQTE", "type": "video", "source": "Computerphile" },
+  { "topicId": "dijkstras_algorithm", "title": "Shortest Path Algorithms", "url": "https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/", "type": "article", "source": "freeCodeCamp" },
+
+  { "topicId": "binary_search", "title": "Binary Search Tutorial", "url": "https://www.geeksforgeeks.org/binary-search/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "binary_search", "title": "Binary Search in Detail", "url": "https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search", "type": "article", "source": "Khan Academy" },
+  { "topicId": "binary_search", "title": "Binary Search Patterns", "url": "https://www.freecodecamp.org/news/binary-search/", "type": "article", "source": "freeCodeCamp" },
+
   { "topicId": "arrays", "title": "Arrays in Data Structures", "url": "https://www.geeksforgeeks.org/array-data-structure/", "type": "article", "source": "GeeksforGeeks" },
   { "topicId": "arrays", "title": "Arrays and Objects", "url": "https://www.freecodecamp.org/news/data-structures-101-arrays-a-visual-introduction-for-beginners-7f013bcc355a/", "type": "article", "source": "freeCodeCamp" },
 
@@ -62,11 +74,27 @@
   { "topicId": "binary_search_trees", "title": "Binary Search Tree", "url": "https://www.geeksforgeeks.org/binary-search-tree-data-structure/", "type": "article", "source": "GeeksforGeeks" },
   { "topicId": "binary_search_trees", "title": "BST Implementation", "url": "https://www.freecodecamp.org/news/binary-search-tree-what-is-it/", "type": "article", "source": "freeCodeCamp" },
 
+  { "topicId": "red_black_trees", "title": "Red-Black Tree", "url": "https://www.geeksforgeeks.org/introduction-to-red-black-tree/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "red_black_trees", "title": "Red-Black Trees Explained", "url": "https://www.youtube.com/watch?v=qvZGUFHWChY", "type": "video", "source": "Computerphile" },
+  { "topicId": "red_black_trees", "title": "Balanced BSTs - MIT OCW", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/", "type": "course", "source": "MIT OpenCourseWare" },
+
+  { "topicId": "b_trees", "title": "B-Tree Data Structure", "url": "https://www.geeksforgeeks.org/introduction-of-b-tree/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "b_trees", "title": "B-Trees and Databases", "url": "https://www.youtube.com/watch?v=aZjYr87r1b8", "type": "video", "source": "Computerphile" },
+  { "topicId": "b_trees", "title": "B+ Trees", "url": "https://en.wikipedia.org/wiki/B%2B_tree", "type": "article", "source": "Wikipedia" },
+
+  { "topicId": "skip_lists", "title": "Skip Lists", "url": "https://www.geeksforgeeks.org/skip-list/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "skip_lists", "title": "Skip Lists - A Probabilistic Alternative", "url": "https://en.wikipedia.org/wiki/Skip_list", "type": "article", "source": "Wikipedia" },
+  { "topicId": "skip_lists", "title": "Skip Lists Explained", "url": "https://www.youtube.com/watch?v=2g9OSRKJuzM", "type": "video", "source": "MIT OpenCourseWare" },
+
+  { "topicId": "bloom_filters", "title": "Bloom Filters", "url": "https://www.geeksforgeeks.org/bloom-filters-introduction-and-python-implementation/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "bloom_filters", "title": "Bloom Filters by Example", "url": "https://llimllib.github.io/bloomfilter-tutorial/", "type": "article", "source": "Interactive Tutorial" },
+  { "topicId": "bloom_filters", "title": "Bloom Filters Explained", "url": "https://www.youtube.com/watch?v=-SuTGoFYjZs", "type": "video", "source": "Computerphile" },
+
   { "topicId": "machine_learning", "title": "Machine Learning Course for Beginners", "url": "https://www.youtube.com/watch?v=NWONeJKn6kc", "type": "video", "source": "freeCodeCamp" },
   { "topicId": "machine_learning", "title": "Machine Learning", "url": "https://www.coursera.org/learn/machine-learning", "type": "course", "source": "Coursera" },
   { "topicId": "machine_learning", "title": "Machine Learning Overview", "url": "https://en.wikipedia.org/wiki/Machine_learning", "type": "article", "source": "Wikipedia" },
 
-  { "topicId": "neural_networks", "title": "Neural Networks Explained", "url": "https://www.youtube.com/watch?v=aircAruvnKk", "type": "video", "source": "Computerphile" },
+  { "topicId": "neural_networks", "title": "Neural Networks Explained", "url": "https://www.youtube.com/watch?v=aircAruvnKk", "type": "video", "source": "3Blue1Brown" },
   { "topicId": "neural_networks", "title": "Introduction to Neural Networks", "url": "https://www.geeksforgeeks.org/neural-networks-a-beginners-guide/", "type": "article", "source": "GeeksforGeeks" },
 
   { "topicId": "deep_learning", "title": "Deep Learning Specialization", "url": "https://www.coursera.org/specializations/deep-learning", "type": "course", "source": "Coursera" },
@@ -92,6 +120,66 @@
 
   { "topicId": "clustering", "title": "Clustering in Machine Learning", "url": "https://www.geeksforgeeks.org/clustering-in-machine-learning/", "type": "article", "source": "GeeksforGeeks" },
   { "topicId": "clustering", "title": "K-Means Clustering", "url": "https://www.youtube.com/watch?v=4b5d3muPQmA", "type": "video", "source": "Computerphile" },
+
+  { "topicId": "transformer_architecture", "title": "Attention Is All You Need (original paper)", "url": "https://arxiv.org/abs/1706.03762", "type": "article", "source": "arXiv" },
+  { "topicId": "transformer_architecture", "title": "The Illustrated Transformer", "url": "https://jalammar.github.io/illustrated-transformer/", "type": "article", "source": "Jay Alammar" },
+  { "topicId": "transformer_architecture", "title": "Transformers Explained - 3Blue1Brown", "url": "https://www.youtube.com/watch?v=wjZofJX0v4M", "type": "video", "source": "3Blue1Brown" },
+
+  { "topicId": "large_language_models", "title": "How Large Language Models Work", "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g", "type": "video", "source": "3Blue1Brown" },
+  { "topicId": "large_language_models", "title": "Large Language Models Explained", "url": "https://www.geeksforgeeks.org/large-language-model-llm/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "large_language_models", "title": "State of GPT - Andrej Karpathy", "url": "https://www.youtube.com/watch?v=bZQun8Y4L2A", "type": "video", "source": "Microsoft Build" },
+
+  { "topicId": "prompt_engineering", "title": "Prompt Engineering Guide", "url": "https://www.promptingguide.ai/", "type": "article", "source": "Prompt Engineering Guide" },
+  { "topicId": "prompt_engineering", "title": "ChatGPT Prompt Engineering for Developers", "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/", "type": "course", "source": "DeepLearning.AI" },
+  { "topicId": "prompt_engineering", "title": "Prompt Engineering Overview", "url": "https://www.geeksforgeeks.org/prompt-engineering/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "fine_tuning", "title": "Fine-Tuning LLMs with Hugging Face", "url": "https://huggingface.co/docs/transformers/training", "type": "article", "source": "Hugging Face" },
+  { "topicId": "fine_tuning", "title": "Finetuning Large Language Models", "url": "https://www.deeplearning.ai/short-courses/finetuning-large-language-models/", "type": "course", "source": "DeepLearning.AI" },
+  { "topicId": "fine_tuning", "title": "LoRA: Low-Rank Adaptation Explained", "url": "https://www.geeksforgeeks.org/lora-fine-tuning/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "rag", "title": "LangChain RAG Tutorial", "url": "https://python.langchain.com/docs/tutorials/rag/", "type": "article", "source": "LangChain" },
+  { "topicId": "rag", "title": "Building RAG Applications", "url": "https://www.deeplearning.ai/short-courses/building-and-evaluating-advanced-rag/", "type": "course", "source": "DeepLearning.AI" },
+  { "topicId": "rag", "title": "RAG Explained", "url": "https://www.youtube.com/watch?v=T-D1OfcDW1M", "type": "video", "source": "freeCodeCamp" },
+
+  { "topicId": "embeddings", "title": "Word Embeddings - 3Blue1Brown", "url": "https://www.youtube.com/watch?v=wgfSDrqYMJ4", "type": "video", "source": "3Blue1Brown" },
+  { "topicId": "embeddings", "title": "Understanding Embeddings", "url": "https://www.geeksforgeeks.org/word-embeddings-in-nlp/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "embeddings", "title": "Vector Embeddings for Developers", "url": "https://www.freecodecamp.org/news/get-started-with-hugging-face/", "type": "article", "source": "freeCodeCamp" },
+
+  { "topicId": "attention_mechanism", "title": "Attention in Neural Networks", "url": "https://www.youtube.com/watch?v=PSs6nxngL6k", "type": "video", "source": "3Blue1Brown" },
+  { "topicId": "attention_mechanism", "title": "Attention Mechanism Explained", "url": "https://www.geeksforgeeks.org/attention-mechanism-in-neural-network/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "attention_mechanism", "title": "The Illustrated Attention", "url": "https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/", "type": "article", "source": "Jay Alammar" },
+
+  { "topicId": "generative_ai", "title": "Generative AI for Everyone", "url": "https://www.deeplearning.ai/courses/generative-ai-for-everyone/", "type": "course", "source": "DeepLearning.AI" },
+  { "topicId": "generative_ai", "title": "Introduction to Generative AI", "url": "https://www.cloudskillsboost.google/course_templates/536", "type": "course", "source": "Google" },
+  { "topicId": "generative_ai", "title": "Generative AI Overview", "url": "https://www.geeksforgeeks.org/generative-ai/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "ai_ethics", "title": "AI Ethics - Fast.ai", "url": "https://ethics.fast.ai/", "type": "course", "source": "fast.ai" },
+  { "topicId": "ai_ethics", "title": "Ethics of Artificial Intelligence", "url": "https://en.wikipedia.org/wiki/Ethics_of_artificial_intelligence", "type": "article", "source": "Wikipedia" },
+  { "topicId": "ai_ethics", "title": "Responsible AI Practices", "url": "https://ai.google/responsibility/responsible-ai-practices/", "type": "article", "source": "Google AI" },
+
+  { "topicId": "ai_agents", "title": "LLM Agents - Andrew Ng", "url": "https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/", "type": "course", "source": "DeepLearning.AI" },
+  { "topicId": "ai_agents", "title": "Building AI Agents", "url": "https://www.geeksforgeeks.org/ai-agent/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "ai_agents", "title": "ReAct: Reason and Act in LLMs", "url": "https://www.youtube.com/watch?v=Eug2clsLtFs", "type": "video", "source": "freeCodeCamp" },
+
+  { "topicId": "diffusion_models", "title": "Diffusion Models Explained", "url": "https://www.youtube.com/watch?v=fbLgFrlTnGU", "type": "video", "source": "Computerphile" },
+  { "topicId": "diffusion_models", "title": "How Diffusion Models Work", "url": "https://www.geeksforgeeks.org/denoising-diffusion-probabilistic-models/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "diffusion_models", "title": "Diffusion Models Course - Hugging Face", "url": "https://huggingface.co/learn/diffusion-course/unit0/1", "type": "course", "source": "Hugging Face" },
+
+  { "topicId": "transfer_learning", "title": "Transfer Learning in Deep Learning", "url": "https://www.geeksforgeeks.org/ml-introduction-to-transfer-learning/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "transfer_learning", "title": "Transfer Learning with Keras", "url": "https://www.tensorflow.org/guide/keras/transfer_learning", "type": "article", "source": "TensorFlow" },
+  { "topicId": "transfer_learning", "title": "Practical Deep Learning - fast.ai", "url": "https://course.fast.ai/", "type": "course", "source": "fast.ai" },
+
+  { "topicId": "convolutional_neural_networks", "title": "CNNs Explained - 3Blue1Brown", "url": "https://www.youtube.com/watch?v=KuXjwB4LzSA", "type": "video", "source": "3Blue1Brown" },
+  { "topicId": "convolutional_neural_networks", "title": "Convolutional Neural Networks", "url": "https://www.geeksforgeeks.org/introduction-convolution-neural-network/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "convolutional_neural_networks", "title": "CS231n: CNNs for Visual Recognition", "url": "https://cs231n.github.io/convolutional-networks/", "type": "course", "source": "Stanford" },
+
+  { "topicId": "recurrent_neural_networks", "title": "RNNs and LSTMs Explained", "url": "https://www.youtube.com/watch?v=WCUNPb-5EYI", "type": "video", "source": "3Blue1Brown" },
+  { "topicId": "recurrent_neural_networks", "title": "Recurrent Neural Networks", "url": "https://www.geeksforgeeks.org/introduction-to-recurrent-neural-network/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "recurrent_neural_networks", "title": "Understanding LSTMs", "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/", "type": "article", "source": "Colah's Blog" },
+
+  { "topicId": "gradient_descent", "title": "Gradient Descent - 3Blue1Brown", "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w", "type": "video", "source": "3Blue1Brown" },
+  { "topicId": "gradient_descent", "title": "Gradient Descent Algorithm", "url": "https://www.geeksforgeeks.org/gradient-descent-algorithm-and-its-variants/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "gradient_descent", "title": "Optimizers Explained", "url": "https://www.freecodecamp.org/news/a-guide-to-gradient-descent-and-other-optimization-algorithms/", "type": "article", "source": "freeCodeCamp" },
 
   { "topicId": "operating_systems", "title": "Operating Systems: Three Easy Pieces", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/", "type": "article", "source": "MIT OpenCourseWare" },
   { "topicId": "operating_systems", "title": "Operating System Concepts", "url": "https://www.geeksforgeeks.org/operating-systems/", "type": "article", "source": "GeeksforGeeks" },
@@ -120,6 +208,18 @@
 
   { "topicId": "cpu_architecture", "title": "Computer Architecture", "url": "https://www.geeksforgeeks.org/computer-organization-and-architecture-tutorials/", "type": "article", "source": "GeeksforGeeks" },
   { "topicId": "cpu_architecture", "title": "How CPUs Work", "url": "https://www.youtube.com/watch?v=cNN_tTXABUA", "type": "video", "source": "Computerphile" },
+
+  { "topicId": "containers_docker", "title": "Docker Full Course for Beginners", "url": "https://www.youtube.com/watch?v=fqMOX6JJhGo", "type": "video", "source": "freeCodeCamp" },
+  { "topicId": "containers_docker", "title": "Docker Documentation", "url": "https://docs.docker.com/get-started/", "type": "article", "source": "Docker Docs" },
+  { "topicId": "containers_docker", "title": "Docker and Containers Explained", "url": "https://www.geeksforgeeks.org/docker-tutorial/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "kubernetes", "title": "Kubernetes Full Course for Beginners", "url": "https://www.youtube.com/watch?v=X48VuDVv0do", "type": "video", "source": "TechWorld with Nana" },
+  { "topicId": "kubernetes", "title": "Kubernetes Documentation", "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/", "type": "article", "source": "Kubernetes.io" },
+  { "topicId": "kubernetes", "title": "Kubernetes Explained", "url": "https://www.geeksforgeeks.org/kubernetes-tutorial/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "microservices", "title": "Microservices Explained", "url": "https://www.youtube.com/watch?v=rv4LlmLmVWk", "type": "video", "source": "TechWorld with Nana" },
+  { "topicId": "microservices", "title": "Microservices Architecture", "url": "https://microservices.io/patterns/microservices.html", "type": "article", "source": "Microservices.io" },
+  { "topicId": "microservices", "title": "Microservices vs Monolith", "url": "https://www.geeksforgeeks.org/monolithic-vs-microservices-architecture/", "type": "article", "source": "GeeksforGeeks" },
 
   { "topicId": "html_css", "title": "HTML & CSS Full Course", "url": "https://www.youtube.com/watch?v=mU6anWqZJcc", "type": "video", "source": "freeCodeCamp" },
   { "topicId": "html_css", "title": "HTML Basics", "url": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics", "type": "article", "source": "MDN Web Docs" },
@@ -150,6 +250,22 @@
   { "topicId": "web_performance", "title": "Web Performance", "url": "https://developer.mozilla.org/en-US/docs/Web/Performance", "type": "article", "source": "MDN Web Docs" },
   { "topicId": "web_performance", "title": "Website Performance Optimization", "url": "https://www.freecodecamp.org/news/website-performance-optimization/", "type": "article", "source": "freeCodeCamp" },
 
+  { "topicId": "websockets", "title": "WebSockets Explained", "url": "https://www.youtube.com/watch?v=2Nt-ZrNP22A", "type": "video", "source": "Computerphile" },
+  { "topicId": "websockets", "title": "The WebSocket API", "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API", "type": "article", "source": "MDN Web Docs" },
+  { "topicId": "websockets", "title": "WebSocket Tutorial", "url": "https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "graphql", "title": "GraphQL Full Course for Beginners", "url": "https://www.youtube.com/watch?v=ed8SzALpx1Q", "type": "video", "source": "freeCodeCamp" },
+  { "topicId": "graphql", "title": "Introduction to GraphQL", "url": "https://graphql.org/learn/", "type": "article", "source": "GraphQL.org" },
+  { "topicId": "graphql", "title": "GraphQL vs REST", "url": "https://www.geeksforgeeks.org/graphql-vs-rest-api/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "server_side_rendering", "title": "Server-Side Rendering with Next.js", "url": "https://nextjs.org/docs/pages/building-your-application/rendering/server-side-rendering", "type": "article", "source": "Next.js Docs" },
+  { "topicId": "server_side_rendering", "title": "CSR vs SSR vs SSG", "url": "https://www.freecodecamp.org/news/rendering-patterns/", "type": "article", "source": "freeCodeCamp" },
+  { "topicId": "server_side_rendering", "title": "Next.js Full Course", "url": "https://www.youtube.com/watch?v=wm5gMKuwSYk", "type": "video", "source": "freeCodeCamp" },
+
+  { "topicId": "webassembly", "title": "WebAssembly Explained", "url": "https://www.youtube.com/watch?v=cbB3QEwWMlA", "type": "video", "source": "Computerphile" },
+  { "topicId": "webassembly", "title": "WebAssembly Concepts", "url": "https://developer.mozilla.org/en-US/docs/WebAssembly/Concepts", "type": "article", "source": "MDN Web Docs" },
+  { "topicId": "webassembly", "title": "WebAssembly Tutorial", "url": "https://www.geeksforgeeks.org/webassembly/", "type": "article", "source": "GeeksforGeeks" },
+
   { "topicId": "tcp_ip", "title": "TCP/IP Model", "url": "https://www.geeksforgeeks.org/tcp-ip-model/", "type": "article", "source": "GeeksforGeeks" },
   { "topicId": "tcp_ip", "title": "TCP/IP Explained", "url": "https://www.youtube.com/watch?v=PpsEaqJV_A0", "type": "video", "source": "Computerphile" },
 
@@ -176,6 +292,22 @@
 
   { "topicId": "sockets", "title": "Socket Programming", "url": "https://www.geeksforgeeks.org/socket-programming-cc/", "type": "article", "source": "GeeksforGeeks" },
   { "topicId": "sockets", "title": "Network Sockets", "url": "https://en.wikipedia.org/wiki/Network_socket", "type": "article", "source": "Wikipedia" },
+
+  { "topicId": "http2", "title": "HTTP/2 Introduction", "url": "https://developers.google.com/web/fundamentals/performance/http2", "type": "article", "source": "Google Developers" },
+  { "topicId": "http2", "title": "HTTP/2 vs HTTP/1.1", "url": "https://www.geeksforgeeks.org/http1-1-and-http2-differences/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "http2", "title": "HTTP/2 Explained", "url": "https://www.youtube.com/watch?v=fVKPrDrEwTI", "type": "video", "source": "Computerphile" },
+
+  { "topicId": "grpc", "title": "gRPC Crash Course", "url": "https://www.youtube.com/watch?v=Yw4rkaTc0f8", "type": "video", "source": "freeCodeCamp" },
+  { "topicId": "grpc", "title": "Introduction to gRPC", "url": "https://grpc.io/docs/what-is-grpc/introduction/", "type": "article", "source": "gRPC.io" },
+  { "topicId": "grpc", "title": "gRPC vs REST", "url": "https://www.geeksforgeeks.org/rest-api-vs-grpc/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "cdn", "title": "What is a CDN?", "url": "https://www.cloudflare.com/learning/cdn/what-is-a-cdn/", "type": "article", "source": "Cloudflare" },
+  { "topicId": "cdn", "title": "CDN Explained", "url": "https://www.geeksforgeeks.org/what-is-a-content-distribution-network-and-how-does-it-work/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "cdn", "title": "How a CDN Works", "url": "https://www.youtube.com/watch?v=Bsq5cKkS33I", "type": "video", "source": "Computerphile" },
+
+  { "topicId": "vpn", "title": "How Does a VPN Work?", "url": "https://www.youtube.com/watch?v=R-JUOpCgTZc", "type": "video", "source": "Computerphile" },
+  { "topicId": "vpn", "title": "VPN - Virtual Private Network", "url": "https://www.geeksforgeeks.org/virtual-private-network-vpn/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "vpn", "title": "WireGuard VPN Protocol", "url": "https://www.wireguard.com/", "type": "article", "source": "WireGuard.com" },
 
   { "topicId": "cryptography", "title": "Cryptography Full Course", "url": "https://www.youtube.com/watch?v=jhXCTbFnK8o", "type": "video", "source": "freeCodeCamp" },
   { "topicId": "cryptography", "title": "Cryptography Introduction", "url": "https://www.geeksforgeeks.org/cryptography-introduction/", "type": "article", "source": "GeeksforGeeks" },
@@ -205,6 +337,22 @@
   { "topicId": "public_key_infrastructure", "title": "Public Key Infrastructure", "url": "https://www.geeksforgeeks.org/public-key-infrastructure/", "type": "article", "source": "GeeksforGeeks" },
   { "topicId": "public_key_infrastructure", "title": "PKI Explained", "url": "https://en.wikipedia.org/wiki/Public_key_infrastructure", "type": "article", "source": "Wikipedia" },
 
+  { "topicId": "oauth", "title": "OAuth 2.0 Explained", "url": "https://www.youtube.com/watch?v=t18YB3xDfXI", "type": "video", "source": "Computerphile" },
+  { "topicId": "oauth", "title": "OAuth 2.0 Simplified", "url": "https://www.oauth.com/", "type": "article", "source": "oauth.com" },
+  { "topicId": "oauth", "title": "OAuth and OpenID Connect", "url": "https://www.geeksforgeeks.org/what-is-oauth/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "jwt", "title": "JWT Introduction", "url": "https://jwt.io/introduction", "type": "article", "source": "JWT.io" },
+  { "topicId": "jwt", "title": "JSON Web Tokens Explained", "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM", "type": "video", "source": "freeCodeCamp" },
+  { "topicId": "jwt", "title": "JWT Security Best Practices", "url": "https://www.geeksforgeeks.org/json-web-token-jwt/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "zero_trust", "title": "Zero Trust Security Model", "url": "https://www.cloudflare.com/learning/security/glossary/what-is-zero-trust/", "type": "article", "source": "Cloudflare" },
+  { "topicId": "zero_trust", "title": "Zero Trust Architecture", "url": "https://www.geeksforgeeks.org/zero-trust-architecture/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "zero_trust", "title": "What is Zero Trust?", "url": "https://www.youtube.com/watch?v=yn5qlbDpLZ0", "type": "video", "source": "IBM Technology" },
+
+  { "topicId": "cors", "title": "CORS Explained", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS", "type": "article", "source": "MDN Web Docs" },
+  { "topicId": "cors", "title": "Cross-Origin Resource Sharing", "url": "https://www.freecodecamp.org/news/cors-explained/", "type": "article", "source": "freeCodeCamp" },
+  { "topicId": "cors", "title": "CORS in Under 6 Minutes", "url": "https://www.youtube.com/watch?v=PNtFSVU-YTI", "type": "video", "source": "Computerphile" },
+
   { "topicId": "sql", "title": "SQL Full Course", "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY", "type": "video", "source": "freeCodeCamp" },
   { "topicId": "sql", "title": "SQL Tutorial", "url": "https://www.geeksforgeeks.org/sql-tutorial/", "type": "article", "source": "GeeksforGeeks" },
   { "topicId": "sql", "title": "Intro to SQL", "url": "https://www.khanacademy.org/computing/computer-programming/sql", "type": "course", "source": "Khan Academy" },
@@ -231,5 +379,17 @@
   { "topicId": "data_modeling", "title": "ER Diagrams Tutorial", "url": "https://www.youtube.com/watch?v=QpdhBUYk7Kk", "type": "video", "source": "freeCodeCamp" },
 
   { "topicId": "database_replication", "title": "Database Replication", "url": "https://www.geeksforgeeks.org/data-replication-in-dbms/", "type": "article", "source": "GeeksforGeeks" },
-  { "topicId": "database_replication", "title": "Replication Strategies", "url": "https://en.wikipedia.org/wiki/Replication_(computing)", "type": "article", "source": "Wikipedia" }
+  { "topicId": "database_replication", "title": "Replication Strategies", "url": "https://en.wikipedia.org/wiki/Replication_(computing)", "type": "article", "source": "Wikipedia" },
+
+  { "topicId": "redis", "title": "Redis Crash Course", "url": "https://www.youtube.com/watch?v=jgpVdJB2sKQ", "type": "video", "source": "Traversy Media" },
+  { "topicId": "redis", "title": "Redis Documentation", "url": "https://redis.io/docs/", "type": "article", "source": "Redis.io" },
+  { "topicId": "redis", "title": "Redis Tutorial", "url": "https://www.geeksforgeeks.org/redis-tutorial/", "type": "article", "source": "GeeksforGeeks" },
+
+  { "topicId": "cap_theorem", "title": "CAP Theorem Explained", "url": "https://www.geeksforgeeks.org/cap-theorem-in-dbms/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "cap_theorem", "title": "CAP Theorem: Revisited", "url": "https://robertgreiner.com/cap-theorem-revisited/", "type": "article", "source": "Robert Greiner" },
+  { "topicId": "cap_theorem", "title": "CAP Theorem in Distributed Systems", "url": "https://www.youtube.com/watch?v=k-Yaq8AHlFA", "type": "video", "source": "Computerphile" },
+
+  { "topicId": "sharding", "title": "Database Sharding Explained", "url": "https://www.geeksforgeeks.org/database-sharding/", "type": "article", "source": "GeeksforGeeks" },
+  { "topicId": "sharding", "title": "Sharding Patterns", "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding", "type": "article", "source": "Microsoft" },
+  { "topicId": "sharding", "title": "Horizontal vs Vertical Scaling", "url": "https://www.youtube.com/watch?v=xpDnVSmNFX0", "type": "video", "source": "freeCodeCamp" }
 ]

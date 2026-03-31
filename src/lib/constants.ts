@@ -9,17 +9,25 @@ export const CATEGORY_COLORS: Record<Category, string> = {
   "Networking": "#60a5fa",
   "Security": "#f87171",
   "Databases": "#facc15",
+  "Math": "#818cf8",
+  "DevOps": "#2dd4bf",
+  "Languages": "#e879f9",
+  "Software Engineering": "#38bdf8",
 };
 
 export const CATEGORIES: Category[] = [
   "Algorithms",
   "Data Structures",
   "AI / ML",
+  "Math",
   "Systems",
+  "DevOps",
   "Web Dev",
   "Networking",
   "Security",
   "Databases",
+  "Languages",
+  "Software Engineering",
 ];
 
 export const DIFFICULTY_COLORS: Record<string, string> = {

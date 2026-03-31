@@ -6,7 +6,11 @@ export type Category =
   | "Web Dev"
   | "Networking"
   | "Security"
-  | "Databases";
+  | "Databases"
+  | "Math"
+  | "DevOps"
+  | "Languages"
+  | "Software Engineering";
 
 export type Difficulty = "Beginner" | "Intermediate" | "Advanced";
 
