@@ -39,7 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-docsumbrella-*.png
-graph-*.png
+# screenshots (dev only)
+*.png
+
+# firecrawl cache
 .firecrawl/
-docs/
+
+# playwright
+.playwright-mcp/
+
+# design docs (dev only)
+docs/superpowers/
+
+# claude/agent config
+CLAUDE.md
+AGENTS.md
