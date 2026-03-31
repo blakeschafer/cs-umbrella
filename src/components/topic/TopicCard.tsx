@@ -100,7 +100,7 @@ export function TopicCard({
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="absolute right-0 top-0 h-full w-[420px] max-w-full overflow-y-auto border-l border-[var(--border)] bg-[var(--surface)] shadow-2xl"
+        className="absolute right-0 top-14 h-[calc(100%-3.5rem)] w-[420px] max-w-full overflow-y-auto border-l border-[var(--border)] bg-[var(--surface)] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Sticky header */}
