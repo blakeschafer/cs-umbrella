@@ -1,236 +1,1792 @@
 [
-  { "source": "big_o_notation", "target": "sorting_algorithms", "type": "prerequisite" },
-  { "source": "big_o_notation", "target": "search_algorithms", "type": "prerequisite" },
-  { "source": "big_o_notation", "target": "graph_algorithms", "type": "prerequisite" },
-  { "source": "big_o_notation", "target": "dynamic_programming", "type": "prerequisite" },
-  { "source": "big_o_notation", "target": "greedy_algorithms", "type": "prerequisite" },
-  { "source": "big_o_notation", "target": "divide_and_conquer", "type": "prerequisite" },
-  { "source": "big_o_notation", "target": "hashing", "type": "prerequisite" },
-  { "source": "big_o_notation", "target": "backtracking", "type": "prerequisite" },
-  { "source": "recursion", "target": "divide_and_conquer", "type": "prerequisite" },
-  { "source": "recursion", "target": "dynamic_programming", "type": "prerequisite" },
-  { "source": "recursion", "target": "backtracking", "type": "prerequisite" },
-  { "source": "recursion", "target": "graph_algorithms", "type": "prerequisite" },
-  { "source": "recursion", "target": "sorting_algorithms", "type": "prerequisite" },
-  { "source": "divide_and_conquer", "target": "sorting_algorithms", "type": "related" },
-  { "source": "greedy_algorithms", "target": "dynamic_programming", "type": "related" },
-  { "source": "search_algorithms", "target": "sorting_algorithms", "type": "related" },
-  { "source": "hashing", "target": "hash_tables", "type": "related" },
-  { "source": "graph_algorithms", "target": "graphs", "type": "related" },
-  { "source": "arrays", "target": "linked_lists", "type": "prerequisite" },
-  { "source": "arrays", "target": "stacks", "type": "prerequisite" },
-  { "source": "arrays", "target": "queues", "type": "prerequisite" },
-  { "source": "arrays", "target": "hash_tables", "type": "prerequisite" },
-  { "source": "arrays", "target": "sorting_algorithms", "type": "prerequisite" },
-  { "source": "arrays", "target": "search_algorithms", "type": "prerequisite" },
-  { "source": "linked_lists", "target": "stacks", "type": "prerequisite" },
-  { "source": "linked_lists", "target": "queues", "type": "prerequisite" },
-  { "source": "linked_lists", "target": "binary_trees", "type": "prerequisite" },
-  { "source": "binary_trees", "target": "binary_search_trees", "type": "prerequisite" },
-  { "source": "binary_trees", "target": "heaps", "type": "prerequisite" },
-  { "source": "binary_trees", "target": "tries", "type": "prerequisite" },
-  { "source": "binary_search_trees", "target": "search_algorithms", "type": "related" },
-  { "source": "graphs", "target": "graph_algorithms", "type": "prerequisite" },
-  { "source": "graphs", "target": "binary_trees", "type": "related" },
-  { "source": "hash_tables", "target": "hashing", "type": "prerequisite" },
-  { "source": "stacks", "target": "recursion", "type": "related" },
-  { "source": "queues", "target": "process_scheduling", "type": "related" },
-  { "source": "heaps", "target": "sorting_algorithms", "type": "related" },
-  { "source": "machine_learning", "target": "neural_networks", "type": "prerequisite" },
-  { "source": "machine_learning", "target": "supervised_learning", "type": "prerequisite" },
-  { "source": "machine_learning", "target": "unsupervised_learning", "type": "prerequisite" },
-  { "source": "machine_learning", "target": "reinforcement_learning", "type": "prerequisite" },
-  { "source": "machine_learning", "target": "decision_trees", "type": "prerequisite" },
-  { "source": "neural_networks", "target": "deep_learning", "type": "prerequisite" },
-  { "source": "deep_learning", "target": "natural_language_processing", "type": "prerequisite" },
-  { "source": "deep_learning", "target": "computer_vision", "type": "prerequisite" },
-  { "source": "supervised_learning", "target": "decision_trees", "type": "prerequisite" },
-  { "source": "supervised_learning", "target": "neural_networks", "type": "related" },
-  { "source": "unsupervised_learning", "target": "clustering", "type": "prerequisite" },
-  { "source": "unsupervised_learning", "target": "supervised_learning", "type": "related" },
-  { "source": "decision_trees", "target": "clustering", "type": "related" },
-  { "source": "natural_language_processing", "target": "computer_vision", "type": "related" },
-  { "source": "reinforcement_learning", "target": "neural_networks", "type": "related" },
-  { "source": "operating_systems", "target": "memory_management", "type": "prerequisite" },
-  { "source": "operating_systems", "target": "process_scheduling", "type": "prerequisite" },
-  { "source": "operating_systems", "target": "file_systems", "type": "prerequisite" },
-  { "source": "operating_systems", "target": "concurrency", "type": "prerequisite" },
-  { "source": "operating_systems", "target": "virtual_machines", "type": "prerequisite" },
-  { "source": "cpu_architecture", "target": "operating_systems", "type": "prerequisite" },
-  { "source": "cpu_architecture", "target": "memory_management", "type": "prerequisite" },
-  { "source": "cpu_architecture", "target": "compilers", "type": "prerequisite" },
-  { "source": "memory_management", "target": "virtual_machines", "type": "related" },
-  { "source": "concurrency", "target": "process_scheduling", "type": "related" },
-  { "source": "concurrency", "target": "distributed_systems", "type": "prerequisite" },
-  { "source": "distributed_systems", "target": "load_balancing", "type": "related" },
-  { "source": "distributed_systems", "target": "database_replication", "type": "related" },
-  { "source": "compilers", "target": "operating_systems", "type": "related" },
-  { "source": "process_scheduling", "target": "memory_management", "type": "related" },
-  { "source": "html_css", "target": "javascript", "type": "prerequisite" },
-  { "source": "html_css", "target": "responsive_design", "type": "prerequisite" },
-  { "source": "javascript", "target": "frontend_frameworks", "type": "prerequisite" },
-  { "source": "javascript", "target": "backend_development", "type": "prerequisite" },
-  { "source": "javascript", "target": "rest_apis", "type": "prerequisite" },
-  { "source": "http_protocol", "target": "rest_apis", "type": "prerequisite" },
-  { "source": "http_protocol", "target": "web_security", "type": "prerequisite" },
-  { "source": "http_protocol", "target": "web_performance", "type": "prerequisite" },
-  { "source": "frontend_frameworks", "target": "web_performance", "type": "related" },
-  { "source": "frontend_frameworks", "target": "responsive_design", "type": "related" },
-  { "source": "backend_development", "target": "rest_apis", "type": "related" },
-  { "source": "backend_development", "target": "web_security", "type": "related" },
-  { "source": "web_security", "target": "secure_coding", "type": "related" },
-  { "source": "web_security", "target": "authentication", "type": "related" },
-  { "source": "rest_apis", "target": "backend_development", "type": "related" },
-  { "source": "responsive_design", "target": "web_performance", "type": "related" },
-  { "source": "osi_model", "target": "tcp_ip", "type": "prerequisite" },
-  { "source": "osi_model", "target": "routing", "type": "prerequisite" },
-  { "source": "osi_model", "target": "dns", "type": "prerequisite" },
-  { "source": "tcp_ip", "target": "sockets", "type": "prerequisite" },
-  { "source": "tcp_ip", "target": "dns", "type": "prerequisite" },
-  { "source": "tcp_ip", "target": "routing", "type": "prerequisite" },
-  { "source": "tcp_ip", "target": "http_protocol", "type": "prerequisite" },
-  { "source": "routing", "target": "load_balancing", "type": "related" },
-  { "source": "routing", "target": "wireless_networks", "type": "related" },
-  { "source": "network_security", "target": "firewalls", "type": "prerequisite" },
-  { "source": "network_security", "target": "network_security_fundamentals", "type": "related" },
-  { "source": "firewalls", "target": "network_security_fundamentals", "type": "related" },
-  { "source": "dns", "target": "routing", "type": "related" },
-  { "source": "sockets", "target": "backend_development", "type": "related" },
-  { "source": "wireless_networks", "target": "network_security", "type": "related" },
-  { "source": "load_balancing", "target": "distributed_systems", "type": "related" },
-  { "source": "cryptography", "target": "encryption", "type": "prerequisite" },
-  { "source": "cryptography", "target": "public_key_infrastructure", "type": "prerequisite" },
-  { "source": "cryptography", "target": "network_security", "type": "related" },
-  { "source": "cryptography", "target": "network_security_fundamentals", "type": "prerequisite" },
-  { "source": "encryption", "target": "public_key_infrastructure", "type": "prerequisite" },
-  { "source": "encryption", "target": "authentication", "type": "related" },
-  { "source": "authentication", "target": "access_control", "type": "prerequisite" },
-  { "source": "authentication", "target": "web_security", "type": "related" },
-  { "source": "access_control", "target": "secure_coding", "type": "related" },
-  { "source": "penetration_testing", "target": "malware_analysis", "type": "related" },
-  { "source": "penetration_testing", "target": "network_security_fundamentals", "type": "related" },
-  { "source": "secure_coding", "target": "penetration_testing", "type": "related" },
-  { "source": "network_security_fundamentals", "target": "firewalls", "type": "related" },
-  { "source": "public_key_infrastructure", "target": "authentication", "type": "related" },
-  { "source": "malware_analysis", "target": "encryption", "type": "related" },
-  { "source": "sql", "target": "relational_databases", "type": "prerequisite" },
-  { "source": "sql", "target": "query_optimization", "type": "prerequisite" },
-  { "source": "sql", "target": "database_indexing", "type": "prerequisite" },
-  { "source": "relational_databases", "target": "normalization", "type": "prerequisite" },
-  { "source": "relational_databases", "target": "transactions", "type": "prerequisite" },
-  { "source": "relational_databases", "target": "data_modeling", "type": "prerequisite" },
-  { "source": "relational_databases", "target": "nosql", "type": "prerequisite" },
-  { "source": "relational_databases", "target": "database_replication", "type": "prerequisite" },
-  { "source": "normalization", "target": "data_modeling", "type": "related" },
-  { "source": "database_indexing", "target": "query_optimization", "type": "prerequisite" },
-  { "source": "transactions", "target": "concurrency", "type": "related" },
-  { "source": "transactions", "target": "database_replication", "type": "related" },
-  { "source": "nosql", "target": "data_modeling", "type": "related" },
-  { "source": "nosql", "target": "database_replication", "type": "related" },
-  { "source": "data_modeling", "target": "normalization", "type": "related" },
-  { "source": "query_optimization", "target": "web_performance", "type": "related" },
-
-  { "source": "search_algorithms", "target": "binary_search", "type": "prerequisite" },
-  { "source": "binary_search", "target": "binary_search_trees", "type": "related" },
-  { "source": "binary_search", "target": "dijkstras_algorithm", "type": "related" },
-  { "source": "arrays", "target": "binary_search", "type": "prerequisite" },
-
-  { "source": "graph_algorithms", "target": "dijkstras_algorithm", "type": "prerequisite" },
-  { "source": "graph_algorithms", "target": "a_star_search", "type": "prerequisite" },
-  { "source": "dijkstras_algorithm", "target": "a_star_search", "type": "prerequisite" },
-  { "source": "greedy_algorithms", "target": "dijkstras_algorithm", "type": "related" },
-  { "source": "heaps", "target": "dijkstras_algorithm", "type": "related" },
-
-  { "source": "binary_search_trees", "target": "red_black_trees", "type": "prerequisite" },
-  { "source": "binary_search_trees", "target": "b_trees", "type": "prerequisite" },
-  { "source": "red_black_trees", "target": "b_trees", "type": "related" },
-  { "source": "linked_lists", "target": "skip_lists", "type": "prerequisite" },
-  { "source": "binary_search_trees", "target": "skip_lists", "type": "related" },
-  { "source": "hashing", "target": "bloom_filters", "type": "prerequisite" },
-  { "source": "hash_tables", "target": "bloom_filters", "type": "related" },
-  { "source": "b_trees", "target": "database_indexing", "type": "related" },
-
-  { "source": "neural_networks", "target": "transformer_architecture", "type": "prerequisite" },
-  { "source": "deep_learning", "target": "transformer_architecture", "type": "prerequisite" },
-  { "source": "transformer_architecture", "target": "large_language_models", "type": "prerequisite" },
-  { "source": "transformer_architecture", "target": "attention_mechanism", "type": "prerequisite" },
-  { "source": "attention_mechanism", "target": "transformer_architecture", "type": "related" },
-  { "source": "large_language_models", "target": "prompt_engineering", "type": "prerequisite" },
-  { "source": "large_language_models", "target": "fine_tuning", "type": "prerequisite" },
-  { "source": "large_language_models", "target": "rag", "type": "prerequisite" },
-  { "source": "large_language_models", "target": "ai_agents", "type": "prerequisite" },
-  { "source": "large_language_models", "target": "generative_ai", "type": "related" },
-  { "source": "embeddings", "target": "rag", "type": "prerequisite" },
-  { "source": "embeddings", "target": "clustering", "type": "related" },
-  { "source": "natural_language_processing", "target": "large_language_models", "type": "prerequisite" },
-  { "source": "natural_language_processing", "target": "embeddings", "type": "prerequisite" },
-  { "source": "machine_learning", "target": "gradient_descent", "type": "prerequisite" },
-  { "source": "gradient_descent", "target": "neural_networks", "type": "prerequisite" },
-  { "source": "deep_learning", "target": "convolutional_neural_networks", "type": "prerequisite" },
-  { "source": "deep_learning", "target": "recurrent_neural_networks", "type": "prerequisite" },
-  { "source": "deep_learning", "target": "diffusion_models", "type": "prerequisite" },
-  { "source": "convolutional_neural_networks", "target": "computer_vision", "type": "prerequisite" },
-  { "source": "recurrent_neural_networks", "target": "natural_language_processing", "type": "related" },
-  { "source": "recurrent_neural_networks", "target": "transformer_architecture", "type": "related" },
-  { "source": "machine_learning", "target": "transfer_learning", "type": "prerequisite" },
-  { "source": "transfer_learning", "target": "fine_tuning", "type": "related" },
-  { "source": "generative_ai", "target": "diffusion_models", "type": "related" },
-  { "source": "generative_ai", "target": "large_language_models", "type": "related" },
-  { "source": "machine_learning", "target": "ai_ethics", "type": "related" },
-  { "source": "generative_ai", "target": "ai_ethics", "type": "related" },
-  { "source": "rag", "target": "ai_agents", "type": "related" },
-  { "source": "prompt_engineering", "target": "ai_agents", "type": "related" },
-
-  { "source": "virtual_machines", "target": "containers_docker", "type": "prerequisite" },
-  { "source": "containers_docker", "target": "kubernetes", "type": "prerequisite" },
-  { "source": "containers_docker", "target": "microservices", "type": "related" },
-  { "source": "kubernetes", "target": "microservices", "type": "related" },
-  { "source": "distributed_systems", "target": "microservices", "type": "related" },
-  { "source": "microservices", "target": "rest_apis", "type": "related" },
-  { "source": "microservices", "target": "grpc", "type": "related" },
-
-  { "source": "javascript", "target": "websockets", "type": "prerequisite" },
-  { "source": "http_protocol", "target": "websockets", "type": "related" },
-  { "source": "rest_apis", "target": "graphql", "type": "related" },
-  { "source": "backend_development", "target": "graphql", "type": "related" },
-  { "source": "http_protocol", "target": "http2", "type": "prerequisite" },
-  { "source": "http2", "target": "grpc", "type": "prerequisite" },
-  { "source": "frontend_frameworks", "target": "server_side_rendering", "type": "related" },
-  { "source": "http_protocol", "target": "server_side_rendering", "type": "related" },
-  { "source": "javascript", "target": "webassembly", "type": "related" },
-  { "source": "web_performance", "target": "webassembly", "type": "related" },
-  { "source": "web_performance", "target": "cdn", "type": "related" },
-  { "source": "websockets", "target": "backend_development", "type": "related" },
-
-  { "source": "tcp_ip", "target": "http2", "type": "prerequisite" },
-  { "source": "tcp_ip", "target": "grpc", "type": "prerequisite" },
-  { "source": "network_security", "target": "vpn", "type": "related" },
-  { "source": "network_security_fundamentals", "target": "vpn", "type": "related" },
-  { "source": "vpn", "target": "zero_trust", "type": "related" },
-  { "source": "routing", "target": "cdn", "type": "related" },
-  { "source": "load_balancing", "target": "cdn", "type": "related" },
-
-  { "source": "authentication", "target": "oauth", "type": "prerequisite" },
-  { "source": "authentication", "target": "jwt", "type": "prerequisite" },
-  { "source": "oauth", "target": "jwt", "type": "related" },
-  { "source": "encryption", "target": "jwt", "type": "related" },
-  { "source": "access_control", "target": "oauth", "type": "related" },
-  { "source": "access_control", "target": "zero_trust", "type": "related" },
-  { "source": "web_security", "target": "cors", "type": "prerequisite" },
-  { "source": "web_security", "target": "oauth", "type": "related" },
-  { "source": "web_security", "target": "jwt", "type": "related" },
-  { "source": "http_protocol", "target": "cors", "type": "prerequisite" },
-  { "source": "zero_trust", "target": "network_security", "type": "related" },
-  { "source": "network_security_fundamentals", "target": "zero_trust", "type": "related" },
-
-  { "source": "nosql", "target": "redis", "type": "related" },
-  { "source": "relational_databases", "target": "cap_theorem", "type": "related" },
-  { "source": "nosql", "target": "cap_theorem", "type": "related" },
-  { "source": "distributed_systems", "target": "cap_theorem", "type": "prerequisite" },
-  { "source": "distributed_systems", "target": "sharding", "type": "related" },
-  { "source": "database_replication", "target": "sharding", "type": "related" },
-  { "source": "cap_theorem", "target": "sharding", "type": "related" },
-  { "source": "redis", "target": "backend_development", "type": "related" },
-  { "source": "redis", "target": "web_performance", "type": "related" },
-  { "source": "database_indexing", "target": "b_trees", "type": "related" }
+  {
+    "source": "big_o_notation",
+    "target": "sorting_algorithms",
+    "type": "prerequisite"
+  },
+  {
+    "source": "big_o_notation",
+    "target": "search_algorithms",
+    "type": "prerequisite"
+  },
+  {
+    "source": "big_o_notation",
+    "target": "graph_algorithms",
+    "type": "prerequisite"
+  },
+  {
+    "source": "big_o_notation",
+    "target": "dynamic_programming",
+    "type": "prerequisite"
+  },
+  {
+    "source": "big_o_notation",
+    "target": "greedy_algorithms",
+    "type": "prerequisite"
+  },
+  {
+    "source": "big_o_notation",
+    "target": "divide_and_conquer",
+    "type": "prerequisite"
+  },
+  {
+    "source": "big_o_notation",
+    "target": "hashing",
+    "type": "prerequisite"
+  },
+  {
+    "source": "big_o_notation",
+    "target": "backtracking",
+    "type": "prerequisite"
+  },
+  {
+    "source": "recursion",
+    "target": "divide_and_conquer",
+    "type": "prerequisite"
+  },
+  {
+    "source": "recursion",
+    "target": "dynamic_programming",
+    "type": "prerequisite"
+  },
+  {
+    "source": "recursion",
+    "target": "backtracking",
+    "type": "prerequisite"
+  },
+  {
+    "source": "recursion",
+    "target": "graph_algorithms",
+    "type": "prerequisite"
+  },
+  {
+    "source": "recursion",
+    "target": "sorting_algorithms",
+    "type": "prerequisite"
+  },
+  {
+    "source": "divide_and_conquer",
+    "target": "sorting_algorithms",
+    "type": "related"
+  },
+  {
+    "source": "greedy_algorithms",
+    "target": "dynamic_programming",
+    "type": "related"
+  },
+  {
+    "source": "search_algorithms",
+    "target": "sorting_algorithms",
+    "type": "related"
+  },
+  {
+    "source": "hashing",
+    "target": "hash_tables",
+    "type": "related"
+  },
+  {
+    "source": "graph_algorithms",
+    "target": "graphs",
+    "type": "related"
+  },
+  {
+    "source": "arrays",
+    "target": "linked_lists",
+    "type": "prerequisite"
+  },
+  {
+    "source": "arrays",
+    "target": "stacks",
+    "type": "prerequisite"
+  },
+  {
+    "source": "arrays",
+    "target": "queues",
+    "type": "prerequisite"
+  },
+  {
+    "source": "arrays",
+    "target": "hash_tables",
+    "type": "prerequisite"
+  },
+  {
+    "source": "arrays",
+    "target": "sorting_algorithms",
+    "type": "prerequisite"
+  },
+  {
+    "source": "arrays",
+    "target": "search_algorithms",
+    "type": "prerequisite"
+  },
+  {
+    "source": "linked_lists",
+    "target": "stacks",
+    "type": "prerequisite"
+  },
+  {
+    "source": "linked_lists",
+    "target": "queues",
+    "type": "prerequisite"
+  },
+  {
+    "source": "linked_lists",
+    "target": "binary_trees",
+    "type": "prerequisite"
+  },
+  {
+    "source": "binary_trees",
+    "target": "binary_search_trees",
+    "type": "prerequisite"
+  },
+  {
+    "source": "binary_trees",
+    "target": "heaps",
+    "type": "prerequisite"
+  },
+  {
+    "source": "binary_trees",
+    "target": "tries",
+    "type": "prerequisite"
+  },
+  {
+    "source": "binary_search_trees",
+    "target": "search_algorithms",
+    "type": "related"
+  },
+  {
+    "source": "graphs",
+    "target": "graph_algorithms",
+    "type": "prerequisite"
+  },
+  {
+    "source": "graphs",
+    "target": "binary_trees",
+    "type": "related"
+  },
+  {
+    "source": "hash_tables",
+    "target": "hashing",
+    "type": "prerequisite"
+  },
+  {
+    "source": "stacks",
+    "target": "recursion",
+    "type": "related"
+  },
+  {
+    "source": "queues",
+    "target": "process_scheduling",
+    "type": "related"
+  },
+  {
+    "source": "heaps",
+    "target": "sorting_algorithms",
+    "type": "related"
+  },
+  {
+    "source": "machine_learning",
+    "target": "neural_networks",
+    "type": "prerequisite"
+  },
+  {
+    "source": "machine_learning",
+    "target": "supervised_learning",
+    "type": "prerequisite"
+  },
+  {
+    "source": "machine_learning",
+    "target": "unsupervised_learning",
+    "type": "prerequisite"
+  },
+  {
+    "source": "machine_learning",
+    "target": "reinforcement_learning",
+    "type": "prerequisite"
+  },
+  {
+    "source": "machine_learning",
+    "target": "decision_trees",
+    "type": "prerequisite"
+  },
+  {
+    "source": "neural_networks",
+    "target": "deep_learning",
+    "type": "prerequisite"
+  },
+  {
+    "source": "deep_learning",
+    "target": "natural_language_processing",
+    "type": "prerequisite"
+  },
+  {
+    "source": "deep_learning",
+    "target": "computer_vision",
+    "type": "prerequisite"
+  },
+  {
+    "source": "supervised_learning",
+    "target": "decision_trees",
+    "type": "prerequisite"
+  },
+  {
+    "source": "supervised_learning",
+    "target": "neural_networks",
+    "type": "related"
+  },
+  {
+    "source": "unsupervised_learning",
+    "target": "clustering",
+    "type": "prerequisite"
+  },
+  {
+    "source": "unsupervised_learning",
+    "target": "supervised_learning",
+    "type": "related"
+  },
+  {
+    "source": "decision_trees",
+    "target": "clustering",
+    "type": "related"
+  },
+  {
+    "source": "natural_language_processing",
+    "target": "computer_vision",
+    "type": "related"
+  },
+  {
+    "source": "reinforcement_learning",
+    "target": "neural_networks",
+    "type": "related"
+  },
+  {
+    "source": "operating_systems",
+    "target": "memory_management",
+    "type": "prerequisite"
+  },
+  {
+    "source": "operating_systems",
+    "target": "process_scheduling",
+    "type": "prerequisite"
+  },
+  {
+    "source": "operating_systems",
+    "target": "file_systems",
+    "type": "prerequisite"
+  },
+  {
+    "source": "operating_systems",
+    "target": "concurrency",
+    "type": "prerequisite"
+  },
+  {
+    "source": "operating_systems",
+    "target": "virtual_machines",
+    "type": "prerequisite"
+  },
+  {
+    "source": "cpu_architecture",
+    "target": "operating_systems",
+    "type": "prerequisite"
+  },
+  {
+    "source": "cpu_architecture",
+    "target": "memory_management",
+    "type": "prerequisite"
+  },
+  {
+    "source": "cpu_architecture",
+    "target": "compilers",
+    "type": "prerequisite"
+  },
+  {
+    "source": "memory_management",
+    "target": "virtual_machines",
+    "type": "related"
+  },
+  {
+    "source": "concurrency",
+    "target": "process_scheduling",
+    "type": "related"
+  },
+  {
+    "source": "concurrency",
+    "target": "distributed_systems",
+    "type": "prerequisite"
+  },
+  {
+    "source": "distributed_systems",
+    "target": "load_balancing",
+    "type": "related"
+  },
+  {
+    "source": "distributed_systems",
+    "target": "database_replication",
+    "type": "related"
+  },
+  {
+    "source": "compilers",
+    "target": "operating_systems",
+    "type": "related"
+  },
+  {
+    "source": "process_scheduling",
+    "target": "memory_management",
+    "type": "related"
+  },
+  {
+    "source": "html_css",
+    "target": "javascript",
+    "type": "prerequisite"
+  },
+  {
+    "source": "html_css",
+    "target": "responsive_design",
+    "type": "prerequisite"
+  },
+  {
+    "source": "javascript",
+    "target": "frontend_frameworks",
+    "type": "prerequisite"
+  },
+  {
+    "source": "javascript",
+    "target": "backend_development",
+    "type": "prerequisite"
+  },
+  {
+    "source": "javascript",
+    "target": "rest_apis",
+    "type": "prerequisite"
+  },
+  {
+    "source": "http_protocol",
+    "target": "rest_apis",
+    "type": "prerequisite"
+  },
+  {
+    "source": "http_protocol",
+    "target": "web_security",
+    "type": "prerequisite"
+  },
+  {
+    "source": "http_protocol",
+    "target": "web_performance",
+    "type": "prerequisite"
+  },
+  {
+    "source": "frontend_frameworks",
+    "target": "web_performance",
+    "type": "related"
+  },
+  {
+    "source": "frontend_frameworks",
+    "target": "responsive_design",
+    "type": "related"
+  },
+  {
+    "source": "backend_development",
+    "target": "rest_apis",
+    "type": "related"
+  },
+  {
+    "source": "backend_development",
+    "target": "web_security",
+    "type": "related"
+  },
+  {
+    "source": "web_security",
+    "target": "secure_coding",
+    "type": "related"
+  },
+  {
+    "source": "web_security",
+    "target": "authentication",
+    "type": "related"
+  },
+  {
+    "source": "rest_apis",
+    "target": "backend_development",
+    "type": "related"
+  },
+  {
+    "source": "responsive_design",
+    "target": "web_performance",
+    "type": "related"
+  },
+  {
+    "source": "osi_model",
+    "target": "tcp_ip",
+    "type": "prerequisite"
+  },
+  {
+    "source": "osi_model",
+    "target": "routing",
+    "type": "prerequisite"
+  },
+  {
+    "source": "osi_model",
+    "target": "dns",
+    "type": "prerequisite"
+  },
+  {
+    "source": "tcp_ip",
+    "target": "sockets",
+    "type": "prerequisite"
+  },
+  {
+    "source": "tcp_ip",
+    "target": "dns",
+    "type": "prerequisite"
+  },
+  {
+    "source": "tcp_ip",
+    "target": "routing",
+    "type": "prerequisite"
+  },
+  {
+    "source": "tcp_ip",
+    "target": "http_protocol",
+    "type": "prerequisite"
+  },
+  {
+    "source": "routing",
+    "target": "load_balancing",
+    "type": "related"
+  },
+  {
+    "source": "routing",
+    "target": "wireless_networks",
+    "type": "related"
+  },
+  {
+    "source": "network_security",
+    "target": "firewalls",
+    "type": "prerequisite"
+  },
+  {
+    "source": "network_security",
+    "target": "network_security_fundamentals",
+    "type": "related"
+  },
+  {
+    "source": "firewalls",
+    "target": "network_security_fundamentals",
+    "type": "related"
+  },
+  {
+    "source": "dns",
+    "target": "routing",
+    "type": "related"
+  },
+  {
+    "source": "sockets",
+    "target": "backend_development",
+    "type": "related"
+  },
+  {
+    "source": "wireless_networks",
+    "target": "network_security",
+    "type": "related"
+  },
+  {
+    "source": "load_balancing",
+    "target": "distributed_systems",
+    "type": "related"
+  },
+  {
+    "source": "cryptography",
+    "target": "encryption",
+    "type": "prerequisite"
+  },
+  {
+    "source": "cryptography",
+    "target": "public_key_infrastructure",
+    "type": "prerequisite"
+  },
+  {
+    "source": "cryptography",
+    "target": "network_security",
+    "type": "related"
+  },
+  {
+    "source": "cryptography",
+    "target": "network_security_fundamentals",
+    "type": "prerequisite"
+  },
+  {
+    "source": "encryption",
+    "target": "public_key_infrastructure",
+    "type": "prerequisite"
+  },
+  {
+    "source": "encryption",
+    "target": "authentication",
+    "type": "related"
+  },
+  {
+    "source": "authentication",
+    "target": "access_control",
+    "type": "prerequisite"
+  },
+  {
+    "source": "authentication",
+    "target": "web_security",
+    "type": "related"
+  },
+  {
+    "source": "access_control",
+    "target": "secure_coding",
+    "type": "related"
+  },
+  {
+    "source": "penetration_testing",
+    "target": "malware_analysis",
+    "type": "related"
+  },
+  {
+    "source": "penetration_testing",
+    "target": "network_security_fundamentals",
+    "type": "related"
+  },
+  {
+    "source": "secure_coding",
+    "target": "penetration_testing",
+    "type": "related"
+  },
+  {
+    "source": "network_security_fundamentals",
+    "target": "firewalls",
+    "type": "related"
+  },
+  {
+    "source": "public_key_infrastructure",
+    "target": "authentication",
+    "type": "related"
+  },
+  {
+    "source": "malware_analysis",
+    "target": "encryption",
+    "type": "related"
+  },
+  {
+    "source": "sql",
+    "target": "relational_databases",
+    "type": "prerequisite"
+  },
+  {
+    "source": "sql",
+    "target": "query_optimization",
+    "type": "prerequisite"
+  },
+  {
+    "source": "sql",
+    "target": "database_indexing",
+    "type": "prerequisite"
+  },
+  {
+    "source": "relational_databases",
+    "target": "normalization",
+    "type": "prerequisite"
+  },
+  {
+    "source": "relational_databases",
+    "target": "transactions",
+    "type": "prerequisite"
+  },
+  {
+    "source": "relational_databases",
+    "target": "data_modeling",
+    "type": "prerequisite"
+  },
+  {
+    "source": "relational_databases",
+    "target": "nosql",
+    "type": "prerequisite"
+  },
+  {
+    "source": "relational_databases",
+    "target": "database_replication",
+    "type": "prerequisite"
+  },
+  {
+    "source": "normalization",
+    "target": "data_modeling",
+    "type": "related"
+  },
+  {
+    "source": "database_indexing",
+    "target": "query_optimization",
+    "type": "prerequisite"
+  },
+  {
+    "source": "transactions",
+    "target": "concurrency",
+    "type": "related"
+  },
+  {
+    "source": "transactions",
+    "target": "database_replication",
+    "type": "related"
+  },
+  {
+    "source": "nosql",
+    "target": "data_modeling",
+    "type": "related"
+  },
+  {
+    "source": "nosql",
+    "target": "database_replication",
+    "type": "related"
+  },
+  {
+    "source": "data_modeling",
+    "target": "normalization",
+    "type": "related"
+  },
+  {
+    "source": "query_optimization",
+    "target": "web_performance",
+    "type": "related"
+  },
+  {
+    "source": "search_algorithms",
+    "target": "binary_search",
+    "type": "prerequisite"
+  },
+  {
+    "source": "binary_search",
+    "target": "binary_search_trees",
+    "type": "related"
+  },
+  {
+    "source": "binary_search",
+    "target": "dijkstras_algorithm",
+    "type": "related"
+  },
+  {
+    "source": "arrays",
+    "target": "binary_search",
+    "type": "prerequisite"
+  },
+  {
+    "source": "graph_algorithms",
+    "target": "dijkstras_algorithm",
+    "type": "prerequisite"
+  },
+  {
+    "source": "graph_algorithms",
+    "target": "a_star_search",
+    "type": "prerequisite"
+  },
+  {
+    "source": "dijkstras_algorithm",
+    "target": "a_star_search",
+    "type": "prerequisite"
+  },
+  {
+    "source": "greedy_algorithms",
+    "target": "dijkstras_algorithm",
+    "type": "related"
+  },
+  {
+    "source": "heaps",
+    "target": "dijkstras_algorithm",
+    "type": "related"
+  },
+  {
+    "source": "binary_search_trees",
+    "target": "red_black_trees",
+    "type": "prerequisite"
+  },
+  {
+    "source": "binary_search_trees",
+    "target": "b_trees",
+    "type": "prerequisite"
+  },
+  {
+    "source": "red_black_trees",
+    "target": "b_trees",
+    "type": "related"
+  },
+  {
+    "source": "linked_lists",
+    "target": "skip_lists",
+    "type": "prerequisite"
+  },
+  {
+    "source": "binary_search_trees",
+    "target": "skip_lists",
+    "type": "related"
+  },
+  {
+    "source": "hashing",
+    "target": "bloom_filters",
+    "type": "prerequisite"
+  },
+  {
+    "source": "hash_tables",
+    "target": "bloom_filters",
+    "type": "related"
+  },
+  {
+    "source": "b_trees",
+    "target": "database_indexing",
+    "type": "related"
+  },
+  {
+    "source": "neural_networks",
+    "target": "transformer_architecture",
+    "type": "prerequisite"
+  },
+  {
+    "source": "deep_learning",
+    "target": "transformer_architecture",
+    "type": "prerequisite"
+  },
+  {
+    "source": "transformer_architecture",
+    "target": "large_language_models",
+    "type": "prerequisite"
+  },
+  {
+    "source": "transformer_architecture",
+    "target": "attention_mechanism",
+    "type": "prerequisite"
+  },
+  {
+    "source": "attention_mechanism",
+    "target": "transformer_architecture",
+    "type": "related"
+  },
+  {
+    "source": "large_language_models",
+    "target": "prompt_engineering",
+    "type": "prerequisite"
+  },
+  {
+    "source": "large_language_models",
+    "target": "fine_tuning",
+    "type": "prerequisite"
+  },
+  {
+    "source": "large_language_models",
+    "target": "rag",
+    "type": "prerequisite"
+  },
+  {
+    "source": "large_language_models",
+    "target": "ai_agents",
+    "type": "prerequisite"
+  },
+  {
+    "source": "large_language_models",
+    "target": "generative_ai",
+    "type": "related"
+  },
+  {
+    "source": "embeddings",
+    "target": "rag",
+    "type": "prerequisite"
+  },
+  {
+    "source": "embeddings",
+    "target": "clustering",
+    "type": "related"
+  },
+  {
+    "source": "natural_language_processing",
+    "target": "large_language_models",
+    "type": "prerequisite"
+  },
+  {
+    "source": "natural_language_processing",
+    "target": "embeddings",
+    "type": "prerequisite"
+  },
+  {
+    "source": "machine_learning",
+    "target": "gradient_descent",
+    "type": "prerequisite"
+  },
+  {
+    "source": "gradient_descent",
+    "target": "neural_networks",
+    "type": "prerequisite"
+  },
+  {
+    "source": "deep_learning",
+    "target": "convolutional_neural_networks",
+    "type": "prerequisite"
+  },
+  {
+    "source": "deep_learning",
+    "target": "recurrent_neural_networks",
+    "type": "prerequisite"
+  },
+  {
+    "source": "deep_learning",
+    "target": "diffusion_models",
+    "type": "prerequisite"
+  },
+  {
+    "source": "convolutional_neural_networks",
+    "target": "computer_vision",
+    "type": "prerequisite"
+  },
+  {
+    "source": "recurrent_neural_networks",
+    "target": "natural_language_processing",
+    "type": "related"
+  },
+  {
+    "source": "recurrent_neural_networks",
+    "target": "transformer_architecture",
+    "type": "related"
+  },
+  {
+    "source": "machine_learning",
+    "target": "transfer_learning",
+    "type": "prerequisite"
+  },
+  {
+    "source": "transfer_learning",
+    "target": "fine_tuning",
+    "type": "related"
+  },
+  {
+    "source": "generative_ai",
+    "target": "diffusion_models",
+    "type": "related"
+  },
+  {
+    "source": "generative_ai",
+    "target": "large_language_models",
+    "type": "related"
+  },
+  {
+    "source": "machine_learning",
+    "target": "ai_ethics",
+    "type": "related"
+  },
+  {
+    "source": "generative_ai",
+    "target": "ai_ethics",
+    "type": "related"
+  },
+  {
+    "source": "rag",
+    "target": "ai_agents",
+    "type": "related"
+  },
+  {
+    "source": "prompt_engineering",
+    "target": "ai_agents",
+    "type": "related"
+  },
+  {
+    "source": "virtual_machines",
+    "target": "containers_docker",
+    "type": "prerequisite"
+  },
+  {
+    "source": "containers_docker",
+    "target": "kubernetes",
+    "type": "prerequisite"
+  },
+  {
+    "source": "containers_docker",
+    "target": "microservices",
+    "type": "related"
+  },
+  {
+    "source": "kubernetes",
+    "target": "microservices",
+    "type": "related"
+  },
+  {
+    "source": "distributed_systems",
+    "target": "microservices",
+    "type": "related"
+  },
+  {
+    "source": "microservices",
+    "target": "rest_apis",
+    "type": "related"
+  },
+  {
+    "source": "microservices",
+    "target": "grpc",
+    "type": "related"
+  },
+  {
+    "source": "javascript",
+    "target": "websockets",
+    "type": "prerequisite"
+  },
+  {
+    "source": "http_protocol",
+    "target": "websockets",
+    "type": "related"
+  },
+  {
+    "source": "rest_apis",
+    "target": "graphql",
+    "type": "related"
+  },
+  {
+    "source": "backend_development",
+    "target": "graphql",
+    "type": "related"
+  },
+  {
+    "source": "http_protocol",
+    "target": "http2",
+    "type": "prerequisite"
+  },
+  {
+    "source": "http2",
+    "target": "grpc",
+    "type": "prerequisite"
+  },
+  {
+    "source": "frontend_frameworks",
+    "target": "server_side_rendering",
+    "type": "related"
+  },
+  {
+    "source": "http_protocol",
+    "target": "server_side_rendering",
+    "type": "related"
+  },
+  {
+    "source": "javascript",
+    "target": "webassembly",
+    "type": "related"
+  },
+  {
+    "source": "web_performance",
+    "target": "webassembly",
+    "type": "related"
+  },
+  {
+    "source": "web_performance",
+    "target": "cdn",
+    "type": "related"
+  },
+  {
+    "source": "websockets",
+    "target": "backend_development",
+    "type": "related"
+  },
+  {
+    "source": "tcp_ip",
+    "target": "http2",
+    "type": "prerequisite"
+  },
+  {
+    "source": "tcp_ip",
+    "target": "grpc",
+    "type": "prerequisite"
+  },
+  {
+    "source": "network_security",
+    "target": "vpn",
+    "type": "related"
+  },
+  {
+    "source": "network_security_fundamentals",
+    "target": "vpn",
+    "type": "related"
+  },
+  {
+    "source": "vpn",
+    "target": "zero_trust",
+    "type": "related"
+  },
+  {
+    "source": "routing",
+    "target": "cdn",
+    "type": "related"
+  },
+  {
+    "source": "load_balancing",
+    "target": "cdn",
+    "type": "related"
+  },
+  {
+    "source": "authentication",
+    "target": "oauth",
+    "type": "prerequisite"
+  },
+  {
+    "source": "authentication",
+    "target": "jwt",
+    "type": "prerequisite"
+  },
+  {
+    "source": "oauth",
+    "target": "jwt",
+    "type": "related"
+  },
+  {
+    "source": "encryption",
+    "target": "jwt",
+    "type": "related"
+  },
+  {
+    "source": "access_control",
+    "target": "oauth",
+    "type": "related"
+  },
+  {
+    "source": "access_control",
+    "target": "zero_trust",
+    "type": "related"
+  },
+  {
+    "source": "web_security",
+    "target": "cors",
+    "type": "prerequisite"
+  },
+  {
+    "source": "web_security",
+    "target": "oauth",
+    "type": "related"
+  },
+  {
+    "source": "web_security",
+    "target": "jwt",
+    "type": "related"
+  },
+  {
+    "source": "http_protocol",
+    "target": "cors",
+    "type": "prerequisite"
+  },
+  {
+    "source": "zero_trust",
+    "target": "network_security",
+    "type": "related"
+  },
+  {
+    "source": "network_security_fundamentals",
+    "target": "zero_trust",
+    "type": "related"
+  },
+  {
+    "source": "nosql",
+    "target": "redis",
+    "type": "related"
+  },
+  {
+    "source": "relational_databases",
+    "target": "cap_theorem",
+    "type": "related"
+  },
+  {
+    "source": "nosql",
+    "target": "cap_theorem",
+    "type": "related"
+  },
+  {
+    "source": "distributed_systems",
+    "target": "cap_theorem",
+    "type": "prerequisite"
+  },
+  {
+    "source": "distributed_systems",
+    "target": "sharding",
+    "type": "related"
+  },
+  {
+    "source": "database_replication",
+    "target": "sharding",
+    "type": "related"
+  },
+  {
+    "source": "cap_theorem",
+    "target": "sharding",
+    "type": "related"
+  },
+  {
+    "source": "redis",
+    "target": "backend_development",
+    "type": "related"
+  },
+  {
+    "source": "redis",
+    "target": "web_performance",
+    "type": "related"
+  },
+  {
+    "source": "database_indexing",
+    "target": "b_trees",
+    "type": "related"
+  },
+  {
+    "source": "discrete_mathematics",
+    "target": "graph_theory",
+    "type": "prerequisite"
+  },
+  {
+    "source": "discrete_mathematics",
+    "target": "combinatorics",
+    "type": "prerequisite"
+  },
+  {
+    "source": "discrete_mathematics",
+    "target": "set_theory",
+    "type": "prerequisite"
+  },
+  {
+    "source": "discrete_mathematics",
+    "target": "boolean_algebra",
+    "type": "prerequisite"
+  },
+  {
+    "source": "discrete_mathematics",
+    "target": "mathematical_logic",
+    "type": "prerequisite"
+  },
+  {
+    "source": "set_theory",
+    "target": "discrete_mathematics",
+    "type": "related"
+  },
+  {
+    "source": "boolean_algebra",
+    "target": "discrete_mathematics",
+    "type": "related"
+  },
+  {
+    "source": "mathematical_logic",
+    "target": "discrete_mathematics",
+    "type": "related"
+  },
+  {
+    "source": "probability_statistics",
+    "target": "combinatorics",
+    "type": "prerequisite"
+  },
+  {
+    "source": "linear_algebra",
+    "target": "calculus",
+    "type": "related"
+  },
+  {
+    "source": "number_theory",
+    "target": "discrete_mathematics",
+    "type": "related"
+  },
+  {
+    "source": "graph_theory",
+    "target": "graph_algorithms",
+    "type": "related"
+  },
+  {
+    "source": "linear_algebra",
+    "target": "machine_learning",
+    "type": "prerequisite"
+  },
+  {
+    "source": "probability_statistics",
+    "target": "machine_learning",
+    "type": "prerequisite"
+  },
+  {
+    "source": "calculus",
+    "target": "gradient_descent",
+    "type": "prerequisite"
+  },
+  {
+    "source": "calculus",
+    "target": "neural_networks",
+    "type": "prerequisite"
+  },
+  {
+    "source": "number_theory",
+    "target": "cryptography",
+    "type": "prerequisite"
+  },
+  {
+    "source": "boolean_algebra",
+    "target": "cpu_architecture",
+    "type": "related"
+  },
+  {
+    "source": "discrete_mathematics",
+    "target": "big_o_notation",
+    "type": "prerequisite"
+  },
+  {
+    "source": "combinatorics",
+    "target": "dynamic_programming",
+    "type": "related"
+  },
+  {
+    "source": "docker_containers",
+    "target": "kubernetes",
+    "type": "prerequisite"
+  },
+  {
+    "source": "docker_containers",
+    "target": "cicd_pipelines",
+    "type": "related"
+  },
+  {
+    "source": "git_version_control",
+    "target": "cicd_pipelines",
+    "type": "prerequisite"
+  },
+  {
+    "source": "linux_administration",
+    "target": "docker_containers",
+    "type": "prerequisite"
+  },
+  {
+    "source": "linux_administration",
+    "target": "cloud_computing",
+    "type": "prerequisite"
+  },
+  {
+    "source": "cloud_computing",
+    "target": "kubernetes",
+    "type": "related"
+  },
+  {
+    "source": "cloud_computing",
+    "target": "infrastructure_as_code",
+    "type": "related"
+  },
+  {
+    "source": "cloud_computing",
+    "target": "serverless_architecture",
+    "type": "related"
+  },
+  {
+    "source": "kubernetes",
+    "target": "site_reliability_engineering",
+    "type": "related"
+  },
+  {
+    "source": "monitoring_observability",
+    "target": "site_reliability_engineering",
+    "type": "prerequisite"
+  },
+  {
+    "source": "cicd_pipelines",
+    "target": "infrastructure_as_code",
+    "type": "related"
+  },
+  {
+    "source": "docker_containers",
+    "target": "containers_docker",
+    "type": "related"
+  },
+  {
+    "source": "kubernetes",
+    "target": "kubernetes",
+    "type": "related"
+  },
+  {
+    "source": "linux_administration",
+    "target": "operating_systems",
+    "type": "related"
+  },
+  {
+    "source": "cloud_computing",
+    "target": "distributed_systems",
+    "type": "related"
+  },
+  {
+    "source": "serverless_architecture",
+    "target": "cloud_computing",
+    "type": "prerequisite"
+  },
+  {
+    "source": "infrastructure_as_code",
+    "target": "cloud_computing",
+    "type": "prerequisite"
+  },
+  {
+    "source": "programming_paradigms",
+    "target": "oop",
+    "type": "prerequisite"
+  },
+  {
+    "source": "programming_paradigms",
+    "target": "functional_programming",
+    "type": "prerequisite"
+  },
+  {
+    "source": "oop",
+    "target": "design_patterns",
+    "type": "prerequisite"
+  },
+  {
+    "source": "oop",
+    "target": "java_lang",
+    "type": "related"
+  },
+  {
+    "source": "oop",
+    "target": "python_lang",
+    "type": "related"
+  },
+  {
+    "source": "javascript_lang",
+    "target": "typescript_lang",
+    "type": "prerequisite"
+  },
+  {
+    "source": "python_lang",
+    "target": "functional_programming",
+    "type": "related"
+  },
+  {
+    "source": "cpp_lang",
+    "target": "rust_lang",
+    "type": "related"
+  },
+  {
+    "source": "functional_programming",
+    "target": "rust_lang",
+    "type": "related"
+  },
+  {
+    "source": "python_lang",
+    "target": "machine_learning",
+    "type": "related"
+  },
+  {
+    "source": "javascript_lang",
+    "target": "frontend_frameworks",
+    "type": "prerequisite"
+  },
+  {
+    "source": "javascript_lang",
+    "target": "backend_development",
+    "type": "related"
+  },
+  {
+    "source": "typescript_lang",
+    "target": "frontend_frameworks",
+    "type": "related"
+  },
+  {
+    "source": "cpp_lang",
+    "target": "operating_systems",
+    "type": "related"
+  },
+  {
+    "source": "go_lang",
+    "target": "distributed_systems",
+    "type": "related"
+  },
+  {
+    "source": "rust_lang",
+    "target": "operating_systems",
+    "type": "related"
+  },
+  {
+    "source": "java_lang",
+    "target": "oop",
+    "type": "related"
+  },
+  {
+    "source": "functional_programming",
+    "target": "recursion",
+    "type": "related"
+  },
+  {
+    "source": "clean_code",
+    "target": "design_patterns",
+    "type": "prerequisite"
+  },
+  {
+    "source": "clean_code",
+    "target": "code_review",
+    "type": "related"
+  },
+  {
+    "source": "design_patterns",
+    "target": "software_architecture",
+    "type": "prerequisite"
+  },
+  {
+    "source": "software_architecture",
+    "target": "system_design",
+    "type": "prerequisite"
+  },
+  {
+    "source": "software_architecture",
+    "target": "microservices_architecture",
+    "type": "prerequisite"
+  },
+  {
+    "source": "system_design",
+    "target": "microservices_architecture",
+    "type": "related"
+  },
+  {
+    "source": "testing_qa",
+    "target": "cicd_pipelines",
+    "type": "related"
+  },
+  {
+    "source": "testing_qa",
+    "target": "code_review",
+    "type": "related"
+  },
+  {
+    "source": "technical_debt",
+    "target": "clean_code",
+    "type": "related"
+  },
+  {
+    "source": "api_design",
+    "target": "microservices_architecture",
+    "type": "related"
+  },
+  {
+    "source": "agile_scrum",
+    "target": "code_review",
+    "type": "related"
+  },
+  {
+    "source": "design_patterns",
+    "target": "oop",
+    "type": "prerequisite"
+  },
+  {
+    "source": "system_design",
+    "target": "distributed_systems",
+    "type": "related"
+  },
+  {
+    "source": "microservices_architecture",
+    "target": "kubernetes",
+    "type": "related"
+  },
+  {
+    "source": "api_design",
+    "target": "rest_apis",
+    "type": "related"
+  },
+  {
+    "source": "software_architecture",
+    "target": "distributed_systems",
+    "type": "related"
+  },
+  {
+    "source": "microservices_architecture",
+    "target": "docker_containers",
+    "type": "related"
+  },
+  {
+    "source": "graph_algorithms",
+    "target": "topological_sort",
+    "type": "prerequisite"
+  },
+  {
+    "source": "graph_algorithms",
+    "target": "bellman_ford",
+    "type": "related"
+  },
+  {
+    "source": "graph_algorithms",
+    "target": "floyd_warshall",
+    "type": "related"
+  },
+  {
+    "source": "dynamic_programming",
+    "target": "floyd_warshall",
+    "type": "related"
+  },
+  {
+    "source": "big_o_notation",
+    "target": "bit_manipulation",
+    "type": "prerequisite"
+  },
+  {
+    "source": "arrays",
+    "target": "sliding_window",
+    "type": "prerequisite"
+  },
+  {
+    "source": "search_algorithms",
+    "target": "sliding_window",
+    "type": "related"
+  },
+  {
+    "source": "topological_sort",
+    "target": "graph_algorithms",
+    "type": "related"
+  },
+  {
+    "source": "bellman_ford",
+    "target": "dijkstras_algorithm",
+    "type": "related"
+  },
+  {
+    "source": "dijkstras_algorithm",
+    "target": "floyd_warshall",
+    "type": "related"
+  },
+  {
+    "source": "binary_trees",
+    "target": "segment_trees",
+    "type": "prerequisite"
+  },
+  {
+    "source": "graphs",
+    "target": "disjoint_sets",
+    "type": "related"
+  },
+  {
+    "source": "queues",
+    "target": "deques",
+    "type": "prerequisite"
+  },
+  {
+    "source": "arrays",
+    "target": "circular_buffers",
+    "type": "prerequisite"
+  },
+  {
+    "source": "graphs",
+    "target": "adjacency_lists",
+    "type": "related"
+  },
+  {
+    "source": "disjoint_sets",
+    "target": "graph_algorithms",
+    "type": "related"
+  },
+  {
+    "source": "segment_trees",
+    "target": "dynamic_programming",
+    "type": "related"
+  },
+  {
+    "source": "containers_docker",
+    "target": "containerization",
+    "type": "related"
+  },
+  {
+    "source": "operating_systems",
+    "target": "kernel",
+    "type": "related"
+  },
+  {
+    "source": "operating_systems",
+    "target": "system_calls",
+    "type": "related"
+  },
+  {
+    "source": "operating_systems",
+    "target": "ipc",
+    "type": "related"
+  },
+  {
+    "source": "kernel",
+    "target": "system_calls",
+    "type": "prerequisite"
+  },
+  {
+    "source": "memory_management",
+    "target": "caching_strategies",
+    "type": "related"
+  },
+  {
+    "source": "concurrency",
+    "target": "ipc",
+    "type": "related"
+  },
+  {
+    "source": "containerization",
+    "target": "docker_containers",
+    "type": "related"
+  },
+  {
+    "source": "caching_strategies",
+    "target": "redis",
+    "type": "related"
+  },
+  {
+    "source": "javascript_lang",
+    "target": "progressive_web_apps",
+    "type": "prerequisite"
+  },
+  {
+    "source": "javascript_lang",
+    "target": "server_components",
+    "type": "prerequisite"
+  },
+  {
+    "source": "javascript_lang",
+    "target": "web_workers",
+    "type": "prerequisite"
+  },
+  {
+    "source": "javascript_lang",
+    "target": "wasm",
+    "type": "related"
+  },
+  {
+    "source": "frontend_frameworks",
+    "target": "server_components",
+    "type": "related"
+  },
+  {
+    "source": "frontend_frameworks",
+    "target": "progressive_web_apps",
+    "type": "related"
+  },
+  {
+    "source": "web_performance",
+    "target": "edge_computing",
+    "type": "related"
+  },
+  {
+    "source": "web_performance",
+    "target": "wasm",
+    "type": "related"
+  },
+  {
+    "source": "server_side_rendering",
+    "target": "server_components",
+    "type": "related"
+  },
+  {
+    "source": "websockets",
+    "target": "webrtc",
+    "type": "related"
+  },
+  {
+    "source": "tcp_ip",
+    "target": "quic_protocol",
+    "type": "related"
+  },
+  {
+    "source": "http2",
+    "target": "quic_protocol",
+    "type": "related"
+  },
+  {
+    "source": "routing",
+    "target": "nat",
+    "type": "related"
+  },
+  {
+    "source": "routing",
+    "target": "sdn",
+    "type": "related"
+  },
+  {
+    "source": "osi_model",
+    "target": "quic_protocol",
+    "type": "related"
+  },
+  {
+    "source": "sockets",
+    "target": "webrtc",
+    "type": "related"
+  },
+  {
+    "source": "sockets",
+    "target": "mqtt",
+    "type": "related"
+  },
+  {
+    "source": "network_security",
+    "target": "zero_trust_architecture",
+    "type": "related"
+  },
+  {
+    "source": "zero_trust",
+    "target": "zero_trust_architecture",
+    "type": "related"
+  },
+  {
+    "source": "authentication",
+    "target": "zero_trust_architecture",
+    "type": "related"
+  },
+  {
+    "source": "penetration_testing",
+    "target": "threat_modeling",
+    "type": "related"
+  },
+  {
+    "source": "penetration_testing",
+    "target": "bug_bounty",
+    "type": "related"
+  },
+  {
+    "source": "secure_coding",
+    "target": "supply_chain_security",
+    "type": "related"
+  },
+  {
+    "source": "cryptography",
+    "target": "supply_chain_security",
+    "type": "related"
+  },
+  {
+    "source": "network_security_fundamentals",
+    "target": "security_operations",
+    "type": "related"
+  },
+  {
+    "source": "malware_analysis",
+    "target": "security_operations",
+    "type": "related"
+  },
+  {
+    "source": "nosql",
+    "target": "time_series_databases",
+    "type": "related"
+  },
+  {
+    "source": "nosql",
+    "target": "graph_databases",
+    "type": "related"
+  },
+  {
+    "source": "sql",
+    "target": "database_migration",
+    "type": "related"
+  },
+  {
+    "source": "relational_databases",
+    "target": "database_migration",
+    "type": "related"
+  },
+  {
+    "source": "relational_databases",
+    "target": "connection_pooling",
+    "type": "related"
+  },
+  {
+    "source": "transactions",
+    "target": "write_ahead_logging",
+    "type": "prerequisite"
+  },
+  {
+    "source": "database_indexing",
+    "target": "write_ahead_logging",
+    "type": "related"
+  },
+  {
+    "source": "database_replication",
+    "target": "write_ahead_logging",
+    "type": "related"
+  },
+  {
+    "source": "redis",
+    "target": "caching_strategies",
+    "type": "related"
+  }
 ]
