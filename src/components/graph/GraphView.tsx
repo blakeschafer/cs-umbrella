@@ -126,6 +126,8 @@ export function GraphView({
 
   const nodeCanvasObject = useCallback(
     (node: any, ctx: CanvasRenderingContext2D, globalScale: number) => {
+      if (node.x == null || node.y == null || !isFinite(node.x) || !isFinite(node.y)) return;
+
       const { id, name, color, importance } = node;
       const radius = 3 + importance * 2;
       const isActive = id === activeNodeId;
