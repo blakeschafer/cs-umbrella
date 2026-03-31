@@ -68,13 +68,14 @@ export default function Home() {
     }
   }, []);
 
+  const searchBar = (
+    <SearchBar topics={topics} onTopicSelect={handleTopicSelect} />
+  );
+
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Navbar */}
-      <Navbar
-        view={view}
-        onViewChange={handleViewChange}
-      />
+      <Navbar view={view} onViewChange={handleViewChange} />
 
       {/* Views */}
       <AnimatePresence mode="wait">
@@ -90,6 +91,7 @@ export default function Home() {
             <Umbrella
               topics={topics}
               onTopicClick={handleTopicSelect}
+              searchBar={searchBar}
             />
           </motion.div>
         ) : (
@@ -117,6 +119,10 @@ export default function Home() {
               onSetDifficulty={setDifficultyFilter}
               onResetZoom={() => setResetZoomTrigger((n) => n + 1)}
             />
+            {/* Search bar in graph view — bottom left */}
+            <div className="fixed bottom-4 left-4 z-30 w-80">
+              {searchBar}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -136,12 +142,6 @@ export default function Home() {
           />
         )}
       </AnimatePresence>
-
-      {/* Search bar — fixed to bottom on both views */}
-      <SearchBar
-        topics={topics}
-        onTopicSelect={handleTopicSelect}
-      />
     </main>
   );
 }

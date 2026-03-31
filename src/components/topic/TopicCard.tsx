@@ -186,6 +186,33 @@ export function TopicCard({
             </section>
           )}
 
+          {/* Roadmap */}
+          {topic.roadmap && topic.roadmap.length > 0 && (
+            <section>
+              <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
+                Learning Roadmap
+              </h3>
+              <div className="space-y-0">
+                {topic.roadmap.map((step, i) => (
+                  <div key={i} className="flex gap-3">
+                    {/* Timeline line + dot */}
+                    <div className="flex flex-col items-center">
+                      <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--bg)] text-[10px] font-semibold text-[var(--text-secondary)]">
+                        {i + 1}
+                      </div>
+                      {i < topic.roadmap!.length - 1 && (
+                        <div className="w-px flex-1 bg-[var(--border)]" />
+                      )}
+                    </div>
+                    <p className="pb-4 text-sm leading-relaxed text-[var(--text-secondary)]">
+                      {step}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
           {/* Resources */}
           {Object.keys(grouped).length > 0 && (
             <section>

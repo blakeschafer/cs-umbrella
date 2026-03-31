@@ -10,9 +10,10 @@ import { RainEffect } from "./RainEffect";
 interface UmbrellaProps {
   topics: Topic[];
   onTopicClick: (topicId: string) => void;
+  searchBar: React.ReactNode;
 }
 
-export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
+export function Umbrella({ topics, onTopicClick, searchBar }: UmbrellaProps) {
   const [expandedCategory, setExpandedCategory] = useState<Category | null>(null);
 
   const countByCategory = (cat: Category) =>
@@ -86,6 +87,9 @@ export function Umbrella({ topics, onTopicClick }: UmbrellaProps) {
         <p className="mt-2 text-[var(--text-secondary)]">
           Click a category to explore its topics
         </p>
+        <div className="mt-5">
+          {searchBar}
+        </div>
       </motion.div>
 
       {/* Expanded category topics — stays visible until user clicks another or closes */}

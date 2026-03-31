@@ -18,6 +18,7 @@ export interface Topic {
   difficulty: Difficulty;
   tags: string[];
   importance: number; // 1-5
+  roadmap?: string[]; // ordered learning steps for this topic
 }
 
 export interface Relationship {
